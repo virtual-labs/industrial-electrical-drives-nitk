@@ -1,0 +1,686 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title></title>
+ 
+
+	<style type="text/css">
+#wrap {
+    width:85%;
+}
+
+
+</style>
+
+</head>
+
+<body>
+  
+ <div id="experiment">
+  
+  
+     <header class="default" id="experiment-header">
+   
+         <div class="logo" id="experiment-header-logo">
+  
+  
+         <img src="../images/logo.jpg"></div>
+
+ 
+
+           <div class="heading" id="experiment-header-heading">
+       
+ 
+     
+          <a href="../index.html">Electrical Lab</a>
+      
+      </div>
+   
+    </header> 
+     <article id="experiment-article">
+      
+
+         <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+    
+        <header class="heading" id="experiment-article-heading">
+           
+Motor forward and reverse direction control using PLC 
+          </header>  
+         <nav class="default" id="experiment-article-navigation">
+   
+             <ul id="experiment-article-navigation-menu">
+            
+ 
+             </ul>
+         
+   </nav>
+<div id="experiment-article-sections">
+			
+   
+ <section id="experiment-article-section-1">
+              
+      <div class="icon" id="experiment-article-section-1-icon">
+            
+             
+    <img src="../images/theory.jpg"></div>
+
+                   
+ <div class="heading" id=
+"experiment-article-section-1-heading">
+      
+ 
+                 Theory
+          
+          </div>
+
+         
+           <div class="content" id=
+"experiment-article-section-1-content">
+        
+                <div class="divContent"  id="wrap">
+          
+                 
+
+ <p class="MsoNormal" style="line-height: 150%;">
+      
+  
+<font size="5">
+<center>
+<b>
+<u>INTRODUCTION TO LOGIC</u></b>
+</center>
+</font>
+<p>
+A   hardwired   control   circuit   can   be   represented   by   conventional hardwired relay ladder diagram. In any hardwired circuit, there should be electrical continuity in order for the load to energize.</p>
+
+<font size="4"><b><u>Basics about conventional ladder and PLC ladder logic</u></b></font>
+<p>Electrical sequence of operation in hardwired relay circuits can be represented by electrical ladder diagram. Ladder diagram shows the interconnection of field devices. In the ladder diagram, each rung shows how a field device is turned on and also shows how it interacts with next field devices.<br><br>
+The difference between a PLC ladder program and relay ladder rungs is the  continuity.  In  an  electrical  rung  diagram,  there  is  an  electrical continuity only when the current flows from left power rail to right power rail.</p>
+
+<center>
+<img src="../images/LADDER/a.jpg" height=100 width=400></img></center>
+<br>
+<p>Fig (a), shows electrical continuity when SW 1 is closed, as the current flows from L-1 to L-2 energizing the load.<br><br>
+Even though PLC ladder logic was modeled after the conventional relay ladder, there is no electrical continuity in PLC ladder logic. PLC ladder rungs should have logical continuity in order for the output to energize. PLC ladder program uses familiar terms like "rungs" and "normally open" and	"normally  closed"  contacts,  but  the  relay  ladder  logic  has  no electrical continuity between an input and the controlled output.<br><br>
+
+<b>Note</b>:- There  is  no  physical  conductor  that  carries  the  input  signal through to the output.<br><br>
+Each rung in a ladder diagram is a program statement. This program statement consists of a condition or sometimes conditions, along with some type of action. Inputs are the conditions, and the action, or output, is the result of the conditions.<br><br>
+
+As in case of physical wiring hardware devices connected in series or parallel, PLC also combines ladder program instructions in series or parallel. However, rather than working in series or parallel, the PLC
+combines instructions logically using logic operators. Logical operations performed by PLC are nothing but fundamental logic operation, using fundamental logic operators like: AND, OR, and NOT. These operators are used to combine the instructions on a PLC rung so as to make the outcome of each rung either true or false.
+</p>
+
+<font size="4"><b><u>The AND-logic function</u></b></font><br>
+<center>
+<img src="../images/LADDER/b.jpg" height=200 width=400></img></center>
+<p> The series circuit of 2 switches can be looked as an AND logic function. In fig (b) and fig (c), both switch1 and switch2, must be closed to have electrical continuity. W hen  there is  electrical continuity, output  (light1) will energize. Hence the keyword here is AND.<br>
+
+<center>
+<img src="../images/LADDER/c.jpg" height=200 width=400></img></center>
+
+<p>The circuit in fig (b) is represented as a schematic diagram ladder rung in fig (c).<br><br>
+
+When the switch1 and switch2 is closed, electrical continuity is established to L-2. This is shown in fig (d).</p>
+
+<center>
+<img src="../images/LADDER/d.jpg" height=200 width=400></img></center>
+<br>The various possible switch combinations are shown in the truth table below.<br><br>
+
+Table 1: Truth table for AND logic<br>
+<center>
+<img src="../images/LADDER/e.jpg" height=250 width=400></img></center>
+<br>Fig (d) can be written in PLC ladder format as shown in the figure below<br>
+
+<center>
+<img src="../images/LADDER/f.jpg" height=200 width=400></img></center>
+<br>
+Here is the program listing for a typical PLC, if you are entering the program with a handheld programmer.<br><br>
+LOAD I1<br>
+AND I2<br>
+OUT O5
+
+<p>The above instruction tell the processor to load input 1 (I1) into memory, AND it with input 2 (I2) and then output the result to output 5 (O5). The resulting output will be based on the truth table fig (e).</p>
+
+<font size="4"><b><u>The OR-logic function</u></b></font><br>
+<p>In an OR - LOGIC function, the output is true if any input is true. The OR logic also states that if all inputs are true, the output will be true.<br>
+
+<center>
+<img src="../images/LADDER/g.jpg" height=250 width=400></img></center>
+<br>
+
+<p>In the above figure, if switch1 OR switch2 is energized then light1 will energize. Also, if both SW 1 and SW2 are true, the output will also be true.<br><br>
+Fig (g) is converted to PLC ladder rung and it looks like fig (h)<br>
+
+<center>
+<img src="../images/LADDER/h.jpg" height=250 width=400></img></center>
+
+<p>A PLC rung of logic will have normally open or normally closed contacts instead of normally open or normally closed switch symbols. Addresses and instructions are included. Here, in additions to each contact and its address, text information such as SW1, SW2 and L-1 is used and they are  referred  to  as  instruction comments.  These  instruction comments can be added from programming software.</p>
+Table 2: Truth table representing two-input OR function<br>
+
+<center>
+<img src="../images/LADDER/i.jpg" height=250 width=400></img></center><br><br>
+
+<font size="4"><b><u>The NOT-logic function</u></b></font>
+<p>A normally closed relay contact passes power any time when the relay coil  is  not  energized. In  the  same manner, the  normally closed PLC ladder logic instruction will pass power any time when the input status file bit associated is  not a  1. In this condition, the physical hardware input is not sending an input signal into the PLC's input module. The opposite of normally open PLC instruction or contact is the NOT logic. NOT logic can be used in conjunction with AND or OR logic, when a logical 0 in the status file is expected to activate some output device. In other words, NOT logic is used when an input is not energized i.e., 0 in the associated status bit, the output should be energized. Also, when the input is energized i.e., 1 in the associated status bit, the output should not be energized.</p>
+Table 3: Truth table for NOT function<br>
+
+<center>
+<img src="../images/LADDER/j.jpg" height=200 width=450></img></center>
+<br>
+
+<center>
+<img src="../images/LADDER/k.jpg" height=200 width=450></img></center>
+<br>
+
+<font size="4"><u>Analysis of rung 1</u></font>
+<p>When I1 is true i.e. the input status file bit regarding I1 is true (1), the instruction I1 will energize the output. The instruction I1 is considered true when it passes logical continuity. If there is no valid input signal from the field input devices attached to I1's screw terminal on the input module, a logical 0 will be placed in the associated input status file bit. A logical 0 in the input status file will make the normally open input instruction to become false .When normally open instruction is false, it will not pass logical continuity.</p>
+
+<font size="4"><u>Analysis of rung 2</u></font>
+<p>The normally closed instruction works	much like normally closed contacts on a hardware relay. In the fig (k), when the normally closed instruction I2 is true, i.e. the associated status file bit has a valid zero (0), logical	continuity  is established to energize the output. When the associated status file bit has valid 1, the NC instruction goes false and there is no logical continuity and the output is not energized.</p>
+
+<font size="4"><b><u>The PARALLEL NOT- logic function</u></b></font>
+
+<center>
+<img src="../images/LADDER/l.jpg" height=200 width=400></img></center>
+<br>
+PLC ladder rung has 2 input instructions, one normally open and the other one is normally closed. This circuit contains parallel NOT logic. This schematic rung will be true under the conditions shown in the truth table below.<br><br>
+Table 4: Input and output relation of a parallel NOT function.<br>
+
+<center>
+<img src="../images/LADDER/m.jpg" height=250 width=400></img></center>
+<br>
+
+Output L-1 will be energized only when input1 must be true OR input2 must not be true.<br>
+
+<center>
+<img src="../images/LADDER/n.jpg" height=280 width=400></img></center>
+<br>
+
+<font size="4"><b><u>The EXCLUSIVE OR-logic function</u></b></font>
+<br>Table 5: Input and output relation of an exclusive OR function.<br>
+
+<center>
+<img src="../images/LADDER/o.jpg" height=300 width=400></img></center>
+<br>
+Ladder rung of EXOR GATE would look like this<br>
+
+<center>
+<img src="../images/LADDER/p.jpg" height=250 width=400></img></center>
+<br>
+
+<u><b>Case 1</b></u>
+<p>When I1 = 0 and I2 = 0:<br><br>
+Let us analyze main rung. When I1 = 0, the normally open instruction is false and, normally closed instruction is true, but since normally open instruction is false, there is no logical continuity and output cannot be energized. Similar analysis can be done in parallel rung, normally closed instruction will be true and normally open instruction will be false and output is not energized.</p>
+
+<u><b>Case 2</b></u>
+<p>When I1= 0 and I2 = 1:<br><br>
+In main rung, normally open instruction will be false and, normally closed instruction will be true, but since there is no logical continuity this rung logic cannot energize the output. But, in parallel rung, normally closed instruction will be true, as well as normally open instruction will also be true, hence there is logical continuity, and output is energized.</p>
+
+<u><b>Case 3</b></u>
+<p>When I1 = 1 and I2 = 0:<br><br>
+This case is similar to case 2, only the role of inputs are interchanged i.e. here main rung is true and energizes the output and parallel rung is false.</p>
+
+<u><b>Case 4</b></u>
+<p>When both inputs are true, the main ladder rung as well as the parallel ladder rung goes false. In main rung, normally open instruction is true but normally closed instruction is false. Hence, there is no logical continuity.    In parallel ladder rung, normally closed instruction is false and normally open instruction is true, and here also there is no logical continuity. Hence, the output is not energized.</p>
+            
+
+
+
+
+	</p>
+
+<br></div></div>
+                         
+
+
+</section>
+ <section id="experiment-article-section-2">
+                    
+
+<div class="icon" id="experiment-article-section-2-icon">
+                
+
+<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>
+
+              
+   <div class="heading" id=
+"experiment-article-section-2-heading">
+   
+
+                     Procedure
+          
+          </div>
+
+           
+         <div class="content" id=
+"experiment-article-section-2-content">
+            
+            <div class="divContent"  id="wrap">
+                  
+        <p class="MsoNormal" style="line-height: 150%;">
+                      
+      <span lang="EN-IN" style=
+'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+
+
+
+<center><font size="5"><u><b>Aim of the experiment: Motor Forward and Reverse Direction Control using a PLC </b></u></font>
+<br></center>
+
+<p><font size="4"><u><b>Aim</u> : </b></font>
+To achieve motor forward and reverse direction control using a PLC. 
+</p>
+
+
+<p><font size="4"><u><b>Procedure</u> : </b></font>In our experiment, we wish to change the direction of motor rotation by click of a push button, using a PLC. <br><br>
+Let us see the basic diagram of the circuitry:  </p>
+
+<center>
+<img src="../images/mtrfwd/PR/1.jpg" height=500 width=450></img><br></center>
+
+<p><font size="4"><u><b>Ladder logic design</u> : </b></font>
+<p>Now, let us see how the ladder logic of motor forward and reverse direction control is implemented using a PLC. </p>
+
+<ul type=disc>
+<li>Inputs to the PLC are: 
+<ul>
+<li>Stop ( normally open push button ) <br></li>
+<li>Forward (normally open push button ) <br></li>
+<li>Reverse (normally open push button ) <br></li>
+</ul><br>
+
+</li>
+
+<li>Outputs to the PLC are: 
+<ul>
+<li>Motor forward circuit <br></li>
+<li>Motor reverse circuit  <br></li>
+<li>Forward (LED)  <br></li>
+<li>Reverse (LED)  <br></li>
+<li>Forward slow (LED)  <br></li>
+<li>Reverse slow (LED)  <br></li>
+</ul>
+</li>
+<br>
+<b><u>Note</b></u> : Motor forward circuit (forwardmtr) and Motor reverse circuit (reversemtr) is a circuit, which is connected to the motor, which changes the supply polarity , which is fed to the motor. In return, changes the direction of motor rotation. 
+
+<br>
+<br>
+
+<li>Since the inputs and outputs are less, 8-point input module and 8 point output module is sufficient, where CPU resides in slot 0, input module resides in slot 1 and output module in slot 2. </li>
+<br>
+
+<li>Let us assign the address for the input and output signals of the PLC: <br><br>
+<ul>
+<li>Stop (normally open push button ) : I:1/0 <br></li>
+<li>Forward (normally open push button) : I:1/1 <br></li>
+<li>Reverse (normally open push button) : I:1/2 <br></li>
+<li>Temp1(temporary variable) : O:2/0 <br></li>
+<li>forwardmtr ( Motor forward circuit ) : O:2/1 <br></li>
+<li>Temp2(temporary variable) : O:2/2 <br></li>
+<li>Forward (LED) : O:2/3 <br></li>
+<li>reversemtr (Motor reverse circuit ) : O:2/4 <br></li>
+<li>Reverse (LED) : O:2/5 <br></li>
+<li>Forwardslow (LED) : O:2/6 <br></li>
+<li>Reverseslow (LED) : O:2/7<br></li>
+</ul>
+</li><br>
+
+<li>Let us see its ladder logic diagram:<br>
+
+<center>
+<img src="../images/mtrfwd/PR/2.jpg" height=600 width=650></img><br></center>
+</ul>
+
+<p><b><u>Note</b></u> : Here, the motor’s breaking is natural breaking. So when the motor’s direction in changed, it cannot instantly change its direction. When motor’s supply is cut down, it will have a natural breaking, during which its speed reduces and finally comes to rest. Our assumption is that, the motor takes 7 seconds to completely stop. So when the motor is instructed to change direction by the user, PLC cuts off its supply, till it comes to rest and then, it changes its direction, using the direction changing circuits ( forwardmtr, reversemtr ) . In order to be on the safer side, an off-delay timer of 10 seconds ( greater than 7 seconds) is used, to activate the motor direction changing circuits.</p>
+
+<ol type="a" >
+<li><br>
+<center>
+<img src="../images/mtrfwd/PR/3.jpg" height=350 width=550></img><br></center>
+<p>The above rungs are used for the forward motor direction rotation. </p>
+</li><br>
+
+<li><br>
+<center>
+<img src="../images/mtrfwd/PR/4.jpg" height=200 width=550></img><br></center>
+<p>The above rung is executed when the motor is instructed to change direction from forward to reverse, or from forward to stop. </p>
+</li><br>
+
+<li><br>
+<center>
+<img src="../images/mtrfwd/PR/5.jpg" height=450 width=550></img><br></center>
+<p>The above rungs are used for the reverse motor direction rotation. </p>
+</li><br>
+
+<li><br>
+<center>
+<img src="../images/mtrfwd/PR/6.jpg" height=200 width=550></img><br></center>
+<p>The above rung is executed when the motor is instructed to change direction from reverse to forward, or from reverse to stop. </p>
+</li>
+
+</ol>
+<br>
+
+The following screen shots explain the operation:
+<center>
+<img src="../images/mtrfwd/PR/7.jpg" height=500 width=700></img><br></center>
+The above screen shot represents the condition when the motor is running forward.<br><br><br>
+
+<center>
+<img src="../images/mtrfwd/PR/8.jpg" height=500 width=700></img><br></center>
+The above screen shot represents the condition when the reverse push button is pressed while the motor was running in forward direction, and the motor starts braking before it starts revolving in reverse direction.<br><br><br>
+
+
+<center>
+<img src="../images/mtrfwd/PR/9.jpg" height=500 width=700></img><br></center>
+The above screen shots represents the condition when the motor is running in reverse direction.<br><br>
+
+
+
+
+
+
+                            </span>
+</p>
+
+ 
+  </div>
+</div>    
+                  
+</section>
+  
+
+<section id="experiment-article-section-3">
+             
+       <div class="icon" id="experiment-article-section-3-icon">
+          
+      <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+</div>
+                    
+
+           
+         <div class="heading" id= "experiment-article-section-3-heading">
+    
+                   Self Evaluation
+            
+        </div>
+
+                    
+	   <div class="content" id="experiment-article-section-3-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+							<div id="slickQuiz">
+        <h1 class="quizName"><!-- where the quiz name goes --></h1>
+
+        <div class="quizArea">
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
+
+                <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="indexs.html">Get Started</a>
+            </div>
+
+            <!-- where the quiz gets built -->
+        </div>
+
+      
+</div>
+      
+                                <form id="form11" method="post" name="form11">
+                              
+    
+
+
+       
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div> 
+            </section>
+
+
+  
+<section id="experiment-article-section-4">
+  
+       <div class="icon" id="experiment-article-section-4-icon">
+         
+        <img src="../images/simulation.jpg" style="padding-left: 20px;">
+</div>
+
+              
+ <div class="heading" id=
+"experiment-article-section-4-heading">
+     
+                   Simulator
+          
+          </div>
+
+              
+      <div class="content" id="experiment-article-section-4-content">
+        
+            
+      <div class="divContent">
+                      
+
+<p style="text-align: center;">
+	
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/
+shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="800" width="1300">
+<param name="quality" value="high" />
+<param name="allowScriptAccess" value="always" />
+<param name="allowFullScreen" value="true" />
+<param name="movie" value="../images/motorfwd.swf" />
+<embed allowfullscreen="true" allowscriptaccess="always" height="800" pluginspage="http://www.macromedia.com/go/
+getflashplayer" quality="high" src="../images/motorfwd.swf" type="application/x-shockwave-flash" width="1300">
+</embed>
+</object>
+</p></br>
+
+<p style="text-align: center;">
+<a href="../images/motorfwd.swf" target="_blank"></a></p>   
+ </section>
+
+      
+
+         <section id="experiment-article-section-5">
+    
+               <div class="icon" id="experiment-article-section-5-icon">
+   
+     <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>
+    
+      <div class="heading" id= "experiment-article-section-5-heading">
+      
+                  Assignment
+         
+
+           </div>
+               
+     <div class="content" id="expostperiment-article-section-5-content">
+      
+         
+<ol type="1">
+<li>Write a PLC ladder logic rung diagram for 3 input AND logic function?</li>
+<li> Write a PLC ladder logic rung diagram for 3 input OR logic function?</li>
+<li>Write a PLC ladder logic rung diagram for 3 input NAND logic function?</li>
+<li>Write a PLC ladder logic rung diagram for 3 input NOR logic function?</li>
+</ol>
+   </div>
+          
+      </section>
+	
+
+
+      
+         <section id="experiment-article-section-6">
+   
+                 <div class="icon" id="experiment-article-section-6-icon">
+                               
+      <img src="../images/reference.jpg" style="padding-left: 15px;"></div>
+
+  
+                  <div class="heading" id="experiment-article-section-6-heading">
+     
+                   Reference
+          
+          </div>
+
+             
+       <div class="content" id="experiment-article-section-6-content">
+   
+<ol type="1">
+<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
+<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
+<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
+<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
+<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
+</ol>
+         </div>
+
+</section>
+
+   
+
+       <section id="experiment-article-section-7">
+   
+                 <div class="icon" id="experiment-article-section-7-icon">
+ 
+       
+            <img src="../images/video.jpg"></div>
+
+    
+                <div class="heading" id="experiment-article-section-7-heading">
+  
+                      Video 
+           
+         </div>
+
+               
+     <div class="content" id="experiment-article-section-7-content">
+ 
+
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/BFBw6ul4aAw?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+       
+                
+                    </div>
+ 
+          </section>
+     
+         
+
+             
+  
+     <section id="experiment-article-section-8">
+        
+            <div class="icon" id="experiment-article-section-8-icon">
+             
+                  
+      <img src="../images/quiz.jpg"></div>
+                   
+ 
+
+                    <div class="heading" id="experiment-article-section-8-heading">
+ 
+                       Quiz 
+           
+         </div>
+
+                  
+ <div class="content" id="experiment-article-section-8-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+							<div id="slickQuiz">
+        <h1 class="quizName"><!-- where the quiz name goes --></h1>
+
+        <div class="quizArea">
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
+
+                <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index1.html">Get Started</a>
+            </div>
+
+            <!-- where the quiz gets built -->
+        </div>
+
+      
+</div>
+      
+
+                                <form id="form11" method="post" name="form11">
+  
+      
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div> 
+  
+                </section>
+
+       
+     </div>
+     
+   </article>
+  
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+
+ 
+ 
+         
+              
+
+
+
+
+

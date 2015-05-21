@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title></title>
+ 
+
+	<style type="text/css">
+#wrap {
+    width:85%;
+}
+
+
+</style>
+
+</head>
+
+<body>
+  
+ <div id="experiment">
+  
+  
+     <header class="default" id="experiment-header">
+   
+         <div class="logo" id="experiment-header-logo">
+  
+  
+         <img src="../images/logo.jpg"></div>
+
+ 
+
+           <div class="heading" id="experiment-header-heading">
+       
+ 
+     
+          <a href="../index.html">Electrical Lab</a>
+      
+      </div>
+   
+    </header> 
+     <article id="experiment-article">
+      
+
+         <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+    
+        <header class="heading" id="experiment-article-heading">
+           
+Garage Shutter Opening and Closing Using PLC
+          </header>  
+         <nav class="default" id="experiment-article-navigation">
+   
+             <ul id="experiment-article-navigation-menu">
+            
+ 
+             </ul>
+         
+   </nav>
+<div id="experiment-article-sections">
+			
+   
+ <section id="experiment-article-section-1">
+              
+      <div class="icon" id="experiment-article-section-1-icon">
+            
+             
+    <img src="../images/theory.jpg"></div>
+
+                   
+ <div class="heading" id=
+"experiment-article-section-1-heading">
+      
+ 
+                 Theory
+          
+          </div>
+
+         
+           <div class="content" id=
+"experiment-article-section-1-content">
+        
+                <div class="divContent"  id="wrap">
+          
+                 
+
+ <p class="MsoNormal" style="line-height: 150%;">
+      
+  
+ <font size="5">
+<center>
+<b>
+<u>Garage shutter opening and closing using PLC</u></b>
+</center>
+</font>
+
+<p>In order for the garage shutter to open or close , we need certain instruments like motor, coupling, gear box, shaft, limit switches ,chain or belt ,light emitting diode(LED),push buttons (N.O and N.C) and PLC.<br><br>
+Let us see some of the instruments used in detail: </p>
+
+<font size="4"><b><u>Motor</u></b></font>
+<p>Motor is required to produce the torque and power required to pull the garage shutter. For this purpose we can make use of either DC or AC motor. As the speed with which the garage shutter door is opened is preferably constant, we can make use of AC motor. A single phase AC motor, which is also known as general purpose motor would be sufficient.</p>
+
+<font size="4"><b><u>Coupling</u></b></font>
+<p>A coupling is a device used to connect two shafts together at their ends for the purpose of transmitting power. Here in our case , we are using to connect shaft of the motor to gear box.<br>
+
+<center>
+<img src="../images/garage/TH/1.jpg" height=100 width=200></img><br></center>
+
+<font size="4"><b><u>Gear box</u></b></font>
+<p>Gear box is a device that uses gears and gear trains to provide speed and torque conversions from a rotating power source to another device. In simple words it can be used to increase or decrease speed or decrease or increase torque.</p>
+
+<center>
+<img src="../images/garage/TH/2.jpg" height=350 width=350></img><br></center>
+
+
+<font size="4"><b><u>Light emitting diode</u></b></font>
+<p>Light emitting diodes are used to indicate the states of the garage shutter, whether it is closed, opened or in between.</p>
+
+<font size="4"><b><u>Limit switch</u></b></font>
+<p>A limit switch is a type of switch used to stop the motion of a machine slide (or in our case garage door) or element once it reaches a fixed point.<br>
+<center>
+<img src="../images/garage/TH/3.jpg" height=250 width=300></img><br></center>
+
+<font size="4"><u>Working of a limit switch</u></font>
+<p>The basic limit switch has a spring-loaded push button connected to an electric circuit. When the push button (actuator) is pushed inside it trips or actuates the electrical circuit. The electrical circuit then signals a machine element to stop or start its motion. Once the pressure on the push button is removed, it comes back to its original position and is ready for the next cycle.</p>
+
+
+<font size="4"><u>Selection of limit switch</u></font>
+<p>Limit switches are classified based on their actuating mechanism and application. The types of limit switches are many and some of them are: - linear limit switch, programmable limit switch, plunger limit switch, limit micro switch etc. Other types of limit switches are called optical proximity switches or magnetic proximity switches. Optical proximity switches utilize two different components. One component emits an infra-red light beam to a receiver mounted at a straight distance away. If the light beam is broken, the optical proximity limit switch will open, “turn off" or close, “turn on" a circuit to switch the electrical power. A magnetic proximity limit switch is a singular device that will also turn on or turn off  when it comes close to a piece of metal. Regardless of the types or sizes of limit switches, these devices can only accomplish a task of a activation or deactivation.<br>
+<br><u>Application</u>
+<br>
+Limit switches are very commonly used devices. For example
+
+<ol type="1">
+<li>Turning OFF of the light, when the refrigerator door is closed.</li>
+<li> Switching ON of car's dome lights when we open the door.</li>
+<li>Stopping of the washing machine when load becomes unbalanced.</li>
+<li>Limit switch are also used in scissor lifts, conveyor systems, transfer machines, material packing and handling equipment, elevators, escalators, general safety equipment etc.</li>
+</ol>
+
+<font size="4"><b><u>Push button</u></b></font>
+<p>Push button is a kind of a switch which is activated or deactivated the moment we press or depress it. It sends a signals momentarily when we press or depress it.<br>
+<center>
+<img src="../images/garage/TH/4.jpg" height=120 width=300></img><br></center>
+             
+
+
+
+
+	</p>
+
+<br></div></div>
+                         
+
+
+</section>
+ <section id="experiment-article-section-2">
+                    
+
+<div class="icon" id="experiment-article-section-2-icon">
+                
+
+<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>
+
+              
+   <div class="heading" id=
+"experiment-article-section-2-heading">
+   
+
+                     Procedure
+          
+          </div>
+
+           
+         <div class="content" id=
+"experiment-article-section-2-content">
+            
+            <div class="divContent"  id="wrap">
+                  
+        <p class="MsoNormal" style="line-height: 150%;">
+                      
+      <span lang="EN-IN" style=
+'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+
+
+<center><font size="5"><u><b>Aim of the experiment: Garage shutter opening and closing using PLC</b></u></font>
+<br></center>
+
+<p><font size="4"><u><b>Aim</u> : </b></font>
+Garage shutter opening and closing using PLC .
+</p>
+
+
+<p><font size="4"><u><b>Procedure</u> : </b></font>For the purpose of opening and closing of garage door shutter, 
+we need motor, limit switch, push button, coupling, light emitting diode, shaft and gear box.<br><br>
+Let us see the basic diagram of the circuitry.</p>
+
+<center>
+<img src="../images/garage/PR/1.jpg" height=400 width=550></img><br></center>
+
+<p>The PLC is used here to take input from the user, whether to open door, close door or just stop either of the action .It gives signal to the motor to open or close the shutter accordingly. Limit switches are used to determine the extreme position of garage shutter. This signal is a form of input to the PLC. Limit switch1 is used to identify the upper limit of the garage shutter i.e. when garage shutter is fully open. Limit switch2 is used to identify the lower limit of the garage shutter i.e. when garage shutter is fully closed.</p>
+
+<p><u>Steps to design the process</u>
+<ul type=disc>
+<li>Choose a shaft of proper strength to withstand the weight of the garage shutter and notice its diameter.</li>
+<li>Calculate the torque required to pull the garage shutter.</li>
+<li>Calculate the torque of the motor used to pull the garage shutter.</li>
+<li>Use the equation, <br>
+Motor torque * gear ratio = Torque to pull garage shutter--(1)<br>
+Find the required Gear ratio from the above equation.</li>
+<li>Design the required ladder logic for the process.</li>
+</ul>
+
+<font size="4"><u><b>Design specification</b></u></font>
+<ul type=disc>
+<li>Assuming we have a garage shutter of 9*9 feet and weighing about 100 kg. Also, taking 1.5kw *2800 rpm synchronous 
+ac motor.</li><br>
+
+<li><u>Torque required to pull the garage shutter</u><br>
+Assuming the shaft to be of 2.4cm diameter , or radius of  1.2cm.<br>
+	     We know, Torque = Force*distance,<br>
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (Mass*acceleration)*distance<br>
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= (100kg*10m/s<sup>2</sup>)*(1.2*10<sup>-2</sup>m)<br>
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Torque = 12 N-m</li><br>
+
+<li><u>Torque produced by motor</u><br>
+     Torque of motor = {Power (kW)*60000} / {2*3.14*rpm}<br>
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;= (1.5*60000)/ (2*3.14*2800)<br>
+&nbsp;Torque of motor = 5.118 N-m</li>
+</ul>
+
+<font size="4"><u><b>Ladder logic design </b></u></font>
+<p>Now, let us see how the ladder logic of the garage shutter (shown below) is implemented in a PLC.</p>
+
+<center>
+<img src="../images/garage/PR/2.jpg" height=400 width=550></img><br></center>
+
+Our assumption:
+<ul type=disc>
+<li>Open push button used is normally open, close push button used is normally open and stop push button used is normally closed.</li><br>
+<li>Limit switch1 (LS1): not activated (false) when door is fully opened, else activated (true).</li><br>
+<li>Limit switch2 (LS2): activated (true) when door is fully closed, else not activated (false).</li><br>
+<li>Since inputs and outputs are less, 8-point I/O module PLC is sufficient, where CPU resides in slot 0, input module resides in slot1, and output module resides in slot2. </li><br>
+<li>Let us assign address for the input and output signals of the PLC.<br><br>
+
+<ul type=square>
+<li>Open(push button):   I:1/0</li><br>
+<li>Close(push button):   I:1/1</li><br>
+<li>Stop(push button):   I:1/2</li><br>
+<li>LS1:   I:1/3</li><br>
+<li>LS2:   I:1/4</li><br>
+<li>Motor up : O:2/0</li><br>
+<li>Motor down: O:2/1</li><br>
+<li>AJAR LED: O:2/2</li><br>
+<li>Open LED: O:2/3</li><br>
+<li>Shut LED: O:2/4</li><br>
+</ul>
+</li>
+<li>Let us see its ladder logic program:<br>
+<center>
+<img src="../images/garage/PR/3.jpg" height=500 width=600></img><br></center>
+<br>The above ladder logic program has 5 rungs , let us see the functions of each rung individually:
+</li>
+</ul>
+
+<font size="4"><u><b>Rung 000:</b></u></font><br>
+<center>
+<img src="../images/garage/PR/4.jpg" height=250 width=600></img></center>
+
+<p>The above rung is used to open the garage shutter. The above rung passes logical continuity, when open push button is pressed. It will pass logical continuity as long as stop or close push button is not pressed. It will pass logical continuity as long as door is not fully opened. The moment door is fully opened the motor is de-energized. Since open switch used is a push button, it has to be latched.</p>
+
+
+<font size="4"><u><b>Rung 001:</b></u></font><br>
+<center>
+<img src="../images/garage/PR/5.jpg" height=250 width=600></img></center>
+<p>The above rung is used to close the garage shutter. The above rung passes logical continuity, when close push button is pressed. It will pass logical continuity as long as stop or open push button is not pressed. It will pass logical continuity as long as door is not fully closed. The moment door is fully closed the motor is de-energized. Since close switch used is a push button, it has to be latched.</p>
+
+
+<font size="4"><u><b>Rung 002:</b></u></font><br>
+<center>
+<img src="../images/garage/PR/6.jpg" height=250 width=600></img></center>
+<p>The above rung is used to indicate open condition of the garage shutter. When the garage shutter is fully opened, the signal from the Limit switch1 (LS1) is false i.e. 0 is sent to the corresponding input status file i.e. input screw terminal 3, has 0 in its corresponding input status file bit location. Thus open LED will be energized. </p>
+
+
+<font size="4"><u><b>Rung 003:</b></u></font><br>
+<center>
+<img src="../images/garage/PR/7.jpg" height=250 width=600></img></center>
+<p>The above rung is used to indicate shut condition of the garage shutter. When the garage shutter is fully closed, the signal from the Limit switch2 (LS2) is true i.e. 1 is sent to the corresponding input status file i.e. input screw terminal 4, has 1 in its corresponding input status file bit location. Thus shut LED will be energized. </p>
+
+<font size="4"><u><b>Rung 004:</b></u></font><br>
+<center>
+<img src="../images/garage/PR/8.jpg" height=250 width=600></img></center>
+<p>AJAR LED is used to indicate that the garage shutter is not in its extreme positions i.e. it is not completely closed or completely open. In other words, it is in between of two extreme positions. When the garage shutter is fully opened, the signal from the Limit switch1 (LS1) is false i.e. 0 is sent to the corresponding input status file i.e. input screw terminal 3, has 0 in its corresponding input status file bit location. Hence, the normally open instruction becomes false and logical continuity is lost. As a result AJAR LED is de-energized. When the garage shutter is fully closed, the signal from the Limit switch2 (LS2) is true i.e. 1 is sent to the corresponding input status file i.e. input screw terminal 4, has 1 in its corresponding input status file bit location. Hence, the normally closed instruction becomes false and logical continuity is lost. As a result AJAR LED is de-energized. So, only when the garage shutter is in between of the two extreme positions, logical continuity is passed and AJAR LED is energized.</p>
+
+
+The following screen shots represents the operation:
+<ul type=disc>
+<li><br>
+<center>
+<img src="../images/garage/PR/9.jpg" height=500 width=800></img><br></center>
+<br>The above screen shot represents the condition when the Garage shutter is completely closed.
+<br><br><br></li>
+
+<li><br>
+<center>
+<img src="../images/garage/PR/10.jpg" height=500 width=800></img><br></center>
+<br>The above screen shot represents the condition when the Garage shutter is in intermediate stage i.e. can be opening or closing.
+<br><br><br></li>
+
+
+<li><br>
+<center>
+<img src="../images/garage/PR/11.jpg" height=500 width=800></img><br></center>
+<br>The above screen shot represents the condition when the Garage shutter is completely opened.
+</li>
+</ul>
+
+
+                            </span>
+</p>
+
+ 
+  </div>
+</div>    
+                  
+</section>
+  
+
+<section id="experiment-article-section-3">
+             
+       <div class="icon" id="experiment-article-section-3-icon">
+          
+      <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+</div>
+                    
+
+           
+         <div class="heading" id= "experiment-article-section-3-heading">
+    
+                   Self Evaluation
+            
+        </div>
+
+                    
+	   <div class="content" id="experiment-article-section-3-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+							<div id="slickQuiz">
+        <h1 class="quizName"><!-- where the quiz name goes --></h1>
+
+        <div class="quizArea">
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
+
+                <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="indexs.html">Get Started</a>
+            </div>
+
+            <!-- where the quiz gets built -->
+        </div>
+
+      
+</div>
+      
+                                <form id="form11" method="post" name="form11">
+                              
+      
+
+
+       
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div> 
+            </section>
+
+
+  
+<section id="experiment-article-section-4">
+  
+       <div class="icon" id="experiment-article-section-4-icon">
+         
+        <img src="../images/simulation.jpg" style="padding-left: 20px;">
+</div>
+
+              
+ <div class="heading" id=
+"experiment-article-section-4-heading">
+     
+                   Simulator
+          
+          </div>
+
+              
+      <div class="content" id="experiment-article-section-4-content">
+        
+            
+      <div class="divContent">
+                      
+
+<p style="text-align: center;">
+	
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/
+shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="800" width="1300">
+<param name="quality" value="high" />
+<param name="allowScriptAccess" value="always" />
+<param name="allowFullScreen" value="true" />
+<param name="movie" value="../images/garage.swf" />
+<embed allowfullscreen="true" allowscriptaccess="always" height="800" pluginspage="http://www.macromedia.com/go/
+getflashplayer" quality="high" src="../images/garage.swf" type="application/x-shockwave-flash" width="1300">
+</embed>
+</object>
+</p></br>
+
+<p style="text-align: center;">
+<a href="../images/garage.swf" target="_blank"></a></p>   
+ </section>
+
+      
+
+         <section id="experiment-article-section-5">
+    
+               <div class="icon" id="experiment-article-section-5-icon">
+   
+     <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>
+    
+      <div class="heading" id= "experiment-article-section-5-heading">
+      
+                  Assignment
+         
+
+           </div>
+               
+     <div class="content" id="expostperiment-article-section-5-content">
+      
+         
+                        
+<ol type="1">
+<li>If the weight of the garage shutter is 300kg , and the diameter of the shaft used to pull is 5cm . Calculate the torque required to pull the garage shutter?</li>
+<li>If the diameter of the shaft used to pull the garage shutter is 5cm and the size of the garage shutter is 8 feet*10 feet, rotation of the shaft is 500rpm. Then calculate the time required by the garage shutter to open completely from its completely closed condition.</li>
+<li>If the size of the gate is 8 feet*10 feet and it has to be opened in exact 6 sec, and diameter of the shaft used is 2.4cm. Calculate the speed of rotation of the shaft.</li>
+<li>If the mass of the garage shutter is 500kg, and shaft used to pull it, has 3cm diameter. Then calculate the torque required to pull the gate.</li>
+<li> If the motor used for garage shutter opening and closing produces a torque of 10N-m and the torque required to pull the garage shutter is 15N-m.Calculate the required gear ratio.</li>
+<li>What are the different types of Gears?</li>
+<li> Try to understand the working Bevel gears?</li>
+<li>What is ‘rack and pinion’ gear system?</li>
+<li>What is a compound gear system? Try to understand its importance?</li>
+<li>What is an idler gear? Try to understand its importance.</li>
+</ol>
+
+   </div>
+          
+      </section>
+	
+
+
+      
+         <section id="experiment-article-section-6">
+   
+                 <div class="icon" id="experiment-article-section-6-icon">
+                               
+      <img src="../images/reference.jpg" style="padding-left: 15px;"></div>
+
+  
+                  <div class="heading" id="experiment-article-section-6-heading">
+     
+                   Reference
+          
+          </div>
+
+             
+       <div class="content" id="experiment-article-section-6-content">
+   
+<ol type="1">
+<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
+<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
+<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
+<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
+<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
+</ol>
+
+
+         </div>
+
+</section>
+
+   
+
+       <section id="experiment-article-section-7">
+   
+                 <div class="icon" id="experiment-article-section-7-icon">
+ 
+       
+            <img src="../images/video.jpg"></div>
+
+    
+                <div class="heading" id="experiment-article-section-7-heading">
+  
+                      Video 
+           
+         </div>
+
+               
+     <div class="content" id="experiment-article-section-7-content">
+ 
+
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/afmuh_3_zpM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+       
+                
+                    </div>
+ 
+          </section>
+     
+         
+
+             
+  
+     <section id="experiment-article-section-8">
+        
+            <div class="icon" id="experiment-article-section-8-icon">
+             
+                  
+      <img src="../images/quiz.jpg"></div>
+                   
+ 
+
+                    <div class="heading" id="experiment-article-section-8-heading">
+ 
+                       Quiz 
+           
+         </div>
+
+                  
+ <div class="content" id="experiment-article-section-8-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+						<div id="slickQuiz">
+        <h1 class="quizName"><!-- where the quiz name goes --></h1>
+
+        <div class="quizArea">
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
+
+                <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index1.html">Get Started</a>
+            </div>
+
+            <!-- where the quiz gets built -->
+        </div>
+
+      
+</div>
+      
+
+                                <form id="form11" method="post" name="form11">
+                                   
+    
+      
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div> 
+  
+                </section>
+
+       
+     </div>
+     
+   </article>
+  
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+      
+
+    
+
+                                           
+
+
+                   
+
+

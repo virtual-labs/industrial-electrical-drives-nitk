@@ -1,0 +1,897 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title></title>
+ 
+
+	<style type="text/css">
+#wrap {
+    width:85%;
+}
+
+
+</style>
+
+</head>
+
+<body>
+  
+ <div id="experiment">
+  
+  
+     <header class="default" id="experiment-header">
+   
+         <div class="logo" id="experiment-header-logo">
+  
+  
+         <img src="../images/logo.jpg"></div>
+
+ 
+
+           <div class="heading" id="experiment-header-heading">
+       
+ 
+     
+          <a href="../index.html">Electrical Lab</a>
+      
+      </div>
+   
+    </header> 
+     <article id="experiment-article">
+      
+
+         <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+    
+        <header class="heading" id="experiment-article-heading">
+           
+Maximum Simultaneous Operations Limiter using PLC
+          </header>  
+         <nav class="default" id="experiment-article-navigation">
+   
+             <ul id="experiment-article-navigation-menu">
+            
+ 
+             </ul>
+         
+   </nav>
+<div id="experiment-article-sections">
+			
+   
+ <section id="experiment-article-section-1">
+              
+      <div class="icon" id="experiment-article-section-1-icon">
+            
+             
+    <img src="../images/theory.jpg"></div>
+
+                   
+ <div class="heading" id=
+"experiment-article-section-1-heading">
+      
+ 
+                 Theory
+          
+          </div>
+
+         
+           <div class="content" id=
+"experiment-article-section-1-content">
+        
+                <div class="divContent"  id="wrap">
+          
+                 
+
+ <p class="MsoNormal" style="line-height: 150%;">
+      
+  
+<font size="5">
+<center>
+<b>
+<u>INTRODUCTION TO LOGIC</u></b>
+</center>
+</font>
+<p>
+A   hardwired   control   circuit   can   be   represented   by   conventional hardwired relay ladder diagram. In any hardwired circuit, there should be electrical continuity in order for the load to energize.</p>
+
+<font size="4"><b><u>Basics about conventional ladder and PLC ladder logic</u></b></font>
+<p>Electrical sequence of operation in hardwired relay circuits can be represented by electrical ladder diagram. Ladder diagram shows the interconnection of field devices. In the ladder diagram, each rung shows how a field device is turned on and also shows how it interacts with next field devices.<br><br>
+The difference between a PLC ladder program and relay ladder rungs is the  continuity.  In  an  electrical  rung  diagram,  there  is  an  electrical continuity only when the current flows from left power rail to right power rail.</p>
+
+<center>
+<img src="../images/LADDER/a.jpg" height=120 width=400></img></center>
+<br>
+<p>Fig (a), shows electrical continuity when SW 1 is closed, as the current flows from L-1 to L-2 energizing the load.<br><br>
+Even though PLC ladder logic was modeled after the conventional relay ladder, there is no electrical continuity in PLC ladder logic. PLC ladder rungs should have logical continuity in order for the output to energize. PLC ladder program uses familiar terms like "rungs" and "normally open" and	"normally  closed"  contacts,  but  the  relay  ladder  logic  has  no electrical continuity between an input and the controlled output.<br><br>
+
+<b>Note</b>:- There  is  no  physical  conductor  that  carries  the  input  signal through to the output.<br><br>
+Each rung in a ladder diagram is a program statement. This program statement consists of a condition or sometimes conditions, along with some type of action. Inputs are the conditions, and the action, or output, is the result of the conditions.<br><br>
+
+As in case of physical wiring hardware devices connected in series or parallel, PLC also combines ladder program instructions in series or parallel. However, rather than working in series or parallel, the PLC
+combines instructions logically using logic operators. Logical operations performed by PLC are nothing but fundamental logic operation, using fundamental logic operators like: AND, OR, and NOT. These operators are used to combine the instructions on a PLC rung so as to make the outcome of each rung either true or false.
+</p>
+
+<font size="4"><b><u>The AND-logic function</u></b></font><br>
+<center>
+<img src="../images/LADDER/b.jpg" height=200 width=400></img></center>
+<p> The series circuit of 2 switches can be looked as an AND logic function. In fig (b) and fig (c), both switch1 and switch2, must be closed to have electrical continuity. W hen  there is  electrical continuity, output  (light1) will energize. Hence the keyword here is AND.<br>
+
+<center>
+<img src="../images/LADDER/c.jpg" height=200 width=400></img></center>
+
+<p>The circuit in fig (b) is represented as a schematic diagram ladder rung in fig (c).<br><br>
+
+When the switch1 and switch2 is closed, electrical continuity is established to L-2. This is shown in fig (d).</p>
+
+<center>
+<img src="../images/LADDER/d.jpg" height=200 width=400></img></center>
+<br>The various possible switch combinations are shown in the truth table below.<br><br>
+
+Table 1: Truth table for AND logic<br>
+<center>
+<img src="../images/LADDER/e.jpg" height=250 width=400></img></center>
+<br>Fig (d) can be written in PLC ladder format as shown in the figure below<br>
+
+<center>
+<img src="../images/LADDER/f.jpg" height=200 width=400></img></center>
+<br>
+Here is the program listing for a typical PLC, if you are entering the program with a handheld programmer.<br><br>
+LOAD I1<br>
+AND I2<br>
+OUT O5
+
+<p>The above instruction tell the processor to load input 1 (I1) into memory, AND it with input 2 (I2) and then output the result to output 5 (O5). The resulting output will be based on the truth table fig (e).</p>
+
+<font size="4"><b><u>The OR-logic function</u></b></font><br>
+<p>In an OR - LOGIC function, the output is true if any input is true. The OR logic also states that if all inputs are true, the output will be true.<br>
+
+<center>
+<img src="../images/LADDER/g.jpg" height=250 width=400></img></center>
+<br>
+
+<p>In the above figure, if switch1 OR switch2 is energized then light1 will energize. Also, if both SW 1 and SW2 are true, the output will also be true.<br><br>
+Fig (g) is converted to PLC ladder rung and it looks like fig (h)<br>
+
+<center>
+<img src="../images/LADDER/h.jpg" height=250 width=400></img></center>
+
+<p>A PLC rung of logic will have normally open or normally closed contacts instead of normally open or normally closed switch symbols. Addresses and instructions are included. Here, in additions to each contact and its address, text information such as SW1, SW2 and L-1 is used and they are  referred  to  as  instruction comments.  These  instruction comments can be added from programming software.</p>
+Table 2: Truth table representing two-input OR function<br>
+
+<center>
+<img src="../images/LADDER/i.jpg" height=250 width=400></img></center><br><br>
+
+<font size="4"><b><u>The NOT-logic function</u></b></font>
+<p>A normally closed relay contact passes power any time when the relay coil  is  not  energized. In  the  same manner, the  normally closed PLC ladder logic instruction will pass power any time when the input status file bit associated is  not a  1. In this condition, the physical hardware input is not sending an input signal into the PLC's input module. The opposite of normally open PLC instruction or contact is the NOT logic. NOT logic can be used in conjunction with AND or OR logic, when a logical 0 in the status file is expected to activate some output device. In other words, NOT logic is used when an input is not energized i.e., 0 in the associated status bit, the output should be energized. Also, when the input is energized i.e., 1 in the associated status bit, the output should not be energized.</p>
+Table 3: Truth table for NOT function<br>
+
+<center>
+<img src="../images/LADDER/j.jpg" height=200 width=450></img></center>
+<br>
+
+<center>
+<img src="../images/LADDER/k.jpg" height=200 width=450></img></center>
+<br>
+
+<font size="4"><u>Analysis of rung 1</u></font>
+<p>When I1 is true i.e. the input status file bit regarding I1 is true (1), the instruction I1 will energize the output. The instruction I1 is considered true when it passes logical continuity. If there is no valid input signal from the field input devices attached to I1's screw terminal on the input module, a logical 0 will be placed in the associated input status file bit. A logical 0 in the input status file will make the normally open input instruction to become false .When normally open instruction is false, it will not pass logical continuity.</p>
+
+<font size="4"><u>Analysis of rung 2</u></font>
+<p>The normally closed instruction works	much like normally closed contacts on a hardware relay. In the fig (k), when the normally closed instruction I2 is true, i.e. the associated status file bit has a valid zero (0), logical	continuity  is established to energize the output. When the associated status file bit has valid 1, the NC instruction goes false and there is no logical continuity and the output is not energized.</p>
+
+<font size="4"><b><u>The PARALLEL NOT- logic function</u></b></font>
+
+<center>
+<img src="../images/LADDER/l.jpg" height=200 width=400></img></center>
+<br>
+PLC ladder rung has 2 input instructions, one normally open and the other one is normally closed. This circuit contains parallel NOT logic. This schematic rung will be true under the conditions shown in the truth table below.<br><br>
+Table 4: Input and output relation of a parallel NOT function.<br>
+
+<center>
+<img src="../images/LADDER/m.jpg" height=250 width=400></img></center>
+<br>
+
+Output L-1 will be energized only when input1 must be true OR input2 must not be true.<br>
+
+<center>
+<img src="../images/LADDER/n.jpg" height=280 width=400></img></center>
+<br>
+
+<font size="4"><b><u>The EXCLUSIVE OR-logic function</u></b></font>
+<br>Table 5: Input and output relation of an exclusive OR function.<br>
+
+<center>
+<img src="../images/LADDER/o.jpg" height=300 width=400></img></center>
+<br>
+Ladder rung of EXOR GATE would look like this<br>
+
+<center>
+<img src="../images/LADDER/p.jpg" height=250 width=400></img></center>
+<br>
+
+<u><b>Case 1</b></u>
+<p>When I1 = 0 and I2 = 0:<br><br>
+Let us analyze main rung. When I1 = 0, the normally open instruction is false and, normally closed instruction is true, but since normally open instruction is false, there is no logical continuity and output cannot be energized. Similar analysis can be done in parallel rung, normally closed instruction will be true and normally open instruction will be false and output is not energized.</p>
+
+<u><b>Case 2</b></u>
+<p>When I1= 0 and I2 = 1:<br><br>
+In main rung, normally open instruction will be false and, normally closed instruction will be true, but since there is no logical continuity this rung logic cannot energize the output. But, in parallel rung, normally closed instruction will be true, as well as normally open instruction will also be true, hence there is logical continuity, and output is energized.</p>
+
+<u><b>Case 3</b></u>
+<p>When I1 = 1 and I2 = 0:<br><br>
+This case is similar to case 2, only the role of inputs are interchanged i.e. here main rung is true and energizes the output and parallel rung is false.</p>
+
+<u><b>Case 4</b></u>
+<p>When both inputs are true, the main ladder rung as well as the parallel ladder rung goes false. In main rung, normally open instruction is true but normally closed instruction is false. Hence, there is no logical continuity.    In parallel ladder rung, normally closed instruction is false and normally open instruction is true, and here also there is no logical continuity. Hence, the output is not energized.</p>
+
+<br><br>
+<font size="5">
+<underline><center>
+<b>
+<u>TIMERS</u></b>
+</center></underline>
+</font>
+
+<p>All PLC’s have timer instructions. Timers are output instructions that are internal to the programmable logic controller. 
+Timers provide timed control of the devices that they activate or de-activate. </p>
+
+ <font size="3"><u>Basic functions of timer </u></font>
+<ul type=disc>
+<li>Timers are used to delay an action.</li>
+<li>Timers are used to run an operation for a predetermined period of time.</li>
+<li>Timers are also used to record the total accumulated time of continuous or intermediate events.</li>
+</ul>
+
+ <font size="4"><b><u>Timer’s instructions  </u></b></font>
+<p>Timers consists of following parts: timer address, preset value, timer base, and accumulated value, as shown in
+ figure below. <br>
+<center>
+<img src="../images/timer/a.jpg" height=100 width=400></img></center>
+<center>fig(a)</center><br>
+In the above figure , term instruction name is, timer on delay ( TON ), timer base is 1.0 seconds, timer address is T4:0, 
+accumulated value of zero(0) and a preset value of 200.<br>
+Each timer instruction has three very useful status bits. These bits are timer enable (E N), timer timing (TT), and timer 
+done(DN). <br>
+There are 3 types of timers: On- delay timer, Off-delay timer, and retentive timer.</p>
+
+ <font size="3"><u>On delay timer</u></font>
+<ul type=disc>
+<li>Use this instruction to program a time delay after instructions become true. </li>
+<li>On – delay timers are used when an action is to begin a specified time after the input becomes true. For example, a 
+certain step in the manufacturing is to begin 45 seconds after a signal is received from a limit switch. The 45- seconds delay
+ is the on-delay timers preset value. </li>
+</ul>
+
+ <font size="3"><u>Off- delay timer </u></font>
+<ul type=disc>
+<li>Off- delay timer instructions is used to program a time delay to begin after rung input goes false. </li>
+<li> As an example, when an external cooling fan on a motor is provided, the fan has to run all the time the motor is running
+ and also for certain time (say 10min) after the motor is turned off. This is a ten minute off- delay timer. The ten-minute
+ timing period begins as soon as the motor is turned off. </li>
+</ul>
+
+ <font size="3"><u>Retentive timer</u></font>
+<ul type=disc>
+<li>Retentive timer is a timer which retains the accumulated value in case of power loss, change of processor mode or rung 
+state going from true to false (rung state transition).</li> 
+<li>Retentive timer can be used to track the running time of a motor for its maintenance purpose. Each time the motor is 
+turned off, the timer will remember the motor’s elapsed running time. The next time the motor is turned on, the time will 
+increase from there. This timer can be reset by using a reset instruction. </li>
+</ul>
+
+ <font size="3"><u>Reset </u></font>
+<ul type=disc>
+<li>This instruction is used to reset the accumulated value of counter or timer. </li>
+<li>It is used to reset a retentive timer’s accumulated value to zero. </li>
+</ul>
+
+ <font size="3"><u>A typical timer element</u></font>
+<p>A timer element is made up of three 16 bit words:</p>
+<ul type=disc>
+<li>Word 0 &#8594; 3 status bits (EN, TT, DN). </li>
+<li>Word 1 &#8594; Preset values. </li>
+<li>Word 2 &#8594; Accumulated value. </li>
+</ul>
+<center>
+<img src="../images/timer/b.jpg" height=50 width=300></img></center>
+<center>fig(b)</center><br>
+
+<u>How do we address a timer? </u><br>
+Addressing a timer is as follows: <br>
+<ol type="1">
+<li>The address format in order to address the timer element is T4:3 <br>
+          Where, T = T identifies this as a timer file. <br>
+                       4 = represents the default timer file 4. <br>
+                     <b> Note</b>: SLC timer can be assigned any unused file from 9 
+                                to 255. <br>
+                      :3 = This is timer three in file 4. There are 256 timers 
+                              available in each file. Timers 0 through 255 are 
+                              available . <br><br>
+</li>
+<li>Preset value of the timer can be addressed in the following way:T4:3.PRE <br>
+           Where, T= identifies this as a timer file. <br>
+                        4= represents the default timer file 4.<br> 
+                       :3= timer 3 in file 4. <br>
+                       . = this point is the word delimiter. It separates the timer number, called the structure, from the subelements.
+                            Here the subelement is PRE, for preset value.<br><br>
+</li>
+<li>Accumulated value of the timer can be addressed as shown below:T4:3.ACC <br>
+            Where, T= identifies this as a timer file. <br>
+                         4= represents the default timer file 4.<br> 
+                        :3= timer 3 in file 4. <br>
+                        . = this point is the word delimiter. It separates the timer number, called the structure, from the subelements.
+                            Here the subelement is ACC, for accumulated value. <br><br>
+</li>
+</ol>          
+                    
+&#8658; The status bits of the timer can be addressed in the following way: 
+<ul type=disc>
+<li>Word zero, bit 13, is the done bit. It is identified as DN.
+  This bit is set when the timer’s accumulated value is 
+   equal to the timer’s preset value. It can be addressed as 
+   T4:3/DN.        </li>  
+<li>Word zero, bit 14, is the timer timing bit. It is identified   
+   as TT. TT is set when the timer is timing. It is 
+   addressed as T4:3/TT. </li>
+<li> Word zero, bit 15, is the timer enable bit. It is identified
+   as EN. EN bit is set whenever the timer is enabled. It is       
+     addressed as T4:3/EN. </li>
+</ul>
+
+ <font size="4"><b><u>The on-delay timer instruction</u></b></font>
+<center>
+<img src="../images/timer/c.jpg" height=400 width=550></img></center>
+<center>fig(c)</center><br>
+The above figure is used to explain the on-delay timer instruction.<br> 
+Here, T4:2 represents timer file 4, timer element 2, preset value is 50, accumulated value is 0 and timer base is 1 second. 
+Input module is in slot 1 and output module is in slot 2. <br>
+
+<ul type=disc>
+<li>As long as the instruction I:1/0 is true, the on-delay timer T4:2 will increment every one second toward its preset value
+ of 50 seconds. The accumulated value displays the current number of seconds that passed. When the accumulated value
+ is equal to the preset value, the timer’s done bit will get energized or set. So when the timer’s done bit gets energized, the
+ rung 003, instruction T4:3/DN becomes true and logical continuity is passed and the output O:2/2 gets energized. </li>
+        
+<li>As long as the I:1/4 is true, the timer instruction is enabled. Hence, rung 000 becomes true and logical continuity is 
+passed and the output O:2/0 is energized. <br>
+Note: An on-delay timer is not retentive in nature.so any loss of continuity to the timer instruction on rung 000 will cause 
+the timer to reset itself to an accumulated value of 0. </li>
+<li>When the timer is timing i.e rung 000 is true and accumulated value is less than preset value, timer timing bit(TT) is true.
+ So the rung 002 becomes true i.e instruction T4:2/TT is true and output instruction O:2/1 is energized.<br>
+Note: As long as the rung 000 is true i.e instruction I:1/0 is true, the timer instruction is considered enabled. The enable bit 
+will be true when the timer timing bit is true. Timer enable bit will be set through the transition from the timer-timing bit to the
+ timer-done bit. Timer enable bit is set as long as there is logical continuity through all input instructions to the timer 
+instruction, no matter the relationship between the preset value and accumulated value. When the rung goes false, the
+ enable bit is reset.  </li>
+</ul> 
+
+
+ <font size="4"><b><u>The off-delay timer instruction</u></b></font>
+<center>
+<img src="../images/timer/d.jpg" height=400 width=550></img></center>
+<center>fig(d)</center><br>
+The above figure is used to explain the off-delay timer instruction. Here, T4:2 represents timer file 4, timer element 2, 
+preset value is 200, accumulated value is 0 and timer base is 1 second. Input module is in slot 1 and output module is in
+ slot 2. <br>
+<ul type=disc>
+<li>As an example, consider an external cooling fan on a motor which has to run all the time when the motor is running and
+ also for 200 seconds after the motor is turned off. For this purpose, we use 200- second off-delay timer. The 200-second
+ timing cycle begins when the motor is turned off. </li>
+<li> When the instruction I:1/0 is true, the motor is turned on i.e instruction O:2/0 becomes true. In other words, rung 000 
+becomes true. When the instruction I:1/0 is true, rung 001 becomes true, which will make the off-delay timer T4:2 enable.
+ So as long as the instruction I:1/0 is true, the timer enable bit, EN, is true and hence, rung 002 become true, which inturn 
+makes the output instruction O:2/1 true. The done bit is set as long as the rung 001 is true i.e the done bit is set when the
+ enable bit is set. So the rung 004 is true. Hence, the external cooling fan is energized i.e instruction O:2/3 is true. So at 
+this point, both motor and external cooling fan are energized. </li>
+<li>When the motor is turned off, i.e the instruction I:1/0 becomes false, the output instruction O:2/0( motor) becomes false 
+and motor is turned off. When rung 001 transitions from true to false, the TOF( off-delay timer) instruction begins timing. 
+The done bit and the external cooling fan( O:2/3) will still remains on, or true, for the preset value of 200 seconds. The time 
+period between the point when the rung becomes false and the point when the 200 seconds preset time expires for T4:2 is
+ called delay after the input goes false, or the off-delay. The timers done bit and its associated output stay true until the
+ off-delay of 200- seconds expires. The time expires when the accumulated value reaches the preset value. When the input
+instruction I:1/0 goes from true to false, the timer enable bit (EN) is reset and timer timing bit(TT) is set. The timer will start
+ timing at this point. The timer timing bit(EN) becomes true whenever the rung transitions from true to false and the 
+accumulated value is less than the preset value.<br> 
+Note: The timer done bit, bit 13, is set when the rung 000 becomes true. It will remain set through the true to false transition
+ and until the accumulated value is equal to the preset value. This bit is commonly used to control the other logic when an
+ output needs to be turned-on or turned-off after its rung has been off for the preset time interval. </li>
+</ul>
+
+ <font size="4"><b><u>The retentive timer instruction</u></b></font>
+<p>Retentive timer instruction is used when we want to retain the accumulated value through power loss, processor mode
+ change, or change in the rung state from true to false. The retentive timer instruction will measure the cumulative time
+ period for which its rung is true. One of the example of retentive timer is that, it can be used to track the running time of a 
+motor for maintenance purpose. The retentive timer is used to track the accumulated time the motor has run. In our example
+, our motor needs maintenance after 3600 seconds or, one hour of running time. Each time the motor is turned off, the timer 
+needs to remember the motors total elapsed running time. The next time the motor is turned on, the timer will increase the
+ accumulated running time from where it is left off. When the total accumulated motor running time has been reached, a 
+maintenance remainder pilot light will be lit. A retentive timer is used in this application.</p>
+<center>
+<img src="../images/timer/e.jpg" height=400 width=550></img></center>
+<center>fig(e)</center><br>
+<p>Here, T4:2 represents timer file 4, timer element 2, preset value is 3600, accumulated value is 0 and timer base is 1
+ second. Input module is in slot 1 and output module is in slot 2. <br>
+The retentive timer on, RTO instruction, behaves similar to the timer-on delay instruction, with exception that when the RTO 
+instruction goes false, it will retain its accumulated value. <br>
+The retentive timer will retain its accumulated value during the following conditions: </p>
+<ul type=disc>
+<li>When its rung goes false.</li> 
+<li>When processor losses power. But, the battery for memory back up must be in good condition. </li> 
+<li>When the processor faults. </li> 
+<li>When the processor operating mode is changed from remote run or remote test to remote program mode.</li> 
+</ul>
+
+ <font size="4"><u>Associated status bit </u></font>
+<p>The timer done bit, bit 13, is set when the accumulated value is equal to the preset value. For our application, the done
+ bit and output O:2/0 could control the maintenance reminder pilot light. <br>
+Timer timing bit(TT), bit 14, is on rung 002. This bit is set anytime the rung conditions are true and the timer times. The timer 
+times whenever the rung is true and the accumulated value is less than the preset value. When the done bit is set, the 
+timer timing bit resets. So in our example, the timer timing bit will be set or true, whenever input I:1/0 is true and as long as
+ the accumulated value is less than the preset value of 3600 seconds. Output O:2/1 will be on or true when the timer is
+ timing between 0 second and 300 seconds. As the done bit is set and O:2/0 turns on, the timer timing bit goes false and
+ O:2/1 turns off. <br>
+The timer enable bit, 15, is set or true , anytime the timer instruction rung 000 is true. As long as the instruction I:1/0 is true, 
+the timer instruction is considered enabled. The enable bit is true when the timer-timing bit is true and it will stay set through
+ the transition from the timer-timing bit to the timer done bit.</p>
+
+ <font size="4"><u>The reset instruction</u></font>
+<p>In order to reset the accumulated value of retentive timer, a reset instruction is used. The address of the reset instruction
+ must match the address of the timer that is to be reset. Only one address is allowed per reset instruction. In rung 004,
+ I:1/1 instruction is used to reset the timer T4:2. This signal comes from a momentary normally open push button field 
+device, connected to input screw terminal 1. Pressing this push button will reset the RTO’s accumulated value back to 0. </p>
+
+<p><b>NOTE</b>: Retentive timer off instruction behaves similar to the timer-off delay with the exception that when the
+ instruction goes from false to true, it will retain , or remember, its accumulated value.</p>
+             
+
+
+
+
+	</p>
+
+<br></div></div>
+                         
+
+
+</section>
+ <section id="experiment-article-section-2">
+                    
+
+<div class="icon" id="experiment-article-section-2-icon">
+                
+
+<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>
+
+              
+   <div class="heading" id=
+"experiment-article-section-2-heading">
+   
+
+                     Procedure
+          
+          </div>
+
+           
+         <div class="content" id=
+"experiment-article-section-2-content">
+            
+            <div class="divContent"  id="wrap">
+                  
+        <p class="MsoNormal" style="line-height: 150%;">
+                      
+      <span lang="EN-IN" style=
+'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+
+
+                                           
+<center><font size="5"><u><b>Aim of the experiment: Maximum simultaneous operation limiting using a PLC </b></u></font>
+<br></center>
+
+<font size="4"><u><b>Theory</u> : </b></font><br>
+<p>In many applications there will be limit on the current drown, in such cases maximum simultaneous operation limiter is required. In our experiment, there are three motors, each with its own start-stop buttons. Any two may run at a time. Also any one may run by itself. </p>
+
+<p><font size="4"><u><b>Aim</u> : </b></font>
+Maximum simultaneous operation limiting using a PLC.  
+</p>
+
+<p><font size="4"><u><b>Procedure</u> : </b></font>In our experiment, there are 3 motors which can be turned ON or OFF through a PLC. But we wish to have maximum simultaneous operation limiting to 2 motors, i.e. any 2 motor may run at a time. Also, any one may run by itself. 
+<br></p>
+Let us see basic diagram of the circuitry:<br>
+
+<center>
+<img src="../images/operationlimiter/PR/1.jpg" height=500 width=450></img><br></center>
+
+<b><font size="4"><u>Ladder Logic design</u> : </font></b>
+<p>Now let us see how the ladder logic of maximum simultaneous operation limiter is implemented using PLC. </p>
+
+
+<b><font size="4"><u>Our assumption</u> : </font></b>
+<ul type=disc>
+<li>All the three motors have their own start and stop push buttons. Both start and stop push buttons are of normally open types. </li><br>
+
+<li>Since inputs and outputs are less, 8-point I/O module is sufficient, where CPU resides in slot 0, input module resides in slot 0, input module resides in slot 1 and output module in   slot 2. </li><br>
+
+<li>Let us assign address for the input and output signals of the PLC: <br><br>
+
+<ul type=square>
+<li>START1 (Normally open push button) = I :1/0</li><br> 
+<li>START2 (Normally open push button) = I :1/1</li><br>
+<li>START3 (Normally open push button) = I :1/2</li><br> 
+<li>STOP1 (Normally open push button) = I :1/3</li><br>
+<li>STOP2 (Normally open push button) = I :1/4</li><br> 
+<li>STOP3 (Normally open push button) = I :1/5</li><br> 
+<li>MOTOR1 = O :2/0</li><br> 
+<li>MOTOR2 = O :2/1</li><br> 
+<li>MOTOR3 = O :2/2 </li><br>
+<li>MTR 1 LED = O :2/3 </li><br>
+<li>MTR 2 LED = O :2/4 </li><br>
+<li>MTR 3 LED = O :2/5</li><br>
+</ul>
+</li>
+</ul>
+
+
+Let us see its ladder logic diagram :<br>
+<center>
+<img src="../images/operationlimiter/PR/2.jpg" height=500 width=600></img><br></center>
+<br>The above ladder diagram has three rung. 
+<br>
+<br>
+
+Let us see the function of each rung individually. <br><br>
+
+
+<font size="4"><u><b>Rung 000:</b></u></font><br>
+<center>
+<img src="../images/operationlimiter/PR/3.jpg" height=250 width=600></img></center>
+
+<p>The above rung is used to energize the MOTOR1. As per our requirement, when the MOTOR1 is energized, then either MOTOR2 or MOTOR3 can be energized. But they both cannot be energized together. Or, in other words, when either MOTOR2 or MOTOR3 is energized, then also MOTOR1 can be activated (energized). <br>
+START1 and STOP1 are normally open push button. Pressing STOP1 push button will de-establish the logical continuity.STOP1 instruction (-|/|-) is true all the time unless STOP1 push button is pressed. The START1 push button used to start the MOTOR1. Since START1 a push button, its signal has to be latched.</p>
+
+Consider the figure below:  
+<center>
+<img src="../images/operationlimiter/PR/4.jpg" height=250 width=600></img></center>
+<p>The above diagram shows the logical continuity established when MOTOR2 is OFF and MOTOR3 is ON. When MOTOR2 is OFF the MOTOR2 instruction (-|/|-) become true and when MOTOR3 is ON, then MOTOR3 instruction (-| |-) become true. So when the START1 push button is pressed, logical continuity is established between left rail and right rail.</p>
+
+Consider the figure below:  
+<center>
+<img src="../images/operationlimiter/PR/5.jpg" height=250 width=600></img></center>
+<p>The above diagram shows the logical continuity established when MOTOR3 is OFF and working condition of MOTOR2 is irrelevant (i.e. can be OFF or ON).As per our requirement, if MOTOR2 is ON then MOTOR3 has to be OFF for the MOTOR1 to run. So this rung is true when either only MOTOR1 is running or when MOTOR1 and MOTOR2 are running together.  </p>
+
+
+
+<font size="4"><u><b>Rung 001:</b></u></font><br>
+<center>
+<img src="../images/operationlimiter/PR/6.jpg" height=250 width=600></img></center>
+
+<p>The above rung is used to energize the MOTOR2. As per our requirement, when the MOTOR2 is energized, then either MOTOR3 or MOTOR1 can be energized. But they both cannot be energized together. Or, in other words, when either MOTOR3 or MOTOR1 is energized, then also MOTOR2 can be activated (energized).  <br>
+ START2 and STOP2 are normally open push button. Pressing STOP2 push button will de-establish the logical continuity.STOP2 instruction (-|/|-) is true all the time unless STOP2 push button is pressed. The START2 push button used to start the MOTOR2. Since START2 a push button, its signal has to be latched.  </p>
+
+Consider the figure below:  
+<center>
+<img src="../images/operationlimiter/PR/7.jpg" height=250 width=600></img></center>
+<p>The above diagram shows the logical continuity established when MOTOR3 is OFF and MOTOR1 is ON. When MOTOR3 is OFF the MOTOR3 instruction (-|/|-) become true and when MOTOR1 is ON, then MOTOR1 instruction (-| |-) become true. So when the START2 push button is pressed, logical continuity is established between left rail and right rail. </p>
+
+Consider the figure below:
+<center>
+<img src="../images/operationlimiter/PR/8.jpg" height=250 width=600></img></center>
+<p>The above diagram shows the logical continuity established when MOTOR1 is OFF and working condition of MOTOR3 is irrelevant (i.e. can be OFF or ON).As per our requirement, if MOTOR3 is ON then MOTOR1 has to be OFF for the MOTOR2 to run. So this rung is true when either only MOTOR2 is running or when MOTOR2 and MOTOR3 are running together. </p>
+
+
+<font size="4"><u><b>Rung 002:</b></u></font><br>
+<center>
+<img src="../images/operationlimiter/PR/9.jpg" height=250 width=600></img></center>
+
+<p>The above rung is used to energize the MOTOR3. As per our requirement, when the MOTOR3 is energized, then either MOTOR1 or MOTOR2 can be energized. But they both cannot be energized together. Or, in other words, when either MOTOR1 or MOTOR2 is energized, then also MOTOR3 can be activated (energized). <br>
+
+START3 and STOP3 are normally open push button. Pressing STOP3 push button will de-establish the logical continuity.STOP3 instruction (-|/|-) is true all the time unless STOP3 push button is pressed. The START3 push button used to start the MOTOR3. Since START3 a push button, its signal has to be latched.  </p>
+
+Consider the figure below:
+<center>
+<img src="../images/operationlimiter/PR/10.jpg" height=250 width=600></img></center>
+
+<p>The above diagram shows the logical continuity established when MOTOR1 is OFF and MOTOR2 is ON. When MOTOR1 is OFF the MOTOR1 instruction (-|/|-) become true and when MOTOR2 is ON, then MOTOR2 instruction (-| |-) become true. So when the START3 push button is pressed, logical continuity is established between left rail and right rail. </p>
+
+Consider the figure below:  
+
+<center>
+<img src="../images/operationlimiter/PR/11.jpg" height=250 width=600></img></center>
+
+<p>The above diagram shows the logical continuity established when MOTOR2 is OFF and working condition of MOTOR1 is irrelevant (i.e. can be OFF or ON).As per our requirement, if MOTOR1 is ON then MOTOR2 has to be OFF for the MOTOR3 to run. So this rung is true when either only MOTOR3 is running or when MOTOR3 and MOTOR1 are running together.  </p>
+
+
+The following screen shots explains the operation :
+<center>
+<img src="../images/operationlimiter/PR/12.jpg" height=500 width=700></img></center>
+<br>The above screen shot represents the condition when MOTOR1 is running.<br><br><br>
+
+<center>
+<img src="../images/operationlimiter/PR/13.jpg" height=500 width=700></img></center>
+<br>The above screen shot represents the condition when MOTOR2  is also running.<br><br><br>
+
+<center>
+<img src="../images/operationlimiter/PR/14.jpg" height=500 width=700></img></center>
+<br>The above screen shot represents the condition when MOTOR1 and MOTOR2 are running and pressing of START3 button,  does not energize MOTOR3, thus achieving Maximum Simultaneous Operation of two motor’s limiting using a PLC.<br>
+<br>
+
+
+                            </span>
+</p>
+
+ 
+  </div>
+</div>    
+                  
+</section>
+  
+
+<section id="experiment-article-section-3">
+             
+       <div class="icon" id="experiment-article-section-3-icon">
+          
+      <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+</div>
+                    
+
+           
+         <div class="heading" id= "experiment-article-section-3-heading">
+    
+                   Self Evaluation
+            
+        </div>
+
+                    
+	   <div class="content" id="experiment-article-section-3-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+							<div id="slickQuiz">
+        <h1 class="quizName"><!-- where the quiz name goes --></h1>
+
+        <div class="quizArea">
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
+
+                <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="indexs.html">Get Started</a>
+            </div>
+
+            <!-- where the quiz gets built -->
+        </div>
+
+      
+</div>
+      
+                                <form id="form11" method="post" name="form11">
+  
+
+
+       
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div> 
+            </section>
+
+
+  
+<section id="experiment-article-section-4">
+  
+       <div class="icon" id="experiment-article-section-4-icon">
+         
+        <img src="../images/simulation.jpg" style="padding-left: 20px;">
+</div>
+
+              
+ <div class="heading" id=
+"experiment-article-section-4-heading">
+     
+                   Simulator
+          
+          </div>
+
+              
+      <div class="content" id="experiment-article-section-4-content">
+        
+            
+      <div class="divContent">
+                      
+
+<p style="text-align: center;">
+	
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/
+shockwave/cabs/flash/swflash.cab#version=6,0,40,0" height="800" width="1300">
+<param name="quality" value="high" />
+<param name="allowScriptAccess" value="always" />
+<param name="allowFullScreen" value="true" />
+<param name="movie" value="../images/operationlimiter.swf" />
+<embed allowfullscreen="true" allowscriptaccess="always" height="800" pluginspage="http://www.macromedia.com/go/
+getflashplayer" quality="high" src="../images/operationlimiter.swf" type="application/x-shockwave-flash" width="1300">
+</embed>
+</object>
+</p></br>
+
+<p style="text-align: center;">
+<a href="../images/operationlimiter.swf" target="_blank"></a></p>   
+ </section>
+
+      
+
+         <section id="experiment-article-section-5">
+    
+               <div class="icon" id="experiment-article-section-5-icon">
+   
+     <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>
+    
+      <div class="heading" id= "experiment-article-section-5-heading">
+      
+                  Assignment
+         
+
+           </div>
+               
+     <div class="content" id="expostperiment-article-section-5-content">
+      
+         
+<ol type="1">
+<li>Write a PLC ladder logic rung diagram for 3 input AND logic function?</li>
+<li> Write a PLC ladder logic rung diagram for 3 input OR logic function?</li>
+<li>Write a PLC ladder logic rung diagram for 3 input NAND logic function?</li>
+<li>Write a PLC ladder logic rung diagram for 3 input NOR logic function?</li>
+</ol>
+
+   </div>
+          
+      </section>
+	
+
+
+      
+         <section id="experiment-article-section-6">
+   
+                 <div class="icon" id="experiment-article-section-6-icon">
+                               
+      <img src="../images/reference.jpg" style="padding-left: 15px;"></div>
+
+  
+                  <div class="heading" id="experiment-article-section-6-heading">
+     
+                   Reference
+          
+          </div>
+
+             
+       <div class="content" id="experiment-article-section-6-content">
+   
+<ol type="1">
+<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
+<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
+<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
+<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
+<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
+</ol>
+
+
+         </div>
+
+</section>
+
+   
+
+       <section id="experiment-article-section-7">
+   
+                 <div class="icon" id="experiment-article-section-7-icon">
+ 
+       
+            <img src="../images/video.jpg"></div>
+
+    
+                <div class="heading" id="experiment-article-section-7-heading">
+  
+                      Video 
+           
+         </div>
+
+               
+     <div class="content" id="experiment-article-section-7-content">
+ 
+
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/ASFCdYofQCU?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+       
+                
+                    </div>
+ 
+          </section>
+     
+         
+
+             
+  
+     <section id="experiment-article-section-8">
+        
+            <div class="icon" id="experiment-article-section-8-icon">
+             
+                  
+      <img src="../images/quiz.jpg"></div>
+                   
+ 
+
+                    <div class="heading" id="experiment-article-section-8-heading">
+ 
+                       Quiz 
+           
+         </div>
+
+                  
+ <div class="content" id="experiment-article-section-8-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+							<div id="slickQuiz">
+        <h1 class="quizName"><!-- where the quiz name goes --></h1>
+
+        <div class="quizArea">
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
+
+                <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index1.html">Get Started</a>
+            </div>
+
+            <!-- where the quiz gets built -->
+        </div>
+
+      
+</div>
+      
+
+                                <form id="form11" method="post" name="form11">
+                                   
+     
+      
+                                </form><br>
+                            </div><br>
+                        </div>
+                    </div> 
+  
+                </section>
+
+       
+     </div>
+     
+   </article>
+  
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
