@@ -21,7 +21,7 @@
                 {
                     "contact": {
                         "alternate_email": "", 
-                        "email": "tahiliani.nitk@gmail.com", 
+                        "email": "tahiliani@nitk.edu.in", 
                         "mobile_number": "", 
                         "office_number": ""
                     }, 
@@ -33,10 +33,13 @@
                     "title": "", 
                     "web": ""
                 }, 
+               
+              
+              
                 {
                     "contact": {
                         "alternate_email": "", 
-                        "email": "tahiliani.nitk@gmail.com", 
+                        "email": "tahiliani.nitk@gmail.com",
                         "mobile_number": "", 
                         "office_number": ""
                     }, 
@@ -44,52 +47,7 @@
                     "institute": "NITK Surathkal", 
                     "name": "Mohit tahiliani", 
                     "organization": "", 
-                    "role": "Lab Developer", 
-                    "title": "", 
-                    "web": ""
-                }, 
-               {
-                    "contact": {
-                        "alternate_email": "", 
-                        "email": "tahiliani.nitk@gmail.com", 
-                        "mobile_number": "", 
-                        "office_number": ""
-                    }, 
-                    "department": "", 
-                    "institute": "NITK Surathkal", 
-                    "name": "Mohit tahiliani", 
-                    "organization": "", 
-                    "role": "Lab Developer", 
-                    "title": "", 
-                    "web": ""
-                },  
-                {
-                    "contact": {
-                        "alternate_email": "", 
-                        "email": "tahiliani.nitk@gmail.com", 
-                        "mobile_number": "", 
-                        "office_number": ""
-                    }, 
-                    "department": "", 
-                    "institute": "NITK Surathkal", 
-                    "name": "Mohit tahiliani", 
-                    "organization": "", 
-                    "role": "Lab Developer", 
-                    "title": "", 
-                    "web": ""
-                }, 
-                 {
-                    "contact": {
-                        "alternate_email": "", 
-                        "email": "tahiliani.nitk@gmail.com", 
-                        "mobile_number": "", 
-                        "office_number": ""
-                    }, 
-                    "department": "", 
-                    "institute": "NITK Surathkal", 
-                    "name": "Mohit tahiliani", 
-                    "organization": "", 
-                    "role": "Lab Developer", 
+                    "role": "Lab RA", 
                     "title": "", 
                     "web": ""
                 }
