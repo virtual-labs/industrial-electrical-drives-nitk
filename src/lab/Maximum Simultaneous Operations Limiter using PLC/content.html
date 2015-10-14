@@ -2,91 +2,41 @@
 
 <html>
 <head>
-
     <title></title>
- 
-
 	<style type="text/css">
 #wrap {
     width:85%;
 }
-
-
 </style>
-
 </head>
-
-<body>
-  
- <div id="experiment">
-  
-  
-     <header class="default" id="experiment-header">
-   
-         <div class="logo" id="experiment-header-logo">
-  
-  
+<body>  
+ <div id="experiment">  
+     <header class="default" id="experiment-header">   
+         <div class="logo" id="experiment-header-logo">    
          <img src="../images/logo.jpg"></div>
-
- 
-
            <div class="heading" id="experiment-header-heading">
-       
- 
-     
-          <a href="../index.html">Electrical Lab</a>
-      
-      </div>
-   
+ <a href="../index.html">Electrical Lab</a>
+       </div>   
     </header> 
      <article id="experiment-article">
-      
-
-         <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
-
-    
-        <header class="heading" id="experiment-article-heading">
-           
+         <div class="breadcrumb" id="experiment-article-breadcrumb"></div>    
+        <header class="heading" id="experiment-article-heading">           
 Maximum Simultaneous Operations Limiter using PLC
           </header>  
-         <nav class="default" id="experiment-article-navigation">
-   
-             <ul id="experiment-article-navigation-menu">
-            
- 
-             </ul>
-         
+         <nav class="default" id="experiment-article-navigation">   
+             <ul id="experiment-article-navigation-menu">    
+             </ul>         
    </nav>
-<div id="experiment-article-sections">
-			
-   
- <section id="experiment-article-section-1">
-              
-      <div class="icon" id="experiment-article-section-1-icon">
-            
-             
-    <img src="../images/theory.jpg"></div>
-
-                   
- <div class="heading" id=
-"experiment-article-section-1-heading">
-      
- 
-                 Theory
-          
-          </div>
-
-         
-           <div class="content" id=
-"experiment-article-section-1-content">
-        
-                <div class="divContent"  id="wrap">
-          
-                 
-
- <p class="MsoNormal" style="line-height: 150%;">
-      
-  
+<div id="experiment-article-sections">   
+ <section id="experiment-article-section-1">              
+      <div class="icon" id="experiment-article-section-1-icon">    
+             <img src="../images/theory.jpg"></div>                   
+ <div class="heading" id="experiment-article-section-1-heading">
+  Theory
+ </div>        
+<div class="content" id="experiment-article-section-1-content">
+                        <div class="divContent"  id="wrap">      
+  <p class="MsoNormal" style="line-height: 150%;">      
 <font size="5">
 <center>
 <b>
@@ -444,51 +394,23 @@ device, connected to input screw terminal 1. Pressing this push button will rese
 
 <p><b>NOTE</b>: Retentive timer off instruction behaves similar to the timer-off delay with the exception that when the
  instruction goes from false to true, it will retain , or remember, its accumulated value.</p>
-             
-
-
-
-
-	</p>
+</p>
 
 <br></div></div>
-                         
-
-
 </section>
- <section id="experiment-article-section-2">
-                    
-
-<div class="icon" id="experiment-article-section-2-icon">
-                
-
-<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>
-
-              
-   <div class="heading" id=
-"experiment-article-section-2-heading">
-   
-
-                     Procedure
-          
-          </div>
-
-           
-         <div class="content" id=
-"experiment-article-section-2-content">
-            
-            <div class="divContent"  id="wrap">
-                  
-        <p class="MsoNormal" style="line-height: 150%;">
-                      
-      <span lang="EN-IN" style=
-'font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
-
-
-                                           
+ <section id="experiment-article-section-2">                   
+<div class="icon" id="experiment-article-section-2-icon">               
+<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>              
+   <div class="heading" id="experiment-article-section-2-heading">
+ Procedure
+  </div>           
+ <div class="content" id="experiment-article-section-2-content">
+ <div class="divContent"  id="wrap">                  
+        <p class="MsoNormal" style="line-height: 150%;">                      
+      <span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
+                                     
 <center><font size="5"><u><b>Aim of the experiment: Maximum simultaneous operation limiting using a PLC </b></u></font>
 <br></center>
-
 <font size="4"><u><b>Theory</u> : </b></font><br>
 <p>In many applications there will be limit on the current drown, in such cases maximum simultaneous operation limiter is required. In our experiment, there are three motors, each with its own start-stop buttons. Any two may run at a time. Also any one may run by itself. </p>
 
@@ -532,7 +454,6 @@ Let us see basic diagram of the circuitry:<br>
 </li>
 </ul>
 
-
 Let us see its ladder logic diagram :<br>
 <center>
 <img src="../images/operationlimiter/PR/2.jpg" height=500 width=600></img><br></center>
@@ -541,7 +462,6 @@ Let us see its ladder logic diagram :<br>
 <br>
 
 Let us see the function of each rung individually. <br><br>
-
 
 <font size="4"><u><b>Rung 000:</b></u></font><br>
 <center>
@@ -559,8 +479,6 @@ Consider the figure below:
 <center>
 <img src="../images/operationlimiter/PR/5.jpg" height=250 width=600></img></center>
 <p>The above diagram shows the logical continuity established when MOTOR3 is OFF and working condition of MOTOR2 is irrelevant (i.e. can be OFF or ON).As per our requirement, if MOTOR2 is ON then MOTOR3 has to be OFF for the MOTOR1 to run. So this rung is true when either only MOTOR1 is running or when MOTOR1 and MOTOR2 are running together.  </p>
-
-
 
 <font size="4"><u><b>Rung 001:</b></u></font><br>
 <center>
@@ -615,44 +533,27 @@ The following screen shots explains the operation :
 <img src="../images/operationlimiter/PR/14.jpg" height=500 width=700></img></center>
 <br>The above screen shot represents the condition when MOTOR1 and MOTOR2 are running and pressing of START3 button,  does not energize MOTOR3, thus achieving Maximum Simultaneous Operation of two motor’s limiting using a PLC.<br>
 <br>
-
-
-                            </span>
+</span>
 </p>
 
- 
-  </div>
-</div>    
-                  
+ </div>
+</div>                     
 </section>
-  
 
-<section id="experiment-article-section-3">
-             
-       <div class="icon" id="experiment-article-section-3-icon">
-          
+<section id="experiment-article-section-3">             
+       <div class="icon" id="experiment-article-section-3-icon">          
       <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
 </div>
-                    
-
-           
-         <div class="heading" id= "experiment-article-section-3-heading">
-    
+ <div class="heading" id= "experiment-article-section-3-heading">    
                    Self Evaluation
-            
-        </div>
-
-                    
+                    </div>                    
 	   <div class="content" id="experiment-article-section-3-content">
                         <div class="divQuiz">
                             <div id="displayQuiz">
 							<div id="slickQuiz">
         <h1 class="quizName"><!-- where the quiz name goes --></h1>
-
         <div class="quizArea">
             <div class="quizHeader">
-                <!-- where the quiz main copy goes -->
-
                 <a style="margin-top: 40px;float: left;
 width: auto;
 padding: 5px 15px;
@@ -662,71 +563,39 @@ border: 1px solid #FFF;
 border-radius: 5px;
 text-decoration: none;" href="indexs.html">Get Started</a>
             </div>
-
-            <!-- where the quiz gets built -->
-        </div>
-
-      
+        </div>     
 </div>
-      
-                                <form id="form11" method="post" name="form11">
-  
+<form id="form11" method="post" name="form11">
+  </form><br>
+   </div><br>
+ </div>
+  </div> 
+</section>
 
-
-       
-                                </form><br>
-                            </div><br>
-                        </div>
-                    </div> 
-            </section>
-
-
-  
-<section id="experiment-article-section-4">
-  
-       <div class="icon" id="experiment-article-section-4-icon">
-         
+<section id="experiment-article-section-4">  
+       <div class="icon" id="experiment-article-section-4-icon">         
         <img src="../images/simulation.jpg" style="padding-left: 20px;">
-</div>
-
-              
- <div class="heading" id=
-"experiment-article-section-4-heading">
-     
-                   Simulator
-          
-          </div>
-
-
+</div>              
+ <div class="heading" id="experiment-article-section-4-heading">
+                        Simulator
+                    </div>
  <p style="text-align: center;">  
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
  height="600" width="800">
 <param name="quality" value="high" />
 <param name="movie" value="../images/operationlimiter.swf" />
 <embed height="600" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="../images/operationlimiter.swf" 
-type="application/x-shockwave-flash" width="800"></embed></object>
-					  
-</p></br>
- 
- </section>
+type="application/x-shockwave-flash" width="800"></embed></object>	  
+</p></br> 
+ </section     
 
-      
-
-         <section id="experiment-article-section-5">
-    
-               <div class="icon" id="experiment-article-section-5-icon">
-   
-     <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>
-    
-      <div class="heading" id= "experiment-article-section-5-heading">
-      
-                  Assignment
-         
-
-           </div>
-               
-     <div class="content" id="expostperiment-article-section-5-content">
-      
+         <section id="experiment-article-section-5">    
+               <div class="icon" id="experiment-article-section-5-icon">   
+     <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>    
+      <div class="heading" id= "experiment-article-section-5-heading">      
+                  Assignment      
+           </div>               
+     <div class="content" id="expostperiment-article-section-5-content">    
          
 <ol type="1">
 <li>Write a PLC ladder logic rung diagram for 3 input AND logic function?</li>
@@ -734,30 +603,16 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 <li>Write a PLC ladder logic rung diagram for 3 input NAND logic function?</li>
 <li>Write a PLC ladder logic rung diagram for 3 input NOR logic function?</li>
 </ol>
-
-   </div>
-          
+   </div>          
       </section>
-	
-
-
-      
-         <section id="experiment-article-section-6">
-   
+    
+         <section id="experiment-article-section-6">   
                  <div class="icon" id="experiment-article-section-6-icon">
-                               
-      <img src="../images/reference.jpg" style="padding-left: 15px;"></div>
-
-  
-                  <div class="heading" id="experiment-article-section-6-heading">
-     
-                   Reference
-          
-          </div>
-
-             
-       <div class="content" id="experiment-article-section-6-content">
-   
+      <img src="../images/reference.jpg" style="padding-left: 15px;"></div>  
+                  <div class="heading" id="experiment-article-section-6-heading">     
+                   Reference          
+          </div>             
+       <div class="content" id="experiment-article-section-6-content">   
 <ol type="1">
 <li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
 <li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
@@ -765,62 +620,26 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 <li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
 <li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
 </ol>
+  </div>
+</section>  
 
-
-         </div>
-
-</section>
-
-   
-
-       <section id="experiment-article-section-7">
-   
-                 <div class="icon" id="experiment-article-section-7-icon">
- 
-       
-            <img src="../images/video.jpg"></div>
-
-    
-                <div class="heading" id="experiment-article-section-7-heading">
-  
-                      Video 
-           
-         </div>
-
-               
+       <section id="experiment-article-section-7">   
+                 <div class="icon" id="experiment-article-section-7-icon">       
+            <img src="../images/video.jpg"></div>    
+                <div class="heading" id="experiment-article-section-7-heading">  
+                      Video            
+         </div>               
      <div class="content" id="experiment-article-section-7-content">
- 
-
-
 <iframe width="800" height="600" src="https://www.youtube.com/embed/ASFCdYofQCU?rel=0" frameborder="0" allowfullscreen></iframe>
-
-
-       
-                
-                    </div>
- 
-          </section>
-     
-         
-
-             
-  
-     <section id="experiment-article-section-8">
-        
-            <div class="icon" id="experiment-article-section-8-icon">
-             
-                  
-      <img src="../images/quiz.jpg"></div>
-                   
- 
-
+ </div>
+  </section>  
+  <section id="experiment-article-section-8">        
+            <div class="icon" id="experiment-article-section-8-icon"> 
+      <img src="../images/quiz.jpg"></div>                
                     <div class="heading" id="experiment-article-section-8-heading">
- 
-                       Quiz 
-           
-         </div>
-
-                  
+                        Quiz 
+                    </div>
+                 
  <div class="content" id="experiment-article-section-8-content">
                         <div class="divQuiz">
                             <div id="displayQuiz">
@@ -829,9 +648,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 
         <div class="quizArea">
             <div class="quizHeader">
-                <!-- where the quiz main copy goes -->
-
-                <a style="margin-top: 40px;float: left;
+                   <a style="margin-top: 40px;float: left;
 width: auto;
 padding: 5px 15px;
 color: #FFF;
@@ -840,34 +657,18 @@ border: 1px solid #FFF;
 border-radius: 5px;
 text-decoration: none;" href="index1.html">Get Started</a>
             </div>
-
-            <!-- where the quiz gets built -->
-        </div>
-
-      
+        </div>      
 </div>
-      
-
-                                <form id="form11" method="post" name="form11">
-                                   
-     
-      
-                                </form><br>
-                            </div><br>
-                        </div>
-                    </div> 
-  
-                </section>
-
-       
-     </div>
-     
-   </article>
-  
+<form id="form11" method="post" name="form11">
+ </form><br>
+     </div><br>
+   </div>
+ </div> 
+ </section>       
+     </div>     
+   </article>  
   </div>
-
 </body>
-
 </html>
 
 
