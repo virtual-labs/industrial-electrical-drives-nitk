@@ -60,7 +60,7 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:Timer-done bit</p>"  // no comma here
         },
 				  		{ // Question 5
-            "q": "In timer file 12, timer 5’s timer timing bit is addressed as ________   ",
+            "q": "In timer file 12, timer 5's timer timing bit is addressed as ________   ",
             "a": [
                   {"option": "T5:12/TT",    "correct": false},
                 {"option": "T12:5/TT",     "correct": true},

@@ -147,7 +147,7 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:36N-m</p>" // no comma here
         },
        		{ // Question 12 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "<br><img src=\"../images/garage/q1.jpg\"\height=250 width=250/>The above figure represents a micro switch (limit switch), it has one normally open connection (N.O) and one normally closed connection (N.C). The connection between terminal1 and terminal2 is ________ and connection between terminal1 and terminal3 is _________.",
+            "q": "<br><img src=\"../images/garage/q1.gif\"\height=250 width=250/>The above figure represents a micro switch (limit switch), it has one normally open connection (N.O) and one normally closed connection (N.C). The connection between terminal1 and terminal2 is ________ and connection between terminal1 and terminal3 is _________.",
             "a": [
                 {"option": "Normally open, normally closed",               "correct": true},
                 {"option": "Normally closed, normally open",   "correct": false},

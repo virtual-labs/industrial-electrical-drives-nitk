@@ -26,20 +26,20 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:Conventional relay ladder logic has electrical continuity and PLC ladder logic has logical continuity</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "<br><img src=\"../images/LADDER/QUIZ/2.jpg\"\height=200 width=400/><br>The above circuit can be represented by the following PLC ladder rung diagram",
+            "q": "<br><img src=\"../images/LADDER/QUIZ/2.gif\"\height=200 width=400/><br>The above circuit can be represented by the following PLC ladder rung diagram",
             "a": [
-                {"option": "<br><img src=\"../images/LADDER/QUIZ/2a.jpg\"\height=120 width=300/>",               "correct": false},
-                {"option": "<br><img src=\"../images/LADDER/QUIZ/2b.jpg\"\height=120 width=300/>",   "correct": false},
-                {"option": "<br><img src=\"../images/LADDER/QUIZ/2c.jpg\"\height=120 width=300/>",               "correct": false},
-				{"option": "<br><img src=\"../images/LADDER/QUIZ/2d.jpg\"\height=120 width=300/>",               "correct": true}
+                {"option": "<br><img src=\"../images/LADDER/QUIZ/2a.gif\"\height=120 width=300/>",               "correct": false},
+                {"option": "<br><img src=\"../images/LADDER/QUIZ/2b.gif\"\height=120 width=300/>",   "correct": false},
+                {"option": "<br><img src=\"../images/LADDER/QUIZ/2c.gif\"\height=120 width=300/>",               "correct": false},
+				{"option": "<br><img src=\"../images/LADDER/QUIZ/2d.gif\"\height=120 width=300/>",               "correct": true}
                 //{"option": "Eggs, fruit, toast, and milk", "correct": true} // no comma here
             ],
          
-            "correct": "<p><span>Right answer</span> Ans:<br><img src=\"../images/LADDER/QUIZ/2d.jpg\"\height=120 width=300/></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,Ans:<br><img src=\"../images/LADDER/QUIZ/2d.jpg\"\height=120 width=300/></p>" // no comma here
+            "correct": "<p><span>Right answer</span> Ans:<br><img src=\"../images/LADDER/QUIZ/2d.gif\"\height=120 width=300/></p>",
+            "incorrect": "<p><span>wrong</span> It's wrong,Ans:<br><img src=\"../images/LADDER/QUIZ/2d.gif\"\height=120 width=300/></p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "<br><img src=\"../images/LADDER/QUIZ/3.jpg\"\height=150 width=400/><br>The above figure represents ",
+            "q": "<br><img src=\"../images/LADDER/QUIZ/3.gif\"\height=150 width=400/><br>The above figure represents ",
             "a": [
                 {"option": "NOR function",           "correct": false},
                 {"option": "NOT function",                  "correct": false},
@@ -50,19 +50,19 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:OR function</p>" // no comma here
         },
         { // Question 4
-            "q": "<br><img src=\"../images/LADDER/QUIZ/4.jpg\"\height=150 width=400/><br>For ladder rung shown above, choose the correct input and output status file bit condition ",
+            "q": "<br><img src=\"../images/LADDER/QUIZ/4.gif\"\height=150 width=400/><br>For ladder rung shown above, choose the correct input and output status file bit condition ",
             "a": [
-                {"option": "<br><img src=\"../images/LADDER/QUIZ/4a.jpg\"\height=100 width=300/>",    "correct": false},
-                {"option": "<br><img src=\"../images/LADDER/QUIZ/4b.jpg\"\height=100 width=300/>",     "correct": false},
+                {"option": "<br><img src=\"../images/LADDER/QUIZ/4a.gif\"\height=100 width=300/>",    "correct": false},
+                {"option": "<br><img src=\"../images/LADDER/QUIZ/4b.gif\"\height=100 width=300/>",     "correct": false},
 				  {"option": "Both are true",  "correct": false},
-                { "option": "Only <br><img src=\"../images/LADDER/QUIZ/4a.jpg\"\height=100 width=300/> is true", "correct": true }
+                { "option": "Only <br><img src=\"../images/LADDER/QUIZ/4a.gif\"\height=100 width=300/> is true", "correct": true }
                // {"option": "1291",   "correct": false} // no comma here
             ],
-                "correct": "<p><span>Right answer</span> Ans:Only <br><img src=\"../images/LADDER/QUIZ/4a.jpg\"\height=100 width=300/> is true</p>",
-                "incorrect": "<p><span>wrong</span> It's wrong,Ans:Only <br><img src=\"../images/LADDER/QUIZ/4a.jpg\"\height=100 width=300/> is true</p>"  // no comma here
+                "correct": "<p><span>Right answer</span> Ans:Only <br><img src=\"../images/LADDER/QUIZ/4a.gif\"\height=100 width=300/> is true</p>",
+                "incorrect": "<p><span>wrong</span> It's wrong,Ans:Only <br><img src=\"../images/LADDER/QUIZ/4a.gif\"\height=100 width=300/> is true</p>"  // no comma here
         },
 		{ // Question 5
-            "q": "<br><img src=\"../images/LADDER/QUIZ/5.jpg\"\height=150 width=400/><br>The above figure represents ",
+            "q": "<br><img src=\"../images/LADDER/QUIZ/5.gif\"\height=150 width=400/><br>The above figure represents ",
             "a": [
                 {"option": "OR function",    "correct": false},
                 {"option": "NOR function",     "correct": true},
@@ -75,7 +75,7 @@ var quizJSON = {
         },
 		  
 		  		{ // Question 6
-            "q": "<br><img src=\"../images/LADDER/QUIZ/6.jpg\"\height=150 width=400/><br>The above figure represents ",
+            "q": "<br><img src=\"../images/LADDER/QUIZ/6.gif\"\height=150 width=400/><br>The above figure represents ",
             "a": [
                 {"option": "XNOR function",    "correct": true},
                 {"option": "XOR function",     "correct": false},
@@ -87,7 +87,7 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:XNOR function</p>"  // no comma here
         },
 				{ // Question 7
-            "q": "<br><img src=\"../images/LADDER/QUIZ/7.jpg\"\height=150 width=400/><br>The above figure represents ",
+            "q": "<br><img src=\"../images/LADDER/QUIZ/7.gif\"\height=150 width=400/><br>The above figure represents ",
             "a": [
                 {"option": "XNOR function",    "correct": false},
                 {"option": "NOR function",     "correct": false},
@@ -99,7 +99,7 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:XOR function</p>"  // no comma here
         },
 		  		{ // Question 8
-            "q": "<br><img src=\"../images/LADDER/QUIZ/8.jpg\"\height=150 width=400/><br>The above figure represents ",
+            "q": "<br><img src=\"../images/LADDER/QUIZ/8.gif\"\height=150 width=400/><br>The above figure represents ",
             "a": [
                 {"option": "XNOR function",    "correct": false},
                 {"option": "OR function",     "correct": false},
@@ -111,29 +111,29 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:NAND function</p>"  // no comma here
         },
 		  		{ // Question 9
-            "q": "<br><img src=\"../images/LADDER/QUIZ/9.jpg\"\height=180 width=450/><br>For ladder rung shown above, choose the correct input and output status file bit condition  ",
+            "q": "<br><img src=\"../images/LADDER/QUIZ/9.gif\"\height=180 width=450/><br>For ladder rung shown above, choose the correct input and output status file bit condition  ",
             "a": [
-                  {"option": "<br><img src=\"../images/LADDER/QUIZ/9a.jpg\"\height=100 width=300/>",    "correct": false},
-                {"option": "<br><img src=\"../images/LADDER/QUIZ/9b.jpg\"\height=100 width=300/>",     "correct": false},
-				     {"option": "<br><img src=\"../images/LADDER/QUIZ/9c.jpg\"\height=100 width=300/>",    "correct": true},
+                  {"option": "<br><img src=\"../images/LADDER/QUIZ/9a.gif\"\height=100 width=300/>",    "correct": false},
+                {"option": "<br><img src=\"../images/LADDER/QUIZ/9b.gif\"\height=100 width=300/>",     "correct": false},
+				     {"option": "<br><img src=\"../images/LADDER/QUIZ/9c.gif\"\height=100 width=300/>",    "correct": true},
                 {"option": "None",     "correct": false}
                    // {"option": "1291",   "correct": false} // no comma here
             ],
-            "correct": "<p><span>Right answer</span> Ans:<br><img src=\"../images/LADDER/QUIZ/9c.jpg\"\height=100 width=300/></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,Ans:<br><img src=\"../images/LADDER/QUIZ/9c.jpg\"\height=100 width=300/></p>"  // no comma here
+            "correct": "<p><span>Right answer</span> Ans:<br><img src=\"../images/LADDER/QUIZ/9c.gif\"\height=100 width=300/></p>",
+            "incorrect": "<p><span>wrong</span> It's wrong,Ans:<br><img src=\"../images/LADDER/QUIZ/9c.gif\"\height=100 width=300/></p>"  // no comma here
         },
 		  
 		  
         { // Question 10
-           "q": "<br><img src=\"../images/LADDER/QUIZ/10.jpg\"\height=180 width=450/><br>For ladder rung shown above, choose the correct input and output status file bit condition  ",
+           "q": "<br><img src=\"../images/LADDER/QUIZ/10.gif\"\height=180 width=450/><br>For ladder rung shown above, choose the correct input and output status file bit condition  ",
             "a": [
-                  {"option": "<br><img src=\"../images/LADDER/QUIZ/10a.jpg\"\height=100 width=300/>",    "correct": false},
-                {"option": "<br><img src=\"../images/LADDER/QUIZ/10b.jpg\"\height=100 width=300/>",     "correct": false},
-				     {"option": "<br><img src=\"../images/LADDER/QUIZ/10c.jpg\"\height=100 width=300/>",    "correct": false},
-                { "option": "<br><img src=\"../images/LADDER/QUIZ/10a.jpg\"\height=100 width=300/> and <br><img src=\"../images/LADDER/QUIZ/10b.jpg\"\height=100 width=300/> both are true", "correct": true }
+                  {"option": "<br><img src=\"../images/LADDER/QUIZ/10a.gif\"\height=100 width=300/>",    "correct": false},
+                {"option": "<br><img src=\"../images/LADDER/QUIZ/10b.gif\"\height=100 width=300/>",     "correct": false},
+				     {"option": "<br><img src=\"../images/LADDER/QUIZ/10c.gif\"\height=100 width=300/>",    "correct": false},
+                { "option": "<br><img src=\"../images/LADDER/QUIZ/10a.gif\"\height=100 width=300/> and <br><img src=\"../images/LADDER/QUIZ/10b.gif\"\height=100 width=300/> both are true", "correct": true }
             ],
-                "correct": "<p><span>Right answer</span> Ans:<br><img src=\"../images/LADDER/QUIZ/10a.jpg\"\height=100 width=300/> and <br><img src=\"../images/LADDER/QUIZ/10b.jpg\"\height=100 width=300/> both are true</p>",
-                "incorrect": "<p><span>wrong</span> It's wrong,Ans:<br><img src=\"../images/LADDER/QUIZ/10a.jpg\"\height=100 width=300/> and <br><img src=\"../images/LADDER/QUIZ/10b.jpg\"\height=100 width=300/> both are true</p>"  // no comma here
+                "correct": "<p><span>Right answer</span> Ans:<br><img src=\"../images/LADDER/QUIZ/10a.gif\"\height=100 width=300/> and <br><img src=\"../images/LADDER/QUIZ/10b.gif\"\height=100 width=300/> both are true</p>",
+                "incorrect": "<p><span>wrong</span> It's wrong,Ans:<br><img src=\"../images/LADDER/QUIZ/10a.gif\"\height=100 width=300/> and <br><img src=\"../images/LADDER/QUIZ/10b.gif\"\height=100 width=300/> both are true</p>"  // no comma here
                 },
 				  		{ // Question 11
             "q": "__________ instruction is used to program a time delay to begin after rung input goes false. ",
@@ -192,7 +192,7 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:T11:6/EN</p>"  // no comma here
         },
         { // Question 16
-           "q": "<br><img src=\"../images/mtrfwd/q1.jpg\"\height=130 width=350/><br>In the figure, _________ is set when the rung 000 becomes true. It will remain set through the true to false transition and until the accumulated value is equal to the preset value  ",
+           "q": "<br><img src=\"../images/mtrfwd/q1.gif\"\height=130 width=350/><br>In the figure, _________ is set when the rung 000 becomes true. It will remain set through the true to false transition and until the accumulated value is equal to the preset value  ",
             "a": [
                     {"option": "Timer-timing bit",    "correct": false},
                 {"option": "Timer-enable bit",     "correct": false},

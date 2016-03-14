@@ -12,7 +12,7 @@
  <div id="experiment">    
      <header class="default" id="experiment-header">   
          <div class="logo" id="experiment-header-logo">  
-           <img src="../images/logo.jpg"></div>
+           <img src="../images/logo.gif"></div>
            <div class="heading" id="experiment-header-heading">     
           <a href="../index.html">Electrical Lab</a>      
       </div>   
@@ -30,7 +30,7 @@ PLC RETENTIVE TIMER-ON INSTRUCTION
    <section id="experiment-article-section-1">
            
       <div class="icon" id="experiment-article-section-1-icon">          
-                 <img src="../images/theory.jpg"></div>                   
+                 <img src="../images/theory.gif"></div>                   
  <div class="heading" id="experiment-article-section-1-heading">
    Theory          
           </div>         
@@ -58,7 +58,7 @@ Timers provide timed control of the devices that they activate or de-activate. <
 <p>Timers consists of following parts: timer address, preset value, timer base, and accumulated value, as shown in
  figure below. <br>
 <center>
-<img src="../images/timer/a.jpg" height=100 width=400></img></center>
+<img src="../images/timer/a.gif" height=100 width=400></img></center>
 <center>fig(a)</center><br>
 In the above figure , term instruction name is, timer on delay ( TON ), timer base is 1.0 seconds, timer address is T4:0, 
 accumulated value of zero(0) and a preset value of 200.<br>
@@ -105,7 +105,7 @@ increase from there. This timer can be reset by using a reset instruction. </li>
 <li>Word 2 &#8594; Accumulated value. </li>
 </ul>
 <center>
-<img src="../images/timer/b.jpg" height=50 width=300></img></center>
+<img src="../images/timer/b.gif" height=50 width=300></img></center>
 <center>fig(b)</center><br>
 
 <u>How do we address a timer? </u><br>
@@ -152,7 +152,7 @@ Addressing a timer is as follows: <br>
 
  <font size="4"><b><u>The on-delay timer instruction</u></b></font>
 <center>
-<img src="../images/timer/c.jpg" height=400 width=550></img></center>
+<img src="../images/timer/c.gif" height=400 width=550></img></center>
 <center>fig(c)</center><br>
 The above figure is used to explain the on-delay timer instruction.<br> 
 Here, T4:2 represents timer file 4, timer element 2, preset value is 50, accumulated value is 0 and timer base is 1 second. 
@@ -180,7 +180,7 @@ instruction, no matter the relationship between the preset value and accumulated
 
  <font size="4"><b><u>The off-delay timer instruction</u></b></font>
 <center>
-<img src="../images/timer/d.jpg" height=400 width=550></img></center>
+<img src="../images/timer/d.gif" height=400 width=550></img></center>
 <center>fig(d)</center><br>
 The above figure is used to explain the off-delay timer instruction. Here, T4:2 represents timer file 4, timer element 2, 
 preset value is 200, accumulated value is 0 and timer base is 1 second. Input module is in slot 1 and output module is in
@@ -219,7 +219,7 @@ needs to remember the motors total elapsed running time. The next time the motor
  accumulated running time from where it is left off. When the total accumulated motor running time has been reached, a 
 maintenance remainder pilot light will be lit. A retentive timer is used in this application.</p>
 <center>
-<img src="../images/timer/e.jpg" height=400 width=550></img></center>
+<img src="../images/timer/e.gif" height=400 width=550></img></center>
 <center>fig(e)</center><br>
 <p>Here, T4:2 represents timer file 4, timer element 2, preset value is 3600, accumulated value is 0 and timer base is 1
  second. Input module is in slot 1 and output module is in slot 2. <br>
@@ -263,7 +263,7 @@ device, connected to input screw terminal 1. Pressing this push button will rese
 
 <div class="icon" id="experiment-article-section-2-icon">               
 
-<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>
+<img src="../images/procedure.gif" style="padding-left: 20px;"></div>
               
    <div class="heading" id="experiment-article-section-2-heading">
        Procedure          
@@ -277,7 +277,7 @@ device, connected to input screw terminal 1. Pressing this push button will rese
 <p><b>Procedure</b>: In our experiment, our motor needs a maintenance after 50 seconds (just for demonstration purpose) of running time. So a retentive timer of 50 seconds is used. <br>
 Let us see the basic diagram of the circuitry:<br>
 
-<center><img src="../images/ronpro/1.jpg" height=450 width=500></img></center>
+<center><img src="../images/ronpro/1.gif" height=450 width=500></img></center>
 </p>
 <ul type=disc>
 <li>Since the inputs and outputs are less, 8-points input module and 8-points output module is sufficient, where CPU resides in slot 0, input module resides in slot 1 and output module resides in slot 2.</li>
@@ -296,7 +296,7 @@ Let us see the basic diagram of the circuitry:<br>
 <br><br>
 
 <li>Let us see the ladder diagram:<br>
-<center><img src="../images/ronpro/2.jpg" height=450 width=500></img></center>
+<center><img src="../images/ronpro/2.gif" height=450 width=500></img></center>
 </li>
 <br>
 
@@ -305,18 +305,18 @@ Let us see the basic diagram of the circuitry:<br>
 
 The following screen shots explain the operation:<br>
 
-<center><img src="../images/ronpro/3.jpg" height=500 width=700></img></center><br>
+<center><img src="../images/ronpro/3.gif" height=500 width=700></img></center><br>
 The above screen shot represents the condition when the motor is off and the timer is reset.<br><br>
 
 <br>
-<center><img src="../images/ronpro/4.jpg" height=500 width=700></img></center><br>
+<center><img src="../images/ronpro/4.gif" height=500 width=700></img></center><br>
 The above screen shot represents the condition when the motor is running and timer is timing.
 <br><br>
 
-<br><center><img src="../images/ronpro/5.jpg" height=500 width=700></img></center><br>
+<br><center><img src="../images/ronpro/5.gif" height=500 width=700></img></center><br>
 The above screen shot represents the condition when the motor is off, and the timer has retained its accumulated value.<br><br>
 
-<br><center><img src="../images/ronpro/6.jpg" height=500 width=700></img></center><br>
+<br><center><img src="../images/ronpro/6.gif" height=500 width=700></img></center><br>
 The above screen shot represents the condition when the motor is off, and the timer has retained its accumulated value.<br><br>
      </span>
 </p> 
@@ -326,7 +326,7 @@ The above screen shot represents the condition when the motor is off, and the ti
 </section> 
 <section id="experiment-article-section-3">             
        <div class="icon" id="experiment-article-section-3-icon">          
-      <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+      <img src="../images/selfevaluation.gif" style="padding-left:50px;">
 </div>                 
  <div class="heading" id= "experiment-article-section-3-heading">    
                    Self Evaluation            
@@ -357,7 +357,7 @@ text-decoration: none;" href="indexs.html">Get Started</a>
             </section>  
 <section id="experiment-article-section-4">  
        <div class="icon" id="experiment-article-section-4-icon">         
-        <img src="../images/simulation.jpg" style="padding-left: 20px;">
+        <img src="../images/simulation.gif" style="padding-left: 20px;">
 </div>
              
  <div class="heading" id="experiment-article-section-4-heading">
@@ -376,7 +376,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
  </section>
 <section id="experiment-article-section-5">    
  <div class="icon" id="experiment-article-section-5-icon">
-  <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>   
+  <img src="../images/assignment.gif" style="padding-left: 20px;"></div>   
   <div class="heading" id= "experiment-article-section-5-heading">
   Assignment      
            </div>               
@@ -389,7 +389,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
       </section>
    <section id="experiment-article-section-6">   
         <div class="icon" id="experiment-article-section-6-icon">                               
-      <img src="../images/reference.jpg" style="padding-left: 15px;"></div>
+      <img src="../images/reference.gif" style="padding-left: 15px;"></div>
  <div class="heading" id="experiment-article-section-6-heading">
   Reference
  </div>
@@ -405,7 +405,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 </section>
  <section id="experiment-article-section-7">   
                  <div class="icon" id="experiment-article-section-7-icon">        
-            <img src="../images/video.jpg"></div>    
+            <img src="../images/video.gif"></div>    
                 <div class="heading" id="experiment-article-section-7-heading">  
                       Video            
          </div>               
@@ -415,7 +415,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
  </section>
  <section id="experiment-article-section-8">
  <div class="icon" id="experiment-article-section-8-icon">
- <img src="../images/quiz.jpg"></div>
+ <img src="../images/quiz.gif"></div>
 <div class="heading" id="experiment-article-section-8-heading">
   Quiz 
  </div>

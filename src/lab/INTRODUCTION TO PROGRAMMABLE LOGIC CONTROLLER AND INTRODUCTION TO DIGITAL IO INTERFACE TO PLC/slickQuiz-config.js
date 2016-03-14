@@ -26,7 +26,7 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:All</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "In the figure shown below, recognize the following part <br><img src=\"../images/PLC/1.jpg\"\height=300 width=450/>",
+            "q": "In the figure shown below, recognize the following part <br><img src=\"../images/PLC/1.gif\"\height=300 width=450/>",
             "a": [
                 { "option": "1= Input section<br> 2 = Output section<br>3 = Sensing section<br>4 = Field hardware devices", "correct": false },
                 { "option": "1 = Sensing section<br>2 = Output section<br>3 = Field hardware devices<br>4 = Input section", "correct": false },
@@ -134,7 +134,7 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:Scanning</p>"  // no comma here
         },
 		{ // Question 11
-		    "q": "What is the address of a screw terminal 9 on the 16-point input module in slot 3? <br><img src=\"../images/PLC/q2.jpg\"\height=450 width=300/> ",
+		    "q": "What is the address of a screw terminal 9 on the 16-point input module in slot 3? <br><img src=\"../images/PLC/q2.gif\"\height=450 width=300/> ",
 		    "a": [
                 { "option": "I: 3.0/9", "correct": true },
                 { "option": "I: 9.0/3", "correct": false },
@@ -146,7 +146,7 @@ var quizJSON = {
 		    "incorrect": "<p><span>wrong</span> It's wrong,Ans:I: 3.0/9</p>"  // no comma here
 		},
 		   { // Question 12
-		       "q": "What is the address of screw terminal 10 on a 16-point input module in slot 4?<br><img src=\"../images/PLC/q3.jpg\"\height=450 width=300/> ",
+		       "q": "What is the address of screw terminal 10 on a 16-point input module in slot 4?<br><img src=\"../images/PLC/q3.gif\"\height=450 width=300/> ",
 		       "a": [
                 { "option": "O: 4.1/10", "correct": false },
                 { "option": "I: 4.0/10", "correct": true },
@@ -158,7 +158,7 @@ var quizJSON = {
 				 "incorrect": "<p><span>wrong</span> It's wrong,Ans:I: 4.0/10</p>"  // no comma here
 		   },
 		   { // Question 13
-		       "q": "What is the address of screw terminal 2 on an 8-point input module in slot 3?<br><img src=\"../images/PLC/q4.jpg\"\height=450 width=300/> ",
+		       "q": "What is the address of screw terminal 2 on an 8-point input module in slot 3?<br><img src=\"../images/PLC/q4.gif\"\height=450 width=300/> ",
 		       "a": [
                 { "option": "I: 3.0/2", "correct": true },
                 { "option": "I: 2.0/3", "correct": false },
@@ -206,7 +206,7 @@ var quizJSON = {
 				 "incorrect": "<p><span>wrong</span> It's wrong,Ans:I: 1.1/15</p>"  // no comma here
 		   },
 		   { // Question 17
-		       "q": "What is the address of screw terminal 3 on an 8-point output module in slot 4?<br><img src=\"../images/PLC/q5.jpg\"\height=450 width=300/> ",
+		       "q": "What is the address of screw terminal 3 on an 8-point output module in slot 4?<br><img src=\"../images/PLC/q5.gif\"\height=450 width=300/> ",
 		       "a": [
                 { "option": "O: 3.1/4", "correct": false },
                 { "option": "O: 4.0/3", "correct": true },
@@ -218,7 +218,7 @@ var quizJSON = {
                 "incorrect": "<p><span>wrong</span> It's wrong,Ans:O: 4.0/3</p>"  // no comma here
 		   },
 		   { // Question 18
-		       "q": "What is the address of screw terminal 8 on a 16-point output module in slot 3?<br><img src=\"../images/PLC/q6.jpg\"\height=450 width=300/> ",
+		       "q": "What is the address of screw terminal 8 on a 16-point output module in slot 3?<br><img src=\"../images/PLC/q6.gif\"\height=450 width=300/> ",
 		       "a": [
                 { "option": "I: 3.0/3", "correct": false },
                 { "option": "O: 3.1/8", "correct": false },
@@ -266,7 +266,7 @@ var quizJSON = {
 				 "incorrect": "<p><span>wrong</span> It's wrong,Ans:O: 4.1/6</p>"  // no comma here
 		   },
 		   { // Question 22
-		       "q": "In a fixed PLC, with 16 inputs. What is the address for the input screw terminal 6?<br><img src=\"../images/PLC/q7.jpg\"\height=250 width=500/> ",
+		       "q": "In a fixed PLC, with 16 inputs. What is the address for the input screw terminal 6?<br><img src=\"../images/PLC/q7.gif\"\height=250 width=500/> ",
 		       "a": [
                 { "option": "I: 0/6", "correct": false },
                 { "option": "I: 0.0/6", "correct": false },

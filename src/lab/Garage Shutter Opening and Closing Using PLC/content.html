@@ -13,7 +13,7 @@
  <div id="experiment"> 
      <header class="default" id="experiment-header">   
          <div class="logo" id="experiment-header-logo">  
-         <img src="../images/logo.jpg"></div>
+         <img src="../images/logo.gif"></div>
 		 <div class="heading" id="experiment-header-heading">      
           <a href="../index.html">Electrical Lab</a>      
       </div>   
@@ -31,7 +31,7 @@ Garage Shutter Opening and Closing Using PLC
  <section id="experiment-article-section-1">             
       <div class="icon" id="experiment-article-section-1-icon">      
              
-    <img src="../images/theory.jpg"></div>                   
+    <img src="../images/theory.gif"></div>                   
  <div class="heading" id="experiment-article-section-1-heading">
                        Theory
                     </div>         
@@ -54,13 +54,13 @@ Let us see some of the instruments used in detail: </p>
 <p>A coupling is a device used to connect two shafts together at their ends for the purpose of transmitting power. Here in our case , we are using to connect shaft of the motor to gear box.<br>
 
 <center>
-<img src="../images/garage/TH/1.jpg" height=100 width=200></img><br></center>
+<img src="../images/garage/TH/1.gif" height=100 width=200></img><br></center>
 
 <font size="4"><b><u>Gear box</u></b></font>
 <p>Gear box is a device that uses gears and gear trains to provide speed and torque conversions from a rotating power source to another device. In simple words it can be used to increase or decrease speed or decrease or increase torque.</p>
 
 <center>
-<img src="../images/garage/TH/2.jpg" height=350 width=350></img><br></center>
+<img src="../images/garage/TH/2.gif" height=350 width=350></img><br></center>
 
 
 <font size="4"><b><u>Light emitting diode</u></b></font>
@@ -69,7 +69,7 @@ Let us see some of the instruments used in detail: </p>
 <font size="4"><b><u>Limit switch</u></b></font>
 <p>A limit switch is a type of switch used to stop the motion of a machine slide (or in our case garage door) or element once it reaches a fixed point.<br>
 <center>
-<img src="../images/garage/TH/3.jpg" height=250 width=300></img><br></center>
+<img src="../images/garage/TH/3.gif" height=250 width=300></img><br></center>
 
 <font size="4"><u>Working of a limit switch</u></font>
 <p>The basic limit switch has a spring-loaded push button connected to an electric circuit. When the push button (actuator) is pushed inside it trips or actuates the electrical circuit. The electrical circuit then signals a machine element to stop or start its motion. Once the pressure on the push button is removed, it comes back to its original position and is ready for the next cycle.</p>
@@ -91,13 +91,13 @@ Limit switches are very commonly used devices. For example
 <font size="4"><b><u>Push button</u></b></font>
 <p>Push button is a kind of a switch which is activated or deactivated the moment we press or depress it. It sends a signals momentarily when we press or depress it.<br>
 <center>
-<img src="../images/garage/TH/4.jpg" height=120 width=300></img><br></center>      
+<img src="../images/garage/TH/4.gif" height=120 width=300></img><br></center>      
 	</p>
 <br></div></div>       
 </section>
  <section id="experiment-article-section-2">            
 <div class="icon" id="experiment-article-section-2-icon">
-<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>              
+<img src="../images/procedure.gif" style="padding-left: 20px;"></div>              
    <div class="heading" id="experiment-article-section-2-heading">
                         Procedure
                     </div>           
@@ -115,7 +115,7 @@ we need motor, limit switch, push button, coupling, light emitting diode, shaft 
 Let us see the basic diagram of the circuitry.</p>
 
 <center>
-<img src="../images/garage/PR/1.jpg" height=400 width=550></img><br></center>
+<img src="../images/garage/PR/1.gif" height=400 width=550></img><br></center>
 
 <p>The PLC is used here to take input from the user, whether to open door, close door or just stop either of the action .It gives signal to the motor to open or close the shutter accordingly. Limit switches are used to determine the extreme position of garage shutter. This signal is a form of input to the PLC. Limit switch1 is used to identify the upper limit of the garage shutter i.e. when garage shutter is fully open. Limit switch2 is used to identify the lower limit of the garage shutter i.e. when garage shutter is fully closed.</p>
 
@@ -152,7 +152,7 @@ Assuming the shaft to be of 2.4cm diameter , or radius of  1.2cm.<br>
 <p>Now, let us see how the ladder logic of the garage shutter (shown below) is implemented in a PLC.</p>
 
 <center>
-<img src="../images/garage/PR/2.jpg" height=400 width=550></img><br></center>
+<img src="../images/garage/PR/2.gif" height=400 width=550></img><br></center>
 
 Our assumption:
 <ul type=disc>
@@ -177,38 +177,38 @@ Our assumption:
 </li>
 <li>Let us see its ladder logic program:<br>
 <center>
-<img src="../images/garage/PR/3.jpg" height=500 width=600></img><br></center>
+<img src="../images/garage/PR/3.gif" height=500 width=600></img><br></center>
 <br>The above ladder logic program has 5 rungs , let us see the functions of each rung individually:
 </li>
 </ul>
 
 <font size="4"><u><b>Rung 000:</b></u></font><br>
 <center>
-<img src="../images/garage/PR/4.jpg" height=250 width=600></img></center>
+<img src="../images/garage/PR/4.gif" height=250 width=600></img></center>
 
 <p>The above rung is used to open the garage shutter. The above rung passes logical continuity, when open push button is pressed. It will pass logical continuity as long as stop or close push button is not pressed. It will pass logical continuity as long as door is not fully opened. The moment door is fully opened the motor is de-energized. Since open switch used is a push button, it has to be latched.</p>
 
 
 <font size="4"><u><b>Rung 001:</b></u></font><br>
 <center>
-<img src="../images/garage/PR/5.jpg" height=250 width=600></img></center>
+<img src="../images/garage/PR/5.gif" height=250 width=600></img></center>
 <p>The above rung is used to close the garage shutter. The above rung passes logical continuity, when close push button is pressed. It will pass logical continuity as long as stop or open push button is not pressed. It will pass logical continuity as long as door is not fully closed. The moment door is fully closed the motor is de-energized. Since close switch used is a push button, it has to be latched.</p>
 
 
 <font size="4"><u><b>Rung 002:</b></u></font><br>
 <center>
-<img src="../images/garage/PR/6.jpg" height=250 width=600></img></center>
+<img src="../images/garage/PR/6.gif" height=250 width=600></img></center>
 <p>The above rung is used to indicate open condition of the garage shutter. When the garage shutter is fully opened, the signal from the Limit switch1 (LS1) is false i.e. 0 is sent to the corresponding input status file i.e. input screw terminal 3, has 0 in its corresponding input status file bit location. Thus open LED will be energized. </p>
 
 
 <font size="4"><u><b>Rung 003:</b></u></font><br>
 <center>
-<img src="../images/garage/PR/7.jpg" height=250 width=600></img></center>
+<img src="../images/garage/PR/7.gif" height=250 width=600></img></center>
 <p>The above rung is used to indicate shut condition of the garage shutter. When the garage shutter is fully closed, the signal from the Limit switch2 (LS2) is true i.e. 1 is sent to the corresponding input status file i.e. input screw terminal 4, has 1 in its corresponding input status file bit location. Thus shut LED will be energized. </p>
 
 <font size="4"><u><b>Rung 004:</b></u></font><br>
 <center>
-<img src="../images/garage/PR/8.jpg" height=250 width=600></img></center>
+<img src="../images/garage/PR/8.gif" height=250 width=600></img></center>
 <p>AJAR LED is used to indicate that the garage shutter is not in its extreme positions i.e. it is not completely closed or completely open. In other words, it is in between of two extreme positions. When the garage shutter is fully opened, the signal from the Limit switch1 (LS1) is false i.e. 0 is sent to the corresponding input status file i.e. input screw terminal 3, has 0 in its corresponding input status file bit location. Hence, the normally open instruction becomes false and logical continuity is lost. As a result AJAR LED is de-energized. When the garage shutter is fully closed, the signal from the Limit switch2 (LS2) is true i.e. 1 is sent to the corresponding input status file i.e. input screw terminal 4, has 1 in its corresponding input status file bit location. Hence, the normally closed instruction becomes false and logical continuity is lost. As a result AJAR LED is de-energized. So, only when the garage shutter is in between of the two extreme positions, logical continuity is passed and AJAR LED is energized.</p>
 
 
@@ -216,20 +216,20 @@ The following screen shots represents the operation:
 <ul type=disc>
 <li><br>
 <center>
-<img src="../images/garage/PR/9.jpg" height=500 width=800></img><br></center>
+<img src="../images/garage/PR/9.gif" height=500 width=800></img><br></center>
 <br>The above screen shot represents the condition when the Garage shutter is completely closed.
 <br><br><br></li>
 
 <li><br>
 <center>
-<img src="../images/garage/PR/10.jpg" height=500 width=800></img><br></center>
+<img src="../images/garage/PR/10.gif" height=500 width=800></img><br></center>
 <br>The above screen shot represents the condition when the Garage shutter is in intermediate stage i.e. can be opening or closing.
 <br><br><br></li>
 
 
 <li><br>
 <center>
-<img src="../images/garage/PR/11.jpg" height=500 width=800></img><br></center>
+<img src="../images/garage/PR/11.gif" height=500 width=800></img><br></center>
 <br>The above screen shot represents the condition when the Garage shutter is completely opened.
 </li>
 </ul>
@@ -240,7 +240,7 @@ The following screen shots represents the operation:
 </section>
 <section id="experiment-article-section-3">             
        <div class="icon" id="experiment-article-section-3-icon">          
-      <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+      <img src="../images/selfevaluation.gif" style="padding-left:50px;">
 </div>       
   <div class="heading" id= "experiment-article-section-3-heading">
                        Self Evaluation
@@ -277,7 +277,7 @@ text-decoration: none;" href="indexs.html">Get Started</a>
  </section>  
 <section id="experiment-article-section-4">  
        <div class="icon" id="experiment-article-section-4-icon">         
-        <img src="../images/simulation.jpg" style="padding-left: 20px;">
+        <img src="../images/simulation.gif" style="padding-left: 20px;">
 		</div>              
  <div class="heading" id="experiment-article-section-4-heading">
     Simulator
@@ -294,7 +294,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
  </section>
 <section id="experiment-article-section-5">    
    <div class="icon" id="experiment-article-section-5-icon">   
-     <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>    
+     <img src="../images/assignment.gif" style="padding-left: 20px;"></div>    
       <div class="heading" id= "experiment-article-section-5-heading">      
  Assignment
     </div>
@@ -317,7 +317,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
    </section>      
          <section id="experiment-article-section-6">
         <div class="icon" id="experiment-article-section-6-icon">
-        <img src="../images/reference.jpg" style="padding-left: 15px;"></div>
+        <img src="../images/reference.gif" style="padding-left: 15px;"></div>
         <div class="heading" id="experiment-article-section-6-heading">
    Reference
   </div>
@@ -334,7 +334,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 </section>
        <section id="experiment-article-section-7">   
                  <div class="icon" id="experiment-article-section-7-icon">       
-            <img src="../images/video.jpg"></div>    
+            <img src="../images/video.gif"></div>    
                 <div class="heading" id="experiment-article-section-7-heading">
                       Video           
          </div>               
@@ -344,7 +344,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
   </section>
   <section id="experiment-article-section-8">
   <div class="icon" id="experiment-article-section-8-icon">
-<img src="../images/quiz.jpg"></div>
+<img src="../images/quiz.gif"></div>
 <div class="heading" id="experiment-article-section-8-heading">
      Quiz 
    </div>

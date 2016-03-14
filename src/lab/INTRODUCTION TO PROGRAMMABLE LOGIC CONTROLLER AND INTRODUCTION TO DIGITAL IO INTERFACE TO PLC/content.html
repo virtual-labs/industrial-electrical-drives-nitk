@@ -12,7 +12,7 @@
  <div id="experiment">  
      <header class="default" id="experiment-header">   
          <div class="logo" id="experiment-header-logo">   
-         <img src="../images/logo.jpg"></div>
+         <img src="../images/logo.gif"></div>
            <div class="heading" id="experiment-header-heading">     
           <a href="../index.html">Electrical Lab</a>      
       </div>   
@@ -29,7 +29,7 @@ INTRODUCTION TO PROGRAMMABLE LOGIC CONTROLLER AND INTRODUCTION TO DIGITAL I/O IN
 <div id="experiment-article-sections">   
  <section id="experiment-article-section-1">             
       <div class="icon" id="experiment-article-section-1-icon">          
-      <img src="../images/theory.jpg"></div>                   
+      <img src="../images/theory.gif"></div>                   
  <div class="heading" id="experiment-article-section-1-heading">
                        Theory
                     </div>         
@@ -64,7 +64,7 @@ INTRODUCTION TO PROGRAMMABLE LOGIC CONTROLLER AND INTRODUCTION TO DIGITAL I/O IN
 <br>
 
 <center>
-<img src="../images/PLC/1.jpg" height=350  width=450>
+<img src="../images/PLC/1.gif" height=350  width=450>
 </img>
 </center>
 
@@ -148,7 +148,7 @@ The first step is to develop the user ladder program. Once the user ladder progr
 </font>
 
 <center>
-<img src="../images/PLC/1a.jpg" height=500  width=600>
+<img src="../images/PLC/1a.gif" height=500  width=600>
 </img>
 </center>
 <p>There are 16 point, 8 point and 32 point input module. As, an example, Fig (a), let us take a standard input module with 16 points.<br><br>
@@ -157,13 +157,13 @@ Each 16 point input module corresponds to one 16-bit word of data. Also, each in
 Note:- A bit position cannot be empty, there is either 1 or 0 value in each position all the times.</p>
 
 <center>
-<img src="../images/PLC/b.jpg" height=400  width=600>
+<img src="../images/PLC/b.gif" height=400  width=600>
 </img>
 </center>
 <p>In the above figure, input three is a closed switch, which is going into the input screw terminal 3. As  we can see the switch is closed, an ON (1) signal is sent to the input word, in bit position 3. Also from the figure, we can see input 4 is an open switch going into the input screw terminal 4. Since the switch is open, an OFF (0) signal is transferred to the input word, in bit position 4.</p>
 
 <center>
-<img src="../images/PLC/c.jpg" height=500  width=600>
+<img src="../images/PLC/c.gif" height=500  width=600>
 </img>
 </center>
 
@@ -176,7 +176,7 @@ Note:- A bit position cannot be empty, there is either 1 or 0 value in each posi
 <p>Input status file is a cluster of words in memory, that are organized to store input data. The data which is stored in the input status file is used by the CPU when the program is solved. Each I/O module in a chassis is assigned a specific word in the input status file. Each screw terminal in an input module corresponds to one memory location in the input status file, which can be used to store ON (1) or OFF (0) status of the connected field input devices.</p>
 
 <center>
-<img src="../images/PLC/d.jpg" height=500  width=600>
+<img src="../images/PLC/d.gif" height=500  width=600>
 </img>
 </center>
 
@@ -188,7 +188,7 @@ Note:- A bit position cannot be empty, there is either 1 or 0 value in each posi
 <p>The output status file has a function which is similar to input status file with the exception that the output status file stores the ON or OFF status of each output. When the user program is solved, the resulting ON or OFF state of each output point (and its associated field device) is stored in the output status file. Each 16-point output module has one 16-bit word holding the ON or OFF status of each of the module's 16-output screw terminals. This status data is stored is stored in the output status file waiting to be sent to the output module's switching circuitry.</p>
 
 <center>
-<img src="../images/PLC/e.jpg" height=500  width=600>
+<img src="../images/PLC/e.gif" height=500  width=600>
 </img>
 </center>
 
@@ -196,7 +196,7 @@ Note:- A bit position cannot be empty, there is either 1 or 0 value in each posi
 After solving user ladder program, the CPU sends each 16-bit output status file word to its associated output module by way of backplane. Each output module takes the low-voltage ON or OFF signal, which is represented as 0 or  1  bit  in  the  16-bit  word,  isolates  it,  and  turns  on  or  turns  off  the associated output's switching device. Each output	  module	has	one switching device for each output point. These switching devices may be small mechanical relays, as shown in fig (f), or solid state devices. The output status file bits electrical signal is sent from the status file to power the relay coil output three's relay output point.</p>
 
 <center>
-<img src="../images/PLC/f.jpg" height=500  width=600>
+<img src="../images/PLC/f.gif" height=500  width=600>
 </img>
 </center>
 <p>Fig (d)  and  fig  (e)  illustrated  PLC's  with  either  all  input  or  all  output modules. These examples were created to help you understand how status file words correlate with input and output modules. Actual applications will have a mix of input and output modules in the same PLC chassis. One of the major advantages of a modular PLC is the ability to place input and output modules in the selected chassis in the input or output designation required for a specific application.<br><br>
@@ -204,7 +204,7 @@ After solving user ladder program, the CPU sends each 16-bit output status file 
 For example, let us take a seven slot chassis. Here, CPU is placed in slot zero and then, you are free to place any mix of input and output modules you need in the remaining six slots.</p>
 
 <center>
-<img src="../images/PLC/g.jpg" height=500  width=600>
+<img src="../images/PLC/g.gif" height=500  width=600>
 </img>
 </center>
 
@@ -261,13 +261,13 @@ Each screw terminal of a 16-point module is identified as 0 through 15, decimal.
 Table 1: Addressing structure format</p>
 
 <center>
-<img src="../images/PLC/h.jpg" height=300  width=500>
+<img src="../images/PLC/h.gif" height=300  width=500>
 </img>
 </center>
 <p>Address format consists of three parts, see figure below. [Fig (i)]</p>
 
 <center>
-<img src="../images/PLC/i.jpg" height=400  width=600>
+<img src="../images/PLC/i.gif" height=400  width=600>
 </img>
 </center>
 
@@ -324,14 +324,14 @@ For our explanation, referring to fig(g), let’s assume our modular PLC has the
 <p>Table 2: Example of input status file</p>
 
 <center>
-<img src="../images/PLC/j.jpg" height=200  width=500>
+<img src="../images/PLC/j.gif" height=200  width=500>
 </img>
 </center>
 
 <p>Table 3: Example of output status file</p>
 
 <center>
-<img src="../images/PLC/k.jpg" height=150  width=500>
+<img src="../images/PLC/k.gif" height=150  width=500>
 </img>
 </center>
 <br>
@@ -368,7 +368,7 @@ The addressing for a fixed PLC is as follows: </p>
 </section>
  <section id="experiment-article-section-2">                   
 <div class="icon" id="experiment-article-section-2-icon">               
-<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>              
+<img src="../images/procedure.gif" style="padding-left: 20px;"></div>              
    <div class="heading" id="experiment-article-section-2-heading">
                      Procedure          
           </div>           
@@ -384,7 +384,7 @@ The addressing for a fixed PLC is as follows: </p>
 </section>
 <section id="experiment-article-section-3">             
        <div class="icon" id="experiment-article-section-3-icon">          
-      <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+      <img src="../images/selfevaluation.gif" style="padding-left:50px;">
 	  </div>                 
    <div class="heading" id= "experiment-article-section-3-heading">
                        Self Evaluation 
@@ -415,7 +415,7 @@ text-decoration: none;" href="indexs.html">Get Started</a>
   </section>  
 <section id="experiment-article-section-4">  
        <div class="icon" id="experiment-article-section-4-icon">         
-        <img src="../images/simulation.jpg" style="padding-left: 20px;">
+        <img src="../images/simulation.gif" style="padding-left: 20px;">
 </div>              
  <div class="heading" id="experiment-article-section-4-heading">     
                    Simulator          
@@ -432,7 +432,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
  </section>    
   <section id="experiment-article-section-5">
    <div class="icon" id="experiment-article-section-5-icon">
-        <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>
+        <img src="../images/assignment.gif" style="padding-left: 20px;"></div>
           <div class="heading" id= "experiment-article-section-5-heading">
    Assignment   
   </div>               
@@ -447,7 +447,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
       </section>      
          <section id="experiment-article-section-6">   
                  <div class="icon" id="experiment-article-section-6-icon">                               
-      <img src="../images/reference.jpg" style="padding-left: 15px;"></div>  
+      <img src="../images/reference.gif" style="padding-left: 15px;"></div>  
                   <div class="heading" id="experiment-article-section-6-heading">     
                    Reference          
           </div>             
@@ -463,7 +463,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 </section>
        <section id="experiment-article-section-7">   
                  <div class="icon" id="experiment-article-section-7-icon">       
-            <img src="../images/video.jpg"></div>    
+            <img src="../images/video.gif"></div>    
                 <div class="heading" id="experiment-article-section-7-heading">  
                       Video           
          </div>               
@@ -473,7 +473,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
  </section>
       <section id="experiment-article-section-8">
   <div class="icon" id="experiment-article-section-8-icon">
-<img src="../images/quiz.jpg"></div>
+<img src="../images/quiz.gif"></div>
   <div class="heading" id="experiment-article-section-8-heading">
  Quiz 
     </div>

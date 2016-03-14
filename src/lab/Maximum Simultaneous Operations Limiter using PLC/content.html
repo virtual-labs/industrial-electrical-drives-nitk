@@ -13,7 +13,7 @@
  <div id="experiment">  
      <header class="default" id="experiment-header">   
          <div class="logo" id="experiment-header-logo">    
-         <img src="../images/logo.jpg"></div>
+         <img src="../images/logo.gif"></div>
            <div class="heading" id="experiment-header-heading">
  <a href="../index.html">Electrical Lab</a>
        </div>   
@@ -30,7 +30,7 @@ Maximum Simultaneous Operations Limiter using PLC
 <div id="experiment-article-sections">   
  <section id="experiment-article-section-1">              
       <div class="icon" id="experiment-article-section-1-icon">    
-             <img src="../images/theory.jpg"></div>                   
+             <img src="../images/theory.gif"></div>                   
  <div class="heading" id="experiment-article-section-1-heading">
   Theory
  </div>        
@@ -51,7 +51,7 @@ A   hardwired   control   circuit   can   be   represented   by   conventional h
 The difference between a PLC ladder program and relay ladder rungs is the  continuity.  In  an  electrical  rung  diagram,  there  is  an  electrical continuity only when the current flows from left power rail to right power rail.</p>
 
 <center>
-<img src="../images/LADDER/a.jpg" height=120 width=400></img></center>
+<img src="../images/LADDER/a.gif" height=120 width=400></img></center>
 <br>
 <p>Fig (a), shows electrical continuity when SW 1 is closed, as the current flows from L-1 to L-2 energizing the load.<br><br>
 Even though PLC ladder logic was modeled after the conventional relay ladder, there is no electrical continuity in PLC ladder logic. PLC ladder rungs should have logical continuity in order for the output to energize. PLC ladder program uses familiar terms like "rungs" and "normally open" and	"normally  closed"  contacts,  but  the  relay  ladder  logic  has  no electrical continuity between an input and the controlled output.<br><br>
@@ -65,27 +65,27 @@ combines instructions logically using logic operators. Logical operations perfor
 
 <font size="4"><b><u>The AND-logic function</u></b></font><br>
 <center>
-<img src="../images/LADDER/b.jpg" height=200 width=400></img></center>
+<img src="../images/LADDER/b.gif" height=200 width=400></img></center>
 <p> The series circuit of 2 switches can be looked as an AND logic function. In fig (b) and fig (c), both switch1 and switch2, must be closed to have electrical continuity. W hen  there is  electrical continuity, output  (light1) will energize. Hence the keyword here is AND.<br>
 
 <center>
-<img src="../images/LADDER/c.jpg" height=200 width=400></img></center>
+<img src="../images/LADDER/c.gif" height=200 width=400></img></center>
 
 <p>The circuit in fig (b) is represented as a schematic diagram ladder rung in fig (c).<br><br>
 
 When the switch1 and switch2 is closed, electrical continuity is established to L-2. This is shown in fig (d).</p>
 
 <center>
-<img src="../images/LADDER/d.jpg" height=200 width=400></img></center>
+<img src="../images/LADDER/d.gif" height=200 width=400></img></center>
 <br>The various possible switch combinations are shown in the truth table below.<br><br>
 
 Table 1: Truth table for AND logic<br>
 <center>
-<img src="../images/LADDER/e.jpg" height=250 width=400></img></center>
+<img src="../images/LADDER/e.gif" height=250 width=400></img></center>
 <br>Fig (d) can be written in PLC ladder format as shown in the figure below<br>
 
 <center>
-<img src="../images/LADDER/f.jpg" height=200 width=400></img></center>
+<img src="../images/LADDER/f.gif" height=200 width=400></img></center>
 <br>
 Here is the program listing for a typical PLC, if you are entering the program with a handheld programmer.<br><br>
 LOAD I1<br>
@@ -98,31 +98,31 @@ OUT O5
 <p>In an OR - LOGIC function, the output is true if any input is true. The OR logic also states that if all inputs are true, the output will be true.<br>
 
 <center>
-<img src="../images/LADDER/g.jpg" height=250 width=400></img></center>
+<img src="../images/LADDER/g.gif" height=250 width=400></img></center>
 <br>
 
 <p>In the above figure, if switch1 OR switch2 is energized then light1 will energize. Also, if both SW 1 and SW2 are true, the output will also be true.<br><br>
 Fig (g) is converted to PLC ladder rung and it looks like fig (h)<br>
 
 <center>
-<img src="../images/LADDER/h.jpg" height=250 width=400></img></center>
+<img src="../images/LADDER/h.gif" height=250 width=400></img></center>
 
 <p>A PLC rung of logic will have normally open or normally closed contacts instead of normally open or normally closed switch symbols. Addresses and instructions are included. Here, in additions to each contact and its address, text information such as SW1, SW2 and L-1 is used and they are  referred  to  as  instruction comments.  These  instruction comments can be added from programming software.</p>
 Table 2: Truth table representing two-input OR function<br>
 
 <center>
-<img src="../images/LADDER/i.jpg" height=250 width=400></img></center><br><br>
+<img src="../images/LADDER/i.gif" height=250 width=400></img></center><br><br>
 
 <font size="4"><b><u>The NOT-logic function</u></b></font>
 <p>A normally closed relay contact passes power any time when the relay coil  is  not  energized. In  the  same manner, the  normally closed PLC ladder logic instruction will pass power any time when the input status file bit associated is  not a  1. In this condition, the physical hardware input is not sending an input signal into the PLC's input module. The opposite of normally open PLC instruction or contact is the NOT logic. NOT logic can be used in conjunction with AND or OR logic, when a logical 0 in the status file is expected to activate some output device. In other words, NOT logic is used when an input is not energized i.e., 0 in the associated status bit, the output should be energized. Also, when the input is energized i.e., 1 in the associated status bit, the output should not be energized.</p>
 Table 3: Truth table for NOT function<br>
 
 <center>
-<img src="../images/LADDER/j.jpg" height=200 width=450></img></center>
+<img src="../images/LADDER/j.gif" height=200 width=450></img></center>
 <br>
 
 <center>
-<img src="../images/LADDER/k.jpg" height=200 width=450></img></center>
+<img src="../images/LADDER/k.gif" height=200 width=450></img></center>
 <br>
 
 <font size="4"><u>Analysis of rung 1</u></font>
@@ -134,31 +134,31 @@ Table 3: Truth table for NOT function<br>
 <font size="4"><b><u>The PARALLEL NOT- logic function</u></b></font>
 
 <center>
-<img src="../images/LADDER/l.jpg" height=200 width=400></img></center>
+<img src="../images/LADDER/l.gif" height=200 width=400></img></center>
 <br>
 PLC ladder rung has 2 input instructions, one normally open and the other one is normally closed. This circuit contains parallel NOT logic. This schematic rung will be true under the conditions shown in the truth table below.<br><br>
 Table 4: Input and output relation of a parallel NOT function.<br>
 
 <center>
-<img src="../images/LADDER/m.jpg" height=250 width=400></img></center>
+<img src="../images/LADDER/m.gif" height=250 width=400></img></center>
 <br>
 
 Output L-1 will be energized only when input1 must be true OR input2 must not be true.<br>
 
 <center>
-<img src="../images/LADDER/n.jpg" height=280 width=400></img></center>
+<img src="../images/LADDER/n.gif" height=280 width=400></img></center>
 <br>
 
 <font size="4"><b><u>The EXCLUSIVE OR-logic function</u></b></font>
 <br>Table 5: Input and output relation of an exclusive OR function.<br>
 
 <center>
-<img src="../images/LADDER/o.jpg" height=300 width=400></img></center>
+<img src="../images/LADDER/o.gif" height=300 width=400></img></center>
 <br>
 Ladder rung of EXOR GATE would look like this<br>
 
 <center>
-<img src="../images/LADDER/p.jpg" height=250 width=400></img></center>
+<img src="../images/LADDER/p.gif" height=250 width=400></img></center>
 <br>
 
 <u><b>Case 1</b></u>
@@ -198,7 +198,7 @@ Timers provide timed control of the devices that they activate or de-activate. <
 <p>Timers consists of following parts: timer address, preset value, timer base, and accumulated value, as shown in
  figure below. <br>
 <center>
-<img src="../images/timer/a.jpg" height=100 width=400></img></center>
+<img src="../images/timer/a.gif" height=100 width=400></img></center>
 <center>fig(a)</center><br>
 In the above figure , term instruction name is, timer on delay ( TON ), timer base is 1.0 seconds, timer address is T4:0, 
 accumulated value of zero(0) and a preset value of 200.<br>
@@ -245,7 +245,7 @@ increase from there. This timer can be reset by using a reset instruction. </li>
 <li>Word 2 &#8594; Accumulated value. </li>
 </ul>
 <center>
-<img src="../images/timer/b.jpg" height=50 width=300></img></center>
+<img src="../images/timer/b.gif" height=50 width=300></img></center>
 <center>fig(b)</center><br>
 
 <u>How do we address a timer? </u><br>
@@ -292,7 +292,7 @@ Addressing a timer is as follows: <br>
 
  <font size="4"><b><u>The on-delay timer instruction</u></b></font>
 <center>
-<img src="../images/timer/c.jpg" height=400 width=550></img></center>
+<img src="../images/timer/c.gif" height=400 width=550></img></center>
 <center>fig(c)</center><br>
 The above figure is used to explain the on-delay timer instruction.<br> 
 Here, T4:2 represents timer file 4, timer element 2, preset value is 50, accumulated value is 0 and timer base is 1 second. 
@@ -320,7 +320,7 @@ instruction, no matter the relationship between the preset value and accumulated
 
  <font size="4"><b><u>The off-delay timer instruction</u></b></font>
 <center>
-<img src="../images/timer/d.jpg" height=400 width=550></img></center>
+<img src="../images/timer/d.gif" height=400 width=550></img></center>
 <center>fig(d)</center><br>
 The above figure is used to explain the off-delay timer instruction. Here, T4:2 represents timer file 4, timer element 2, 
 preset value is 200, accumulated value is 0 and timer base is 1 second. Input module is in slot 1 and output module is in
@@ -359,7 +359,7 @@ needs to remember the motors total elapsed running time. The next time the motor
  accumulated running time from where it is left off. When the total accumulated motor running time has been reached, a 
 maintenance remainder pilot light will be lit. A retentive timer is used in this application.</p>
 <center>
-<img src="../images/timer/e.jpg" height=400 width=550></img></center>
+<img src="../images/timer/e.gif" height=400 width=550></img></center>
 <center>fig(e)</center><br>
 <p>Here, T4:2 represents timer file 4, timer element 2, preset value is 3600, accumulated value is 0 and timer base is 1
  second. Input module is in slot 1 and output module is in slot 2. <br>
@@ -400,7 +400,7 @@ device, connected to input screw terminal 1. Pressing this push button will rese
 </section>
  <section id="experiment-article-section-2">                   
 <div class="icon" id="experiment-article-section-2-icon">               
-<img src="../images/procedure.jpg" style="padding-left: 20px;"></div>              
+<img src="../images/procedure.gif" style="padding-left: 20px;"></div>              
    <div class="heading" id="experiment-article-section-2-heading">
  Procedure
   </div>           
@@ -423,7 +423,7 @@ Maximum simultaneous operation limiting using a PLC.
 Let us see basic diagram of the circuitry:<br>
 
 <center>
-<img src="../images/operationlimiter/PR/1.jpg" height=500 width=450></img><br></center>
+<img src="../images/operationlimiter/PR/1.gif" height=500 width=450></img><br></center>
 
 <b><font size="4"><u>Ladder Logic design</u> : </font></b>
 <p>Now let us see how the ladder logic of maximum simultaneous operation limiter is implemented using PLC. </p>
@@ -456,7 +456,7 @@ Let us see basic diagram of the circuitry:<br>
 
 Let us see its ladder logic diagram :<br>
 <center>
-<img src="../images/operationlimiter/PR/2.jpg" height=500 width=600></img><br></center>
+<img src="../images/operationlimiter/PR/2.gif" height=500 width=600></img><br></center>
 <br>The above ladder diagram has three rung. 
 <br>
 <br>
@@ -465,42 +465,42 @@ Let us see the function of each rung individually. <br><br>
 
 <font size="4"><u><b>Rung 000:</b></u></font><br>
 <center>
-<img src="../images/operationlimiter/PR/3.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/3.gif" height=250 width=600></img></center>
 
 <p>The above rung is used to energize the MOTOR1. As per our requirement, when the MOTOR1 is energized, then either MOTOR2 or MOTOR3 can be energized. But they both cannot be energized together. Or, in other words, when either MOTOR2 or MOTOR3 is energized, then also MOTOR1 can be activated (energized). <br>
 START1 and STOP1 are normally open push button. Pressing STOP1 push button will de-establish the logical continuity.STOP1 instruction (-|/|-) is true all the time unless STOP1 push button is pressed. The START1 push button used to start the MOTOR1. Since START1 a push button, its signal has to be latched.</p>
 
 Consider the figure below:  
 <center>
-<img src="../images/operationlimiter/PR/4.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/4.gif" height=250 width=600></img></center>
 <p>The above diagram shows the logical continuity established when MOTOR2 is OFF and MOTOR3 is ON. When MOTOR2 is OFF the MOTOR2 instruction (-|/|-) become true and when MOTOR3 is ON, then MOTOR3 instruction (-| |-) become true. So when the START1 push button is pressed, logical continuity is established between left rail and right rail.</p>
 
 Consider the figure below:  
 <center>
-<img src="../images/operationlimiter/PR/5.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/5.gif" height=250 width=600></img></center>
 <p>The above diagram shows the logical continuity established when MOTOR3 is OFF and working condition of MOTOR2 is irrelevant (i.e. can be OFF or ON).As per our requirement, if MOTOR2 is ON then MOTOR3 has to be OFF for the MOTOR1 to run. So this rung is true when either only MOTOR1 is running or when MOTOR1 and MOTOR2 are running together.  </p>
 
 <font size="4"><u><b>Rung 001:</b></u></font><br>
 <center>
-<img src="../images/operationlimiter/PR/6.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/6.gif" height=250 width=600></img></center>
 
 <p>The above rung is used to energize the MOTOR2. As per our requirement, when the MOTOR2 is energized, then either MOTOR3 or MOTOR1 can be energized. But they both cannot be energized together. Or, in other words, when either MOTOR3 or MOTOR1 is energized, then also MOTOR2 can be activated (energized).  <br>
  START2 and STOP2 are normally open push button. Pressing STOP2 push button will de-establish the logical continuity.STOP2 instruction (-|/|-) is true all the time unless STOP2 push button is pressed. The START2 push button used to start the MOTOR2. Since START2 a push button, its signal has to be latched.  </p>
 
 Consider the figure below:  
 <center>
-<img src="../images/operationlimiter/PR/7.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/7.gif" height=250 width=600></img></center>
 <p>The above diagram shows the logical continuity established when MOTOR3 is OFF and MOTOR1 is ON. When MOTOR3 is OFF the MOTOR3 instruction (-|/|-) become true and when MOTOR1 is ON, then MOTOR1 instruction (-| |-) become true. So when the START2 push button is pressed, logical continuity is established between left rail and right rail. </p>
 
 Consider the figure below:
 <center>
-<img src="../images/operationlimiter/PR/8.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/8.gif" height=250 width=600></img></center>
 <p>The above diagram shows the logical continuity established when MOTOR1 is OFF and working condition of MOTOR3 is irrelevant (i.e. can be OFF or ON).As per our requirement, if MOTOR3 is ON then MOTOR1 has to be OFF for the MOTOR2 to run. So this rung is true when either only MOTOR2 is running or when MOTOR2 and MOTOR3 are running together. </p>
 
 
 <font size="4"><u><b>Rung 002:</b></u></font><br>
 <center>
-<img src="../images/operationlimiter/PR/9.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/9.gif" height=250 width=600></img></center>
 
 <p>The above rung is used to energize the MOTOR3. As per our requirement, when the MOTOR3 is energized, then either MOTOR1 or MOTOR2 can be energized. But they both cannot be energized together. Or, in other words, when either MOTOR1 or MOTOR2 is energized, then also MOTOR3 can be activated (energized). <br>
 
@@ -508,53 +508,52 @@ START3 and STOP3 are normally open push button. Pressing STOP3 push button will 
 
 Consider the figure below:
 <center>
-<img src="../images/operationlimiter/PR/10.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/10.gif" height=250 width=600></img></center>
 
 <p>The above diagram shows the logical continuity established when MOTOR1 is OFF and MOTOR2 is ON. When MOTOR1 is OFF the MOTOR1 instruction (-|/|-) become true and when MOTOR2 is ON, then MOTOR2 instruction (-| |-) become true. So when the START3 push button is pressed, logical continuity is established between left rail and right rail. </p>
 
 Consider the figure below:  
 
 <center>
-<img src="../images/operationlimiter/PR/11.jpg" height=250 width=600></img></center>
+<img src="../images/operationlimiter/PR/11.gif" height=250 width=600></img></center>
 
 <p>The above diagram shows the logical continuity established when MOTOR2 is OFF and working condition of MOTOR1 is irrelevant (i.e. can be OFF or ON).As per our requirement, if MOTOR1 is ON then MOTOR2 has to be OFF for the MOTOR3 to run. So this rung is true when either only MOTOR3 is running or when MOTOR3 and MOTOR1 are running together.  </p>
 
 
 The following screen shots explains the operation :
 <center>
-<img src="../images/operationlimiter/PR/12.jpg" height=500 width=700></img></center>
+<img src="../images/operationlimiter/PR/12.gif" height=500 width=700></img></center>
 <br>The above screen shot represents the condition when MOTOR1 is running.<br><br><br>
 
 <center>
-<img src="../images/operationlimiter/PR/13.jpg" height=500 width=700></img></center>
+<img src="../images/operationlimiter/PR/13.gif" height=500 width=700></img></center>
 <br>The above screen shot represents the condition when MOTOR2  is also running.<br><br><br>
 
 <center>
-<img src="../images/operationlimiter/PR/14.jpg" height=500 width=700></img></center>
+<img src="../images/operationlimiter/PR/14.gif" height=500 width=700></img></center>
 <br>The above screen shot represents the condition when MOTOR1 and MOTOR2 are running and pressing of START3 button,  does not energize MOTOR3, thus achieving Maximum Simultaneous Operation of two motor’s limiting using a PLC.<br>
 <br>
 </span>
 </p>
-
  </div>
 </div>                     
 </section>
 
 <section id="experiment-article-section-3">             
-       <div class="icon" id="experiment-article-section-3-icon">          
-      <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+<div class="icon" id="experiment-article-section-3-icon">          
+<img src="../images/selfevaluation.gif" style="padding-left:50px;">
 </div>
  <div class="heading" id= "experiment-article-section-3-heading">    
-                   Self Evaluation
-                    </div>                    
-	   <div class="content" id="experiment-article-section-3-content">
-                        <div class="divQuiz">
-                            <div id="displayQuiz">
-							<div id="slickQuiz">
-        <h1 class="quizName"><!-- where the quiz name goes --></h1>
-        <div class="quizArea">
-            <div class="quizHeader">
-                <a style="margin-top: 40px;float: left;
+Self Evaluation
+</div>                    
+<div class="content" id="experiment-article-section-3-content">
+<div class="divQuiz">
+<div id="displayQuiz">
+<div id="slickQuiz">
+<h1 class="quizName"><!-- where the quiz name goes --></h1>
+<div class="quizArea">
+<div class="quizHeader">
+<a style="margin-top: 40px;float: left;
 width: auto;
 padding: 5px 15px;
 color: #FFF;
@@ -562,24 +561,23 @@ background-color: #008B8B;
 border: 1px solid #FFF;
 border-radius: 5px;
 text-decoration: none;" href="indexs.html">Get Started</a>
-            </div>
-        </div>     
+</div>
+</div>     
 </div>
 <form id="form11" method="post" name="form11">
-  </form><br>
-   </div><br>
- </div>
-  </div> 
+</form><br>
+</div><br>
+</div>
+</div> 
 </section>
-
 <section id="experiment-article-section-4">  
-       <div class="icon" id="experiment-article-section-4-icon">         
-        <img src="../images/simulation.jpg" style="padding-left: 20px;">
+<div class="icon" id="experiment-article-section-4-icon">         
+<img src="../images/simulation.gif" style="padding-left: 20px;">
 </div>              
- <div class="heading" id="experiment-article-section-4-heading">
-                        Simulator
-                    </div>
- <p style="text-align: center;">  
+<div class="heading" id="experiment-article-section-4-heading">
+Simulator
+</div>
+<p style="text-align: center;">  
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
  height="600" width="800">
 <param name="quality" value="high" />
@@ -587,32 +585,29 @@ text-decoration: none;" href="indexs.html">Get Started</a>
 <embed height="600" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="../images/operationlimiter.swf" 
 type="application/x-shockwave-flash" width="800"></embed></object>	  
 </p></br> 
- </section     
-
-         <section id="experiment-article-section-5">    
-               <div class="icon" id="experiment-article-section-5-icon">   
-     <img src="../images/assignment.jpg" style="padding-left: 20px;"></div>    
-      <div class="heading" id= "experiment-article-section-5-heading">      
-                  Assignment      
-           </div>               
-     <div class="content" id="expostperiment-article-section-5-content">    
-         
+</section>    
+<section id="experiment-article-section-5">    
+<div class="icon" id="experiment-article-section-5-icon">   
+<img src="../images/assignment.gif" style="padding-left: 20px;"></div>    
+<div class="heading" id= "experiment-article-section-5-heading">      
+Assignment      
+</div>               
+<div class="content" id="expostperiment-article-section-5-content">    
 <ol type="1">
 <li>Write a PLC ladder logic rung diagram for 3 input AND logic function?</li>
 <li> Write a PLC ladder logic rung diagram for 3 input OR logic function?</li>
 <li>Write a PLC ladder logic rung diagram for 3 input NAND logic function?</li>
 <li>Write a PLC ladder logic rung diagram for 3 input NOR logic function?</li>
 </ol>
-   </div>          
-      </section>
-    
-         <section id="experiment-article-section-6">   
-                 <div class="icon" id="experiment-article-section-6-icon">
-      <img src="../images/reference.jpg" style="padding-left: 15px;"></div>  
-                  <div class="heading" id="experiment-article-section-6-heading">     
-                   Reference          
-          </div>             
-       <div class="content" id="experiment-article-section-6-content">   
+</div>          
+</section>
+<section id="experiment-article-section-6">   
+<div class="icon" id="experiment-article-section-6-icon">
+<img src="../images/reference.gif" style="padding-left: 15px;"></div>  
+<div class="heading" id="experiment-article-section-6-heading">     
+Reference          
+</div>             
+<div class="content" id="experiment-article-section-6-content">   
 <ol type="1">
 <li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
 <li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
@@ -620,28 +615,26 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 <li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
 <li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
 </ol>
-  </div>
+</div>
 </section>  
-
-       <section id="experiment-article-section-7">   
-                 <div class="icon" id="experiment-article-section-7-icon">       
-            <img src="../images/video.jpg"></div>    
-                <div class="heading" id="experiment-article-section-7-heading">  
-                      Video            
-         </div>               
-     <div class="content" id="experiment-article-section-7-content">
+<section id="experiment-article-section-7">   
+<div class="icon" id="experiment-article-section-7-icon">       
+<img src="../images/video.gif"></div>    
+<div class="heading" id="experiment-article-section-7-heading">  
+Video            
+</div>               
+<div class="content" id="experiment-article-section-7-content">
 <iframe width="800" height="600" src="https://www.youtube.com/embed/ASFCdYofQCU?rel=0" frameborder="0" allowfullscreen></iframe>
- </div>
-  </section>  
-  <section id="experiment-article-section-8">        
-            <div class="icon" id="experiment-article-section-8-icon"> 
-      <img src="../images/quiz.jpg"></div>                
-                    <div class="heading" id="experiment-article-section-8-heading">
-                        Quiz 
-                    </div>
-                 
- <div class="content" id="experiment-article-section-8-content">
-                        <div class="divQuiz">
+</div>
+</section>  
+<section id="experiment-article-section-8">        
+<div class="icon" id="experiment-article-section-8-icon"> 
+<img src="../images/quiz.gif"></div>                
+<div class="heading" id="experiment-article-section-8-heading">
+Quiz 
+</div>
+<div class="content" id="experiment-article-section-8-content">
+                    <div class="divQuiz">
                             <div id="displayQuiz">
 							<div id="slickQuiz">
         <h1 class="quizName"><!-- where the quiz name goes --></h1>
@@ -656,18 +649,18 @@ background-color: #008B8B;
 border: 1px solid #FFF;
 border-radius: 5px;
 text-decoration: none;" href="index1.html">Get Started</a>
-            </div>
-        </div>      
+</div>
+</div>      
 </div>
 <form id="form11" method="post" name="form11">
- </form><br>
-     </div><br>
-   </div>
- </div> 
- </section>       
-     </div>     
-   </article>  
-  </div>
+</form><br>
+</div><br>
+</div>
+</div> 
+</section>       
+</div>     
+</article>  
+</div>
 </body>
 </html>
 

@@ -71,7 +71,7 @@ var quizJSON = {
             "incorrect": "<p><span>wrong</span> It's wrong,Ans:T11:6/EN</p>"  // no comma here
         },
         { // Question 6
-           "q": "<br><img src=\"../images/offpro/q1.jpg\"\height=130 width=350/><br>In the figure, _________ is set when the rung 000 becomes true. It will remain set through the true to false transition and until the accumulated value is equal to the preset value  ",
+           "q": "<br><img src=\"../images/offpro/q1.gif\"\height=130 width=350/><br>In the figure, _________ is set when the rung 000 becomes true. It will remain set through the true to false transition and until the accumulated value is equal to the preset value  ",
             "a": [
                     {"option": "Timer-timing bit",    "correct": false},
                 {"option": "Timer-enable bit",     "correct": false},

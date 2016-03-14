@@ -15,7 +15,7 @@ var quizJSON = {
     },
     "questions": [
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/1.jpg\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/1a.jpg\"\height=100 width=400/><br>The output O1",
+            "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/1.gif\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/1a.gif\"\height=100 width=400/><br>The output O1",
             "a": [
                 { "option": "Will be energized ", "correct": false },
                 { "option": "Will not be energized", "correct": true }
@@ -25,7 +25,7 @@ var quizJSON = {
                 "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Will not be energized</p>" // no comma here
         },
            { // Question 2 - Multiple Choice, Single True Answer
-               "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/2.jpg\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/2a.jpg\"\height=100 width=400/><br>The output O1",
+               "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/2.gif\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/2a.gif\"\height=100 width=400/><br>The output O1",
                "a": [
                           { "option": "Will be energized ", "correct": false },
                 { "option": "Will not be energized", "correct": true }
@@ -35,7 +35,7 @@ var quizJSON = {
                 "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Will not be energized</p>" // no comma here
            },
               { // Question 3 - Multiple Choice, Single True Answer
-                  "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/3.jpg\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/3a.jpg\"\height=100 width=400/><br>The output O1",
+                  "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/3.gif\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/3a.gif\"\height=100 width=400/><br>The output O1",
                   "a": [
                 { "option": "Will be energized ", "correct": true },
                 { "option": "Will not be energized", "correct": false }
@@ -45,7 +45,7 @@ var quizJSON = {
                 "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Will be energized</p>" // no comma here
               },
                  { // Question 4 - Multiple Choice, Single True Answer
-                     "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/4.jpg\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/4a.jpg\"\height=100 width=400/><br>The output O1",
+                     "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/4.gif\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/4a.gif\"\height=100 width=400/><br>The output O1",
                      "a": [
                 { "option": "Will be energized ", "correct": true },
                 { "option": "Will not be energized", "correct": false }
@@ -55,7 +55,7 @@ var quizJSON = {
                 "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Will be energized</p>" // no comma here
                  },
                     { // Question 5 - Multiple Choice, Single True Answer
-                        "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/5.jpg\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/5a.jpg\"\height=100 width=400/><br>The output O1",
+                        "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/5.gif\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/5a.gif\"\height=100 width=400/><br>The output O1",
                         "a": [
                 { "option": "Will be energized ", "correct": true },
                 { "option": "Will not be energized", "correct": false }
@@ -65,7 +65,7 @@ var quizJSON = {
                 "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Will be energized</p>" // no comma here
                     },
                        { // Question 6 - Multiple Choice, Single True Answer
-                           "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/6.jpg\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/6a.jpg\"\height=100 width=400/><br>The output O1",
+                           "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/6.gif\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/6a.gif\"\height=100 width=400/><br>The output O1",
                            "a": [
                 { "option": "Will be energized ", "correct": false },
                 { "option": "Will not be energized", "correct": true }
@@ -75,7 +75,7 @@ var quizJSON = {
                 "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Will not be energized</p>" // no comma here
                        },
                           { // Question 7 - Multiple Choice, Single True Answer
-                              "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/7.jpg\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/7a.jpg\"\height=100 width=400/><br>The output O1",
+                              "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/7.gif\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/7a.gif\"\height=100 width=400/><br>The output O1",
                               "a": [
                 { "option": "Will be energized ", "correct": true },
                 { "option": "Will not be energized", "correct": false }
@@ -86,7 +86,7 @@ var quizJSON = {
                           },
                    
        { // Question 8
-           "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/8.jpg\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/8a.jpg\"\height=100 width=400/><br>The output O1",
+           "q": "Consider the following PLC Ladder rung <br><img src=\"../images/LADDER/SE/8.gif\"\height=150 width=400/><br>For the following input status file bit condition shown below<br><img src=\"../images/LADDER/SE/8a.gif\"\height=100 width=400/><br>The output O1",
            "a": [
                 { "option": "Will be energized ", "correct": false },
                 { "option": "Will not be energized", "correct": true }
