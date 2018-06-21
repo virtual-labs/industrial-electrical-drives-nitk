@@ -64,7 +64,7 @@ var quizJSON = {
                 "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans is:Accumulated value</p>"  // no comma here
         },
                { // Question 5 - Multiple Choice, Multiple True Answers, Select Any
-                   "q": "In default counter file, how to address the counter’s 12 accumulated value? ",
+                   "q": "In default counter file, how to address the counter's 12 accumulated value? ",
                    "a": [
                 { "option": "C5:12/ACC", "correct": true },
                 { "option": "C5:ACC/12", "correct": false },

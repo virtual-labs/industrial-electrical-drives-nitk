@@ -44,16 +44,16 @@ Motor forward and reverse direction control using PLC
 <b>
 <u>INTRODUCTION TO LOGIC</u></b>
 </center>
-</font>
+</font></br>
 <p>
-A   hardwired   control   circuit   can   be   represented   by   conventional hardwired relay ladder diagram. In any hardwired circuit, there should be electrical continuity in order for the load to energize.</p>
+A   hardwired   control   circuit   can   be   represented   by   conventional hardwired relay ladder diagram. In any hardwired circuit, there should be electrical continuity in order for the load to energize.</p></br>
 
 <font size="4"><b><u>Basics about conventional ladder and PLC ladder logic</u></b></font>
 <p>Electrical sequence of operation in hardwired relay circuits can be represented by electrical ladder diagram. Ladder diagram shows the interconnection of field devices. In the ladder diagram, each rung shows how a field device is turned on and also shows how it interacts with next field devices.<br><br>
 The difference between a PLC ladder program and relay ladder rungs is the  continuity.  In  an  electrical  rung  diagram,  there  is  an  electrical continuity only when the current flows from left power rail to right power rail.</p>
 
 <center>
-<img src="../images/LADDER/a.gif" height=100 width=400></img></center>
+<img src="../images/LADDER/a1.png" style="height:300px; width:500px;"></img></center>
 <br>
 <p>Fig (a), shows electrical continuity when SW 1 is closed, as the current flows from L-1 to L-2 energizing the load.<br><br>
 Even though PLC ladder logic was modeled after the conventional relay ladder, there is no electrical continuity in PLC ladder logic. PLC ladder rungs should have logical continuity in order for the output to energize. PLC ladder program uses familiar terms like "rungs" and "normally open" and	"normally  closed"  contacts,  but  the  relay  ladder  logic  has  no electrical continuity between an input and the controlled output.<br><br>
@@ -63,51 +63,51 @@ Each rung in a ladder diagram is a program statement. This program statement con
 
 As in case of physical wiring hardware devices connected in series or parallel, PLC also combines ladder program instructions in series or parallel. However, rather than working in series or parallel, the PLC
 combines instructions logically using logic operators. Logical operations performed by PLC are nothing but fundamental logic operation, using fundamental logic operators like: AND, OR, and NOT. These operators are used to combine the instructions on a PLC rung so as to make the outcome of each rung either true or false.
-</p>
+</p></br>
 
 <font size="4"><b><u>The AND-logic function</u></b></font><br>
 <center>
-<img src="../images/LADDER/b.gif" height=200 width=400></img></center>
+<img src="../images/LADDER/b1.jpg" style="height:300px; width:500px;"></img></center>
 <p> The series circuit of 2 switches can be looked as an AND logic function. In fig (b) and fig (c), both switch1 and switch2, must be closed to have electrical continuity. W hen  there is  electrical continuity, output  (light1) will energize. Hence the keyword here is AND.<br>
 
 <center>
-<img src="../images/LADDER/c.gif" height=200 width=400></img></center>
+<img src="../images/LADDER/c1.png" style="height:250px; width:600px;"></img></center>
 
 <p>The circuit in fig (b) is represented as a schematic diagram ladder rung in fig (c).<br><br>
 
 When the switch1 and switch2 is closed, electrical continuity is established to L-2. This is shown in fig (d).</p>
 
 <center>
-<img src="../images/LADDER/d.gif" height=200 width=400></img></center>
+<img src="../images/LADDER/d1.png" style="height:250px; width:600px;"></img></center>
 <br>The various possible switch combinations are shown in the truth table below.<br><br>
 
 Table 1: Truth table for AND logic<br>
 <center>
-<img src="../images/LADDER/e.gif" height=250 width=400></img></center>
+<img src="../images/LADDER/e1.jpg" height=250 width=400></img></center>
 <br>Fig (d) can be written in PLC ladder format as shown in the figure below<br>
 
 <center>
-<img src="../images/LADDER/f.gif" height=200 width=400></img></center>
+<img src="../images/LADDER/f1.png" style="height:261px; width:327px;"></img></center>
 <br>
 Here is the program listing for a typical PLC, if you are entering the program with a handheld programmer.<br><br>
 LOAD I1<br>
 AND I2<br>
 OUT O5
 
-<p>The above instruction tell the processor to load input 1 (I1) into memory, AND it with input 2 (I2) and then output the result to output 5 (O5). The resulting output will be based on the truth table fig (e).</p>
+<p>The above instruction tell the processor to load input 1 (I1) into memory, AND it with input 2 (I2) and then output the result to output 5 (O5). The resulting output will be based on the truth table fig (e).</p></br>
 
 <font size="4"><b><u>The OR-logic function</u></b></font><br>
 <p>In an OR - LOGIC function, the output is true if any input is true. The OR logic also states that if all inputs are true, the output will be true.<br>
 
 <center>
-<img src="../images/LADDER/g.gif" height=250 width=400></img></center>
+<img src="../images/LADDER/g1.png" style="height:250px; width:712px;"></img></center>
 <br>
 
 <p>In the above figure, if switch1 OR switch2 is energized then light1 will energize. Also, if both SW 1 and SW2 are true, the output will also be true.<br><br>
 Fig (g) is converted to PLC ladder rung and it looks like fig (h)<br>
 
 <center>
-<img src="../images/LADDER/h.gif" height=250 width=400></img></center>
+<img src="../images/LADDER/h1.png" style="height:250px; width:453px;"></img></center>
 
 <p>A PLC rung of logic will have normally open or normally closed contacts instead of normally open or normally closed switch symbols. Addresses and instructions are included. Here, in additions to each contact and its address, text information such as SW1, SW2 and L-1 is used and they are  referred  to  as  instruction comments.  These  instruction comments can be added from programming software.</p>
 Table 2: Truth table representing two-input OR function<br>
@@ -124,19 +124,19 @@ Table 3: Truth table for NOT function<br>
 <br>
 
 <center>
-<img src="../images/LADDER/k.gif" height=200 width=450></img></center>
+<img src="../images/LADDER/k1.png" style="width:643px; height:250px"></img></center>
 <br>
 
 <font size="4"><u>Analysis of rung 1</u></font>
-<p>When I1 is true i.e. the input status file bit regarding I1 is true (1), the instruction I1 will energize the output. The instruction I1 is considered true when it passes logical continuity. If there is no valid input signal from the field input devices attached to I1's screw terminal on the input module, a logical 0 will be placed in the associated input status file bit. A logical 0 in the input status file will make the normally open input instruction to become false .When normally open instruction is false, it will not pass logical continuity.</p>
+<p>When I1 is true i.e. the input status file bit regarding I1 is true (1), the instruction I1 will energize the output. The instruction I1 is considered true when it passes logical continuity. If there is no valid input signal from the field input devices attached to I1's screw terminal on the input module, a logical 0 will be placed in the associated input status file bit. A logical 0 in the input status file will make the normally open input instruction to become false .When normally open instruction is false, it will not pass logical continuity.</p></br>
 
 <font size="4"><u>Analysis of rung 2</u></font>
-<p>The normally closed instruction works	much like normally closed contacts on a hardware relay. In the fig (k), when the normally closed instruction I2 is true, i.e. the associated status file bit has a valid zero (0), logical	continuity  is established to energize the output. When the associated status file bit has valid 1, the NC instruction goes false and there is no logical continuity and the output is not energized.</p>
+<p>The normally closed instruction works	much like normally closed contacts on a hardware relay. In the fig (k), when the normally closed instruction I2 is true, i.e. the associated status file bit has a valid zero (0), logical	continuity  is established to energize the output. When the associated status file bit has valid 1, the NC instruction goes false and there is no logical continuity and the output is not energized.</p></br>
 
 <font size="4"><b><u>The PARALLEL NOT- logic function</u></b></font>
 
 <center>
-<img src="../images/LADDER/l.gif" height=200 width=400></img></center>
+<img src="../images/LADDER/l1.png" style="width:407px; height:250px"></img></center>
 <br>
 PLC ladder rung has 2 input instructions, one normally open and the other one is normally closed. This circuit contains parallel NOT logic. This schematic rung will be true under the conditions shown in the truth table below.<br><br>
 Table 4: Input and output relation of a parallel NOT function.<br>
@@ -160,7 +160,7 @@ Output L-1 will be energized only when input1 must be true OR input2 must not be
 Ladder rung of EXOR GATE would look like this<br>
 
 <center>
-<img src="../images/LADDER/p.gif" height=250 width=400></img></center>
+<img src="../images/LADDER/p1.png" style="height:250px; width:349px"></img></center>
 <br>
 
 <u><b>Case 1</b></u>
@@ -192,16 +192,16 @@ This case is similar to case 2, only the role of inputs are interchanged i.e. he
   <p class="MsoNormal" style="line-height: 150%;">
 <span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
 <center><font size="5"><u><b>Aim of the experiment: Motor Forward and Reverse Direction Control using a PLC </b></u></font>
-<br></center>
+<br></center></br>
 <p><font size="4"><u><b>Aim</u> : </b></font>
 To achieve motor forward and reverse direction control using a PLC. 
-</p>
+</p></br>
 
 <p><font size="4"><u><b>Procedure</u> : </b></font>In our experiment, we wish to change the direction of motor rotation by click of a push button, using a PLC. <br><br>
 Let us see the basic diagram of the circuitry:  </p>
 
 <center>
-<img src="../images/mtrfwd/PR/1.gif" height=500 width=450></img><br></center>
+<img src="../images/mtrfwd/PR/1.gif" height=500 width=450></img><br></center></br>
 
 <p><font size="4"><u><b>Ladder logic design</u> : </b></font>
 <p>Now, let us see how the ladder logic of motor forward and reverse direction control is implemented using a PLC. </p>
@@ -371,33 +371,9 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 <li>Write a PLC ladder logic rung diagram for 3 input NOR logic function?</li>
 </ol>
    </div>          
-      </section>      
-         <section id="experiment-article-section-6">   
-                 <div class="icon" id="experiment-article-section-6-icon">                               
-      <img src="../images/reference.gif" style="padding-left: 15px;"></div>  
-                  <div class="heading" id="experiment-article-section-6-heading">     
-                   Reference         
-          </div>             
-       <div class="content" id="experiment-article-section-6-content">   
-<ol type="1">
-<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
-<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
-<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
-<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
-<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
-</ol>
-         </div>
-</section>
- <section id="experiment-article-section-7">   
-                 <div class="icon" id="experiment-article-section-7-icon">       
-            <img src="../images/video.gif"></div>   
-                <div class="heading" id="experiment-article-section-7-heading">
-                        Video           
-         </div>              
-     <div class="content" id="experiment-article-section-7-content">
-<iframe width="800" height="600" src="https://www.youtube.com/embed/BFBw6ul4aAw?rel=0" frameborder="0" allowfullscreen></iframe>
- </div> 
-  </section>    
+      </section>  
+
+  
  <section id="experiment-article-section-8">        
             <div class="icon" id="experiment-article-section-8-icon">           
  <img src="../images/quiz.gif"></div>                
@@ -428,7 +404,194 @@ text-decoration: none;" href="index1.html">Get Started</a>
  </div><br>
  </div>
  </div>  
-  </section>       
+  </section> 
+	  <section id="experiment-article-section-7">   
+                 <div class="icon" id="experiment-article-section-7-icon">       
+            <img src="../images/video.gif"></div>   
+                <div class="heading" id="experiment-article-section-7-heading">
+                        Video           
+         </div>              
+     <div class="content" id="experiment-article-section-7-content">
+<iframe width="800" height="600" src="https://www.youtube.com/embed/BFBw6ul4aAw?rel=0" frameborder="0" allowfullscreen></iframe>
+ </div> 
+  </section>  
+         <section id="experiment-article-section-6">   
+                 <div class="icon" id="experiment-article-section-6-icon">                               
+      <img src="../images/reference.gif" style="padding-left: 15px;"></div>  
+                  <div class="heading" id="experiment-article-section-6-heading">     
+                   Reference         
+          </div>             
+       <div class="content" id="experiment-article-section-6-content">   
+<ol type="1">
+<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
+<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
+<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
+<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
+<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
+</ol>
+         </div>
+</section>
+
+<section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/feedback.jpg" style="padding-left: 16px;" />
+</div>
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback
+</div>
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+
+
+<!-- Custom form start -->
+
+<form method="POST" action="http://rtlabs.nitk.ac.in/feedback.php" role="form">
+<input type="hidden" name="code" value="1">
+<div class="form-group"> 
+<label for="name">What is your name?</label> <span class="error">*</span><br>
+<input type="text" style="width:700px;" name="name" class="form-control" value="" placeholder="You may chose to be Anonymous if you do not wish to disclose your name."required="">
+<br><br>
+</div>
+<div class="form-group"> 
+<label for="org">Which organization are you associated with?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="org"  class="form-control" value="" placeholder="Name of your College/Institute/University/Organization."required="">
+<br><br>
+</div>
+<div class="form-group">
+<label for="discipline">Which is your primary discipline?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="discipline" class="form-control" value="" placeholder="Example: Mechanical Engineering, Nanotechnology, Biomedical, Mathematics etc."required="">
+
+<br><br>
+</div>
+<label>Which of the following best describes your current work?</label> <span class="error">*</span><br>
+<div class="radio"><label><input type="radio" required name="occ" checked="true"  value="Studying">Studying<br></label></div>
+<div class="radio"><label><input type="radio" required  name="occ"  value="Teaching">Teaching<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="Research">Research<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"  value="Industry">Industry<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="other">Other <input type="text" name="occ-other"></input></label></div>
+
+<br>
+<div class="form-group">
+<label>Experiment Performed </label><span class="error">* </span><br>
+<select class="form-control" name="exp"  required>
+<option value="Choose" disabled>Choose</option>
+<option value="Motor forward and reverse direction control using PLC">Motor forward and reverse direction control using PLC</option>
+</select>
+
+</div>
+<br>
+<label>Please tell your agreement with the following </label><span class="error">* </span><br>
+<table style="width:100%; margin:0">
+<tr>
+<td></td>
+<td style="text-align:center; width:70px">Excellent</td>    
+<td style="text-align:center; width:70px">Very Good</td>
+<td style="text-align:center; width:70px">Good</td>
+<td style="text-align:center; width:70px">Average</td>
+<td style="text-align:center; width:70px">Needs Improvement</td>
+</tr>
+<tr>
+<td>To what degree was the actual lab environment simulated</td>
+
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" checked="true"  required name="rea"  value="5"></label></div></td>    
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required  name="rea"  value="4"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio"required name="rea"   value="3"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="2"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="1"></label></div></td>
+</tr>
+<tr>
+<td>The theory and procedure were found to be helpful</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required checked="true"  name="tnp"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"   value="1"></label></div></td>
+</tr>
+<tr>
+<td>The results of simulation/experiment were easily interpretable</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio" checked="true"  required name="eas"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="1"></label></div></td>
+</tr>
+</table>
+<br>
+<div class="form-group">
+<label for="help">How helpful do you feel the system is?</label>
+<br><input type="text" style="width:700px;" class="form-control"name="help" value="">
+<br><br>
+</div>
+<label>Please answer the following questions</label><span class="error">* </span><br>
+<table style="width:100%; border:none; margin:0">
+<tr>
+<td></td>
+<td>Yes</td>    
+<td>No</td>
+</tr>
+<tr>
+<td>Did you get the feel of actual lab while performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="a" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="a"  value="N"></label></div></td>
+</tr>
+<tr>
+<td>Did you read the theory and procedure before performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="b" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="b"   value="N"></label></div></td>
+</tr>
+
+<tr>
+<td>Could you conduct the simulation/experiment successfully</td>
+<td> <div class="radio"><label><input type="radio"required name="c" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="c" value="N"></label></div></td>
+</tr>
+<tr>
+<td>Could you compare your results with the given typical results in explore</td>
+<td> <div class="radio"><label><input type="radio"required name="d" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="d"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think performing experiments through virtual labs are more challenging than the real experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="e"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="e"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think doing experiments through virtual lab gives scope for more innovative and creative research work</td>
+<td> <div class="radio"><label><input type="radio"required name="f"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="f"  value="N"></label></div></td>
+</tr>
+</table>
+<br><br>
+<div class="form-group">
+<label for="c1">Please mention any problems/difficulties you faced while performing the simulation/experiment. It will help us improve the content for your later visits.</label>
+<br><textarea  name="c1" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">What do you find most interesting thing about the simulation/experiment? We would be happy to know what delighted you.</label>
+<br><textarea name="c2" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">Is there anything else that you would like to tell us ?</label>
+<br><textarea name="c3"class="form-control"  rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<button type="submit" name="submit"  class="btn btn-default" value="Submit"> Submit </button>
+</form>
+
+
+<!-- Custom form complete -->
+
+</div>
+	
+</section>
+
+
+  
      </div>     
    </article>  
   </div>

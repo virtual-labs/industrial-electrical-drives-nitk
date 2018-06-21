@@ -46,7 +46,7 @@ Theory
 <b>
 <u>PLC Counters</u></b>
 </center></underline>
-</font>
+</font><br>
 
 <p>A counter is a simple device intended to do one simple thing-count. Every PLC has counter instructions. Using counters sometimes be little challenging because many manufacturers seem to use them different way. In other words, the instruction symbol used and method of programming will change for different manufacturers. <br><br>
 
@@ -54,20 +54,20 @@ A typical counter counts from 0 up to a predetermined value, called the “prese
 The fig below shows an up-counter, counting from 0 to 50. </p>
 
 <center>
-<img src="../images/counter/1.gif" height=300 width=550></img></center>
+<img src="../images/counter/1.gif" style="width:485px; height:307px;"></img></center>
 <br>
 The fig below shows a down-counter, counting from 50 to 0.
 
 <center>
-<img src="../images/counter/2.gif" height=300 width=550></img></center>
+<img src="../images/counter/2.gif" style="width:503px; height:289px;"></img></center>
 <br>
 
 <center>
-<img src="../images/counter/3.gif" height=450 width=550></img></center>
+<img src="../images/counter/3.gif" style="width:463px; height:452px;"></img></center>
 <br>
 
 
-<u><font size="4">As for explanation, let us take ALLEN-BRADELY counters:</font></u>
+<u><font size="4">As for explanation, let us take ALLEN-BRADELY counters:</font></u><br>
 <p>In Allen-bradely counter, the default counter file is file 5. The counter data is stored in counter file. Each counter consists of three 16-bit words and is known as “counter element”. In a single processor file, there can be many counter files. Any data file, which is greater than file 8 can be assigned as an additional counter file. Each counter file can have up to 256 counter elements.<br><br>
 
 A counter instruction is one element. A counter element is made up of three 16-bit words. Thus, the counter instruction contains the three parts i.e. word0, word1 and word2. </p>
@@ -78,7 +78,7 @@ A counter instruction is one element. A counter element is made up of three 16-b
 </ul>
 
 <center>
-<img src="../images/counter/4.gif" height=50 width=400></img></center>
+<img src="../images/counter/4.gif" style="width:501px; height:129px;"></img></center>
 <br>
 
 
@@ -115,47 +115,48 @@ Where, C= C identifies this as a counter file.<br>
 <li>C5:14/DN is the address for counter file 5, counter 14’s done bit.</li>
 <li>C5:14/CU is the address for counter file 5, counter 14’s count-up-enable bit.</li>
 <li>C5:14/EN is the address for counter file 5, counter 14’s enable bit.</li>
-</ul>
+</ul><br/>
 
 <font size="4"><b><u>Working of a counter</u></b></font>
 <p>A counter instruction is always an output instruction. The counter instruction counts each time the input logic changes the rung state from false to true. This input logic can be signal from an external device, for e.g. limit switch or sensor, or a signal from internal logic. Every time the counter instruction sees a false-to-true rung transition, a count-up counters accumulated value is incremented by one.
 The working of down-counter is little different. Each time when count-down counter sees a false-to-true rung transition, its accumulated value is decremented by one. Since the accumulated value gets decremented by 1 when each time the input logic changes the rung state from false to true, the accumulated value must be chosen as the starting point of the count.
 <br><br>Counters are retentive in nature. The counter will retain its accumulated value or the on or off status of the done, overflow and underflow bits through a power loss.
-</p>
+</p><br/>
 
 <font size="4"><b><u>The count-up instruction</u></b></font>
 <center>
-<img src="../images/counter/5.gif" height=400 width=550></img></center>
+<img src="../images/counter/5.gif" style="width:536px; height:250px;"></img></center>
 
 <p>
-The count-up instruction is used if we want a counter to increment one decimal value each time it register a rung transition from false to true. Each time input I:1/0 has a transition from off to on, counter C5:1 will increment its accumulated value by one decimal value. The count-up-enabled bit, on rung 001 is set when the rung conditions are true, or enabled. In rung 002, the done bit, DN, is set when the accumulated value is equal to or greater than the preset value. In the event of wrap from +32,767 to -32,768, the accumulated value becomes less than the preset value and the done bit will not be reset. In rung 003, the count-up overflow bit, OV, is set whenever the count-up counters accumulated value wraps from +32,767 to -32,768.</p>
+The count-up instruction is used if we want a counter to increment one decimal value each time it register a rung transition from false to true. Each time input I:1/0 has a transition from off to on, counter C5:1 will increment its accumulated value by one decimal value. The count-up-enabled bit, on rung 001 is set when the rung conditions are true, or enabled. In rung 002, the done bit, DN, is set when the accumulated value is equal to or greater than the preset value. In the event of wrap from +32,767 to -32,768, the accumulated value becomes less than the preset value and the done bit will not be reset. In rung 003, the count-up overflow bit, OV, is set whenever the count-up counters accumulated value wraps from +32,767 to -32,768.</p><br/>
 
 <font size="4"><b><u>The count-down instruction</u></b></font>
 <p>This instruction is used when we want to count down over the range of +32,767 to -32,768. Accumulated value will be decremented by one count, each time the instruction sees a false-to-true transition. Count-down instruction has many applications, for example: if we want to display the remaining number of parts to be filled for a specific order say 50 parts, then, a count-down instruction can be used. In this example, the accumulated value will be set as 50 and the preset value will be 0. Each time a part is completed and passes the sensor, the accumulated value will be decremented by one decimal value, as shown in the figure below.</p>
 
 <center>
-<img src="../images/counter/6.gif" height=400 width=550></img></center>
+<img src="../images/counter/6.gif" style="width:578px; height:539px;"></img></center>
 </p>
+<br/>
 
 <u><font size="4">Ladder explanation</font></u>
-<p>Here, the sensor which sends the signal to the PLC when each time the part is completed and passes the sensor is taken from input screw terminal 0. It is used as a normally open instruction (-| |-) in rung 000       ( I:1/0 ). Accumulated value for the count-down counter C5:0 is set as 50. The preset value is 0. Each time input I:1/0 transitions from off to on, the accumulated value will be decremented by one decimal value. The done bit will true during the entire count from 50 to 0. In both rung 001 and 002 the done bit is used. In rung 001, done bit is used as normally open instruction (-| |-). The output screw terminal 0 is a lamp used to display the status of the process (not completed state). As the done bit will be true during the entire count from 50 to 0, the logical continuity will be established in rung 000 during the entire count from 50 to 0 and not completed lamp ( O:2/0 ) will be glowing. In rung 002, the done bit is used as normally closed instruction (-| |-). The output screw terminal 1 is a lamp used to display the status of the process (completed state). So when the accumulated value decreases and becomes equal to preset value (in this case 0), done bit of the counter is reset. So in rung 002, logical continuity is established and completed lamp (O:2/1)  becomes energized. In other word our process completed status is displayed. Rung 004 is used to reset the counter. Resetting the counter will cause the accumulated value to be reset to 0. Our application specifies that we count down from 50 to 0. After each completed cycle and counter reset, the accumulated value is reset to 0. In order to replace the accumulated value of 50 back into the counter’s accumulator, the move instruction on rung 003 is used. The move source in integer 50. The move instruction’s destination for the integer 50 is C5:0.ACC. Now, our counter is set to count down from 50 to 0.</p>
+<p>Here, the sensor which sends the signal to the PLC when each time the part is completed and passes the sensor is taken from input screw terminal 0. It is used as a normally open instruction (-| |-) in rung 000       ( I:1/0 ). Accumulated value for the count-down counter C5:0 is set as 50. The preset value is 0. Each time input I:1/0 transitions from off to on, the accumulated value will be decremented by one decimal value. The done bit will true during the entire count from 50 to 0. In both rung 001 and 002 the done bit is used. In rung 001, done bit is used as normally open instruction (-| |-). The output screw terminal 0 is a lamp used to display the status of the process (not completed state). As the done bit will be true during the entire count from 50 to 0, the logical continuity will be established in rung 000 during the entire count from 50 to 0 and not completed lamp ( O:2/0 ) will be glowing. In rung 002, the done bit is used as normally closed instruction (-| |-). The output screw terminal 1 is a lamp used to display the status of the process (completed state). So when the accumulated value decreases and becomes equal to preset value (in this case 0), done bit of the counter is reset. So in rung 002, logical continuity is established and completed lamp (O:2/1)  becomes energized. In other word our process completed status is displayed. Rung 004 is used to reset the counter. Resetting the counter will cause the accumulated value to be reset to 0. Our application specifies that we count down from 50 to 0. After each completed cycle and counter reset, the accumulated value is reset to 0. In order to replace the accumulated value of 50 back into the counter’s accumulator, the move instruction on rung 003 is used. The move source in integer 50. The move instruction’s destination for the integer 50 is C5:0.ACC. Now, our counter is set to count down from 50 to 0.</p><br/>
 
 
 <font size="4"><b><u>High - speed counter instruction (HSC)</u></b></font>
 <p>Few programmable logical controls have a special feature called as high-speed counter instruction. In Allan Bradley, the high speed counter- instruction is only used with the SLC 500 fixed PLC’s. If we are using modular SLC 500 chassis and a modular processor, then a separate high- speed counter module is used. </p>
 
 <center>
-<img src="../images/counter/7.gif" height=300 width=550></img></center><br>
+<img src="../images/counter/7.gif" style="width:523px; height:182px;"></img></center><br>
 The above figure shows a high speed counter instruction of a fixed PLC (SLC micrologic 1000). Normally one high speed counter is allowed per program.  The high speed counter can be programmed as either an up-counter or a bidirectional counter. In the above figure, it is programmed as an up-counter. The counter used is somewhat similar to the CTU. However, high-speed counter is only enabled by the rung on which it resides. The high speed counter instruction does not count rung instructions. These transitions are counted from input I:0/1.
-</p>
+</p><br/>
 
 <u><font size="4">Associated status bits</font></u>
-<p>In this instruction, instead of counting the rung transition, the transitions seen at the input point is counted. As a result, many counts may come in between program scans and could be lost, resulting in an inaccurate accumulated value. So in order to solve this problem and provide an accurate update of the accumulated value, a separate hardware accumulator is used in conjunction with the high-speed counter. In word zero, status bit 10, is the update accumulator (UA) bit. Setting the UA bit will cause the instruction image accumulator (in the hardware accumulator used with HSC) to update the processors accumulator.</p>
+<p>In this instruction, instead of counting the rung transition, the transitions seen at the input point is counted. As a result, many counts may come in between program scans and could be lost, resulting in an inaccurate accumulated value. So in order to solve this problem and provide an accurate update of the accumulated value, a separate hardware accumulator is used in conjunction with the high-speed counter. In word zero, status bit 10, is the update accumulator (UA) bit. Setting the UA bit will cause the instruction image accumulator (in the hardware accumulator used with HSC) to update the processors accumulator.</p><br/>
 
 <font size="4"><b><u>How to reset a counter instruction?</u></b></font>
 <p>Reset instruction is used to reset a count-up counter, or count-down counter’s accumulated value to zero. This instruction also works for timers. The address of the reset instruction must match the address of the counter or the timer that is to be reset. Only one address is allowed per reset instruction.<br>
 <center>
-<img src="../images/counter/8.gif" height=400 width=550></img></center><br>
+<img src="../images/counter/8.gif" style="width:465px; height:294px;"></img></center><br>
 The figure above shows a reset instruction on rung 001, which will reset counter C5:0 on rung 000.When the instruction I:1/1 becomes true, C5:0 counter is reset. When resetting a timer or counter instruction, accumulated values and status bits are zeroed.</p>
 </p>
 <br></div></div>
@@ -170,10 +171,10 @@ The figure above shows a reset instruction on rung 001, which will reset counter
                       <div class="divContent"  id="wrap">                  
         <p class="MsoNormal" style="line-height: 150%;">                      
       <span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
-<font size="5"><u><b>Aim of the experiment:PLC Count-up Instruction</b></u></font>
+<font size="5"><u><b>Aim of the experiment:PLC Count-up Instruction</b></u></font></br></br>
 <p>
 <b>Aim</b>: To understand the working of a count up instruction in a Programmable Logic Controller. 
-</p>
+</p></br>
 
 <p><b>Procedure</b>: In our experiment, we wish to demonstrate the working of count-up instruction (up counter). <br>
 The fig below shows the set up.<br>
@@ -279,37 +280,9 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 <li> Choose any one variant of PLC in all major PLC manufacturing company and find out how many counters are present in each of them.</li>
 </ol>
    </div>          
-      </section>      
-         <section id="experiment-article-section-6">
-                    <div class="icon" id="experiment-article-section-6-icon">
-                             
-      <img src="../images/reference.gif" style="padding-left: 15px;"></div>
-    <div class="heading" id="experiment-article-section-6-heading">
-                    Reference
-        
-          </div>             
-       <div class="content" id="experiment-article-section-6-content">
-   <ol type="1">
-<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
-<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
-<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
-<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
-<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007</li>
-</ol>
-         </div>
-</section>  
+      </section>   
 
-       <section id="experiment-article-section-7">
-                    <div class="icon" id="experiment-article-section-7-icon">
-                    <img src="../images/video.gif"></div>
-                   <div class="heading" id="experiment-article-section-7-heading">
-                        Video 
-                    </div>
-                <div class="content" id="experiment-article-section-7-content">
- <iframe width="800" height="600" src="https://www.youtube.com/embed/XAOkMtwxaek?rel=0" frameborder="0" allowfullscreen></iframe>
- </div>
- </section>
- <section id="experiment-article-section-8">
+<section id="experiment-article-section-8">
  <div class="icon" id="experiment-article-section-8-icon">
  <img src="../images/quiz.gif"></div>
  <div class="heading" id="experiment-article-section-8-heading">
@@ -341,6 +314,197 @@ text-decoration: none;" href="index1.html">Get Started</a>
    </div>
      </div> 
   </section>
+	  
+        
+       <section id="experiment-article-section-7">
+                    <div class="icon" id="experiment-article-section-7-icon">
+                    <img src="../images/video.gif"></div>
+                   <div class="heading" id="experiment-article-section-7-heading">
+                        Video 
+                    </div>
+                <div class="content" id="experiment-article-section-7-content">
+ <iframe width="800" height="600" src="https://www.youtube.com/embed/XAOkMtwxaek?rel=0" frameborder="0" allowfullscreen></iframe>
+ </div>
+ </section>
+ 
+  <section id="experiment-article-section-6">
+                    <div class="icon" id="experiment-article-section-6-icon">
+                             
+      <img src="../images/reference.gif" style="padding-left: 15px;"></div>
+    <div class="heading" id="experiment-article-section-6-heading">
+                    Reference
+        
+          </div>             
+       <div class="content" id="experiment-article-section-6-content">
+   <ol type="1">
+<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
+<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
+<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
+<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
+<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007</li>
+</ol>
+         </div>
+</section>  
+
+ 
+  <section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/feedback.jpg" style="padding-left: 16px;" />
+</div>
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback
+</div>
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+
+
+<!-- Custom form start -->
+
+<form method="POST" action="http://rtlabs.nitk.ac.in/feedback.php" role="form">
+<input type="hidden" name="code" value="1">
+<div class="form-group"> 
+<label for="name">What is your name?</label> <span class="error">*</span><br>
+<input type="text" style="width:700px;" name="name" class="form-control" value="" placeholder="You may chose to be Anonymous if you do not wish to disclose your name."required="">
+<br><br>
+</div>
+<div class="form-group"> 
+<label for="org">Which organization are you associated with?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="org"  class="form-control" value="" placeholder="Name of your College/Institute/University/Organization."required="">
+<br><br>
+</div>
+<div class="form-group">
+<label for="discipline">Which is your primary discipline?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="discipline" class="form-control" value="" placeholder="Example: Mechanical Engineering, Nanotechnology, Biomedical, Mathematics etc."required="">
+
+<br><br>
+</div>
+<label>Which of the following best describes your current work?</label> <span class="error">*</span><br>
+<div class="radio"><label><input type="radio" required name="occ" checked="true"  value="Studying">Studying<br></label></div>
+<div class="radio"><label><input type="radio" required  name="occ"  value="Teaching">Teaching<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="Research">Research<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"  value="Industry">Industry<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="other">Other <input type="text" name="occ-other"></input></label></div>
+
+<br>
+<div class="form-group">
+<label>Experiment Performed </label><span class="error">* </span><br>
+<select class="form-control" name="exp"  required>
+<option value="Choose" disabled>Choose</option>
+<option value="PLC COUNT-UP INSTRUCTION ">PLC COUNT-UP INSTRUCTION</option>
+</select>
+
+</div>
+<br>
+<label>Please tell your agreement with the following </label><span class="error">* </span><br>
+<table style="width:100%; margin:0">
+<tr>
+<td></td>
+<td style="text-align:center; width:70px">Excellent</td>    
+<td style="text-align:center; width:70px">Very Good</td>
+<td style="text-align:center; width:70px">Good</td>
+<td style="text-align:center; width:70px">Average</td>
+<td style="text-align:center; width:70px">Needs Improvement</td>
+</tr>
+<tr>
+<td>To what degree was the actual lab environment simulated</td>
+
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" checked="true"  required name="rea"  value="5"></label></div></td>    
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required  name="rea"  value="4"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio"required name="rea"   value="3"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="2"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="1"></label></div></td>
+</tr>
+<tr>
+<td>The theory and procedure were found to be helpful</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required checked="true"  name="tnp"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"   value="1"></label></div></td>
+</tr>
+<tr>
+<td>The results of simulation/experiment were easily interpretable</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio" checked="true"  required name="eas"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="1"></label></div></td>
+</tr>
+</table>
+<br>
+<div class="form-group">
+<label for="help">How helpful do you feel the system is?</label>
+<br><input type="text" style="width:700px;" class="form-control"name="help" value="">
+<br><br>
+</div>
+<label>Please answer the following questions</label><span class="error">* </span><br>
+<table style="width:100%; border:none; margin:0">
+<tr>
+<td></td>
+<td>Yes</td>    
+<td>No</td>
+</tr>
+<tr>
+<td>Did you get the feel of actual lab while performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="a" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="a"  value="N"></label></div></td>
+</tr>
+<tr>
+<td>Did you read the theory and procedure before performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="b" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="b"   value="N"></label></div></td>
+</tr>
+
+<tr>
+<td>Could you conduct the simulation/experiment successfully</td>
+<td> <div class="radio"><label><input type="radio"required name="c" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="c" value="N"></label></div></td>
+</tr>
+<tr>
+<td>Could you compare your results with the given typical results in explore</td>
+<td> <div class="radio"><label><input type="radio"required name="d" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="d"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think performing experiments through virtual labs are more challenging than the real experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="e"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="e"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think doing experiments through virtual lab gives scope for more innovative and creative research work</td>
+<td> <div class="radio"><label><input type="radio"required name="f"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="f"  value="N"></label></div></td>
+</tr>
+</table>
+<br><br>
+<div class="form-group">
+<label for="c1">Please mention any problems/difficulties you faced while performing the simulation/experiment. It will help us improve the content for your later visits.</label>
+<br><textarea  name="c1" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">What do you find most interesting thing about the simulation/experiment? We would be happy to know what delighted you.</label>
+<br><textarea name="c2" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">Is there anything else that you would like to tell us ?</label>
+<br><textarea name="c3"class="form-control"  rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<button type="submit" name="submit"  class="btn btn-default" value="Submit"> Submit </button>
+</form>
+
+
+<!-- Custom form complete -->
+
+</div>
+	
+</section>
+
      </div>    
    </article>  
   </div>

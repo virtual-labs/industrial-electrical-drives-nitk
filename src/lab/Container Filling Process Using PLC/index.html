@@ -27,7 +27,10 @@
   ("images/logo.jpeg" here). All major browsers support the link
   rel="shortcut icon"  tag to associate a small icon with the 
   page -->
-    <link class="custom" href="../images/favicon.png" rel="shortcut icon">
+  
+    <link rel="icon" type="image/png" href="../images/solve.png" />
+  
+    <!-- <link class="custom" href="../images/favicon.png" rel="shortcut icon"> -->
     <!-- These are the stylesheets used for the lab. Please don't
   edit them; If you do, you will lose the edits in subsequent 
   releases of this User Interface. -->
@@ -63,7 +66,7 @@ $(document).ready(function()
           
       thisPage=$("article#experiment-article header#experiment-article-heading").html();
         
-      breadcrumb="<font color='white'>" + "<a href='../../index.html'>Home<a/> \> <a href='../index.html'>" + homePage + "<\/a> \> <a href='index.html'>" + thisPage + "<\/a>"+ "<\/font>";
+      breadcrumb="<font color='white'>" + "<a href='../index.html'>Home<a/> \> <a href='../index.html'>" + homePage + "<\/a> \> <a href='index.html'>" + thisPage + "<\/a>"+ "<\/font>";
         
       $("article#experiment-article div#experiment-article-breadcrumb").html(breadcrumb);
                 

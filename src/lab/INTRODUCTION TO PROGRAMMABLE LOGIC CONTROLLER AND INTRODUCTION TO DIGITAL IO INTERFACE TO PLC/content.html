@@ -18,7 +18,7 @@
       </div>   
     </header> 
      <article id="experiment-article">    
-	 <div class="breadcrumb" id="experiment-article-breadcrumb"></div>    
+	 <div class="breadcrumb" id="experiment-article-breadcrumb" style="font-size:14px"></div>    
         <header class="heading" id="experiment-article-heading">           
 INTRODUCTION TO PROGRAMMABLE LOGIC CONTROLLER AND INTRODUCTION TO DIGITAL I/O INTERFACE TO PLC 
           </header>  
@@ -41,8 +41,8 @@ INTRODUCTION TO PROGRAMMABLE LOGIC CONTROLLER AND INTRODUCTION TO DIGITAL I/O IN
 <b>
 <u>PROGRAMMABLE LOGIC CONTROLLER</u></b>
 </center>
-</font>
-<p>A programmable logic controller (PLC) is a device which is used to provide control for an automated process.</p>
+</font></br>
+<p>A programmable logic controller (PLC) is a device which is used to provide control for an automated process.</p></br>
 
 <font size="4">
 <b><u>Why PLC's are preferred?</u></b>
@@ -56,7 +56,7 @@ INTRODUCTION TO PROGRAMMABLE LOGIC CONTROLLER AND INTRODUCTION TO DIGITAL I/O IN
 <li>Productivity can be improved.</li>
 <li> Makes it easy to work in difficult or hazardous environment.</li>
 </ol>
-</p>
+</p></br>
 
 <font size="4">
 <b><u>Basic block diagram</u></b>
@@ -99,6 +99,7 @@ INTRODUCTION TO PROGRAMMABLE LOGIC CONTROLLER AND INTRODUCTION TO DIGITAL I/O IN
 <p>The devices that are controlled by the PLC's output section screw terminals are the field hardware devices.</p>
 </li>
 </ol>
+</br>
 
 <font size="4">
 <b><u>Fixed and modular PLC hardware</u></b>
@@ -106,23 +107,25 @@ INTRODUCTION TO PROGRAMMABLE LOGIC CONTROLLER AND INTRODUCTION TO DIGITAL I/O IN
 <p>There are two types of physical configurations, fixed and modular.<br><br>
 In a fixed PLC, all of its components like, the input section, power supply, CPU and associated memory and output section - is built into one self - contained unit. All the input and output screw terminals are built into the PLC package and are fixed, which cannot be moved i.e. not removable. This type of PLC is also called as a packaged controller.<br><br>
 The modular PLC comes as separate pieces. All the parts of modular PLC are purchased separately i.e. piece by piece. It’s like customizing , we may have  2  or  3  power  supplies  to  choose  from  ,  a  handful  of  different processors(CPU's) , many separate input modules , many separate output modules  and  a  selection  of  assemblies  ,  called  racks  ,  chassis  ,  or baseplates to hold the pieces together .</p>
+</br>
 
 <font size="4">
 <b><u>How does a PLC work?</u></b>
 </font>
-<p>Microprocessor is the heart of any computer, it is also called as processor, or CPU. The central processing unit supervises system control through the user program. After  reading the input signal, the CPU follows the instructions,  that  a  programmer  or  operator  has  stored  in  the  PLC's memory. Depending upon the result of the solved program, the field control devices or outputs are turned ON or OFF. When the PLC is running and following the programmer's instructions, it is called as solving the program.</p>
+<p>Microprocessor is the heart of any computer, it is also called as processor, or CPU. The central processing unit supervises system control through the user program. After  reading the input signal, the CPU follows the instructions,  that  a  programmer  or  operator  has  stored  in  the  PLC's memory. Depending upon the result of the solved program, the field control devices or outputs are turned ON or OFF. When the PLC is running and following the programmer's instructions, it is called as solving the program.</p></br>
+
 
 <font size="4">
 <b><u>How do PLC's know what they are supposed to do?</u></b>
 </font>
-<p>A PLC just follows the instructions stored in memory. Each instruction given by the programmer is placed in PLC memory in ascending order. A list of instruction is called as the user ladder program.</p>
+<p>A PLC just follows the instructions stored in memory. Each instruction given by the programmer is placed in PLC memory in ascending order. A list of instruction is called as the user ladder program.</p></br>
 
 <font size="4">
 <b><u>How does a PLC work?</u></b>
 </font>
 <p>The instructions which we want our PLC to carry out can be transferred to the controller memory using either handheld programmer or a personal computer.<br><br>
 
-The first step is to develop the user ladder program. Once the user ladder program  is  verified  for  correctness,  the  next  step  is  to  download  the program into the processor's memory. The process of transferring the user defined PLC program from personal computer's memory into PLC memory is called  as downloading the program. But before downloading the user program, the processor must be in  program mode. Now, if all the inputs and outputs signals are wired to the correct screw terminals, the processor can be put in run mode. In run mode, the program will continuously run and solve the programmed instructions. The process of solving the programmed  instruction  is  sometime  called  as  solving  the  logic.  This constant running of the program in a PLC is called as scanning.</p>
+The first step is to develop the user ladder program. Once the user ladder program  is  verified  for  correctness,  the  next  step  is  to  download  the program into the processor's memory. The process of transferring the user defined PLC program from personal computer's memory into PLC memory is called  as downloading the program. But before downloading the user program, the processor must be in  program mode. Now, if all the inputs and outputs signals are wired to the correct screw terminals, the processor can be put in run mode. In run mode, the program will continuously run and solve the programmed instructions. The process of solving the programmed  instruction  is  sometime  called  as  solving  the  logic.  This constant running of the program in a PLC is called as scanning.</p></br>
 
 <font size="3">
 <b><u>NOTE:</u></b>
@@ -133,7 +136,7 @@ The first step is to develop the user ladder program. Once the user ladder progr
 <li><b>Test mode</b> is used to operate or monitor the user program without energizing any outputs.</li><br>
 <li><b>Remote mode</b> allows the PLC to be remotely changed between program and run mode by a personal computer connected to the PLC processor.</li>
 </ul>
-<br>
+<br></br>
 
 <font size="5">
 <center>
@@ -167,7 +170,7 @@ Note:- A bit position cannot be empty, there is either 1 or 0 value in each posi
 </img>
 </center>
 
-<p>Even eight - point input modules are also available. In these modules, only the lower eight bits of the input word are used.</p>
+<p>Even eight - point input modules are also available. In these modules, only the lower eight bits of the input word are used.</p></br>
 
 
 <font size="4">
@@ -180,7 +183,7 @@ Note:- A bit position cannot be empty, there is either 1 or 0 value in each posi
 </img>
 </center>
 
-<p>Above figure shows a 4-slot modular PLC, which contains a power supply, CPU module and 3 input modules. Here each slot in the chassis has a corresponding number. The CPU is slot zero, while input modules are located in slots one through four. The slot number corresponding to a particular input module identifies in which 16-bit word the input status file will store that particular input module's ON or OFF input data. In order to simplify tracking modules in the input status file, the file word assigned to the module is the same as the slot in which the module resides in the modular PLC. As a result, since the CPU resides in slot zero on a SLC 500 modular PLC and there are no input words assigned to the CPU, there will be no word zero in the input status file.</p>
+<p>Above figure shows a 4-slot modular PLC, which contains a power supply, CPU module and 3 input modules. Here each slot in the chassis has a corresponding number. The CPU is slot zero, while input modules are located in slots one through four. The slot number corresponding to a particular input module identifies in which 16-bit word the input status file will store that particular input module's ON or OFF input data. In order to simplify tracking modules in the input status file, the file word assigned to the module is the same as the slot in which the module resides in the modular PLC. As a result, since the CPU resides in slot zero on a SLC 500 modular PLC and there are no input words assigned to the CPU, there will be no word zero in the input status file.</p></br>
 
 <font size="4">
 <b><u>The output status file</u></b>
@@ -209,7 +212,7 @@ For example, let us take a seven slot chassis. Here, CPU is placed in slot zero 
 </center>
 
 <p>Fig (g) shows a seven - slot chassis with input modules in slot 1,3,4 and 6 and , output modules in  slot 2 and 5 .Each input modules will have an associated word with the same input data file number as the slot in which resides . In a similar manner, each output module will have an associated word in the output status file with the same data file word number as the slot in which it resides. Theses status files are two separate data files. Although they are stored in PLC's memory, they are located in predefined, separate areas used strictly for the storage of either input or output status data.<br><br>
-Notice the gaps in both the input status file's input and output status word sequence. There are no input status words reserved for non - existent slots 2 or 5, not output status words 1, 3,4 or 6.</p>
+Notice the gaps in both the input status file's input and output status word sequence. There are no input status words reserved for non - existent slots 2 or 5, not output status words 1, 3,4 or 6.</p></br>
 
 <font size="4">
 <b><u>Sixteen point I/O modules with decimal addressing</u></b>
@@ -277,7 +280,7 @@ Part 3: The dot signifies a word follows. This is the word number. If using an 8
 Part 4: The slash identifies that a bit follows. This is the bit or screw terminal number.<br><br>
 
 <i>Address format = Input or Output: slot / Screw terminal</i>
-</p>
+</p></br>
 
 <font size="4">
 <b><u>I / O interaction with the input and output status files</u></b>
@@ -350,7 +353,7 @@ I: 3. 1 / 0 is input module in slot 3, bit or screw terminal 16. Since the lower
 Remember, the second word is I: 3. 1, so the first bit is I: 3 .1 / 0, or input point 16.<br><br>
 
 I: 3 .1 / 1 is the input module in slot 3, bit or screw terminal 17. <br>
-I: 3 .1 / 2 is the input module in slot 3, bit or screw terminal 18.</p>
+I: 3 .1 / 2 is the input module in slot 3, bit or screw terminal 18.</p></br>
 
 <font size="4">
 <b><u>Fixed I/O addressing</u></b>
@@ -376,7 +379,7 @@ The addressing for a fixed PLC is as follows: </p>
             <div class="divContent"  id="wrap">                  
         <p class="MsoNormal" style="line-height: 150%;">                      
       <span lang="EN-IN" style='font-size: 12pt; line-height: 150%; font-family: "Arial","sans-serif";'>
-   <p>There is no procedure ,as we are trying to understand the basic data flow in a PLC.</p>
+   <p>There is no procedure as we are trying to understand the basic data flow in a PLC.</p>
    </span>
 </p> 
   </div>
@@ -445,33 +448,7 @@ type="application/x-shockwave-flash" width="800"></embed></object>
 </ul>
    </div>          
       </section>      
-         <section id="experiment-article-section-6">   
-                 <div class="icon" id="experiment-article-section-6-icon">                               
-      <img src="../images/reference.gif" style="padding-left: 15px;"></div>  
-                  <div class="heading" id="experiment-article-section-6-heading">     
-                   Reference          
-          </div>             
-       <div class="content" id="experiment-article-section-6-content">   
-<ol type="1">
-<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
-<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
-<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
-<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
-<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
-</ol>
-         </div>
-</section>
-       <section id="experiment-article-section-7">   
-                 <div class="icon" id="experiment-article-section-7-icon">       
-            <img src="../images/video.gif"></div>    
-                <div class="heading" id="experiment-article-section-7-heading">  
-                      Video           
-         </div>               
-     <div class="content" id="experiment-article-section-7-content">
-<iframe width="800" height="600" src="https://www.youtube.com/embed/808NUlqHad0?rel=0" frameborder="0" allowfullscreen></iframe>
- </div>
- </section>
-      <section id="experiment-article-section-8">
+           <section id="experiment-article-section-8">
   <div class="icon" id="experiment-article-section-8-icon">
 <img src="../images/quiz.gif"></div>
   <div class="heading" id="experiment-article-section-8-heading">
@@ -502,6 +479,196 @@ text-decoration: none;" href="index1.html">Get Started</a>
   </div>
      </div> 
  </section>
+ 
+       <section id="experiment-article-section-7">   
+                 <div class="icon" id="experiment-article-section-7-icon">       
+            <img src="../images/video.gif"></div>    
+                <div class="heading" id="experiment-article-section-7-heading">  
+                      Video           
+         </div>               
+     <div class="content" id="experiment-article-section-7-content">
+<iframe width="800" height="600" src="https://www.youtube.com/embed/808NUlqHad0?rel=0" frameborder="0" allowfullscreen></iframe>
+ </div>
+ </section>
+    
+ <section id="experiment-article-section-6">   
+                 <div class="icon" id="experiment-article-section-6-icon">                               
+      <img src="../images/reference.gif" style="padding-left: 15px;"></div>  
+                  <div class="heading" id="experiment-article-section-6-heading">     
+                   Reference          
+          </div>             
+       <div class="content" id="experiment-article-section-6-content">   
+<ol type="1">
+<li>Introduction to Programmable Logic Controllers- Garry Dunning, 2nd Edition, Thomson, ISBN: 981-240-625-5.</li>
+<li>Process Control Instrumentation Technology - Curtis Johnson, Prentice Hall of India.</li>
+<li>W.Bolton,"Programmable Logic Controllers",Newnes publications,Fifth Edition,2009.</li>
+<li>Frank D. Petruzella,"Programmable Logic Controllers",Tata McGraw-Hill Education,2005.</li>
+<li>James A. Rehg, Glenn J. Sartori, "Programmable Logic Controllers", Prentice Hall,2007.</li>
+</ol>
+         </div>
+</section>
+
+
+<section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/feedback.jpg" style="padding-left: 16px;" />
+</div>
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback
+</div>
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+
+
+<!-- Custom form start -->
+
+<form method="POST" action="http://rtlabs.nitk.ac.in/feedback.php" role="form">
+<input type="hidden" name="code" value="1">
+<div class="form-group"> 
+<label for="name">What is your name?</label> <span class="error">*</span><br>
+<input type="text" style="width:700px;" name="name" class="form-control" value="" placeholder="You may chose to be Anonymous if you do not wish to disclose your name."required="">
+<br><br>
+</div>
+<div class="form-group"> 
+<label for="org">Which organization are you associated with?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="org"  class="form-control" value="" placeholder="Name of your College/Institute/University/Organization."required="">
+<br><br>
+</div>
+<div class="form-group">
+<label for="discipline">Which is your primary discipline?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="discipline" class="form-control" value="" placeholder="Example: Mechanical Engineering, Nanotechnology, Biomedical, Mathematics etc."required="">
+
+<br><br>
+</div>
+<label>Which of the following best describes your current work?</label> <span class="error">*</span><br>
+<div class="radio"><label><input type="radio" required name="occ" checked="true"  value="Studying">Studying<br></label></div>
+<div class="radio"><label><input type="radio" required  name="occ"  value="Teaching">Teaching<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="Research">Research<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"  value="Industry">Industry<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="other">Other <input type="text" name="occ-other"></input></label></div>
+
+<br>
+<div class="form-group">
+<label>Experiment Performed </label><span class="error">* </span><br>
+<select class="form-control" name="exp"  required>
+<option value="Choose" disabled>Choose</option>
+<option value="Introduction to PLC and introduction to digital I/O interface to PLC">Introduction to PLC and introduction to digital I/O interface to PLC</option>
+</select>
+
+</div>
+<br>
+<label>Please tell your agreement with the following </label><span class="error">* </span><br>
+<table style="width:100%; margin:0">
+<tr>
+<td></td>
+<td style="text-align:center; width:70px">Excellent</td>    
+<td style="text-align:center; width:70px">Very Good</td>
+<td style="text-align:center; width:70px">Good</td>
+<td style="text-align:center; width:70px">Average</td>
+<td style="text-align:center; width:70px">Needs Improvement</td>
+</tr>
+<tr>
+<td>To what degree was the actual lab environment simulated</td>
+
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" checked="true"  required name="rea"  value="5"></label></div></td>    
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required  name="rea"  value="4"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio"required name="rea"   value="3"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="2"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="1"></label></div></td>
+</tr>
+<tr>
+<td>The theory and procedure were found to be helpful</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required checked="true"  name="tnp"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"   value="1"></label></div></td>
+</tr>
+<tr>
+<td>The results of simulation/experiment were easily interpretable</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio" checked="true"  required name="eas"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="1"></label></div></td>
+</tr>
+</table>
+<br>
+<div class="form-group">
+<label for="help">How helpful do you feel the system is?</label>
+<br><input type="text" style="width:700px;" class="form-control"name="help" value="">
+<br><br>
+</div>
+<label>Please answer the following questions</label><span class="error">* </span><br>
+<table style="width:100%; border:none; margin:0">
+<tr>
+<td></td>
+<td>Yes</td>    
+<td>No</td>
+</tr>
+<tr>
+<td>Did you get the feel of actual lab while performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="a" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="a"  value="N"></label></div></td>
+</tr>
+<tr>
+<td>Did you read the theory and procedure before performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="b" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="b"   value="N"></label></div></td>
+</tr>
+
+<tr>
+<td>Could you conduct the simulation/experiment successfully</td>
+<td> <div class="radio"><label><input type="radio"required name="c" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="c" value="N"></label></div></td>
+</tr>
+<tr>
+<td>Could you compare your results with the given typical results in explore</td>
+<td> <div class="radio"><label><input type="radio"required name="d" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="d"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think performing experiments through virtual labs are more challenging than the real experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="e"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="e"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think doing experiments through virtual lab gives scope for more innovative and creative research work</td>
+<td> <div class="radio"><label><input type="radio"required name="f"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="f"  value="N"></label></div></td>
+</tr>
+</table>
+<br><br>
+<div class="form-group">
+<label for="c1">Please mention any problems/difficulties you faced while performing the simulation/experiment. It will help us improve the content for your later visits.</label>
+<br><textarea  name="c1" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">What do you find most interesting thing about the simulation/experiment? We would be happy to know what delighted you.</label>
+<br><textarea name="c2" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">Is there anything else that you would like to tell us ?</label>
+<br><textarea name="c3"class="form-control"  rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<button type="submit" name="submit"  class="btn btn-default" value="Submit"> Submit </button>
+</form>
+
+
+<!-- Custom form complete -->
+
+</div>
+	
+</section>
+
+
+
  </div>     
    </article>  
   </div>
