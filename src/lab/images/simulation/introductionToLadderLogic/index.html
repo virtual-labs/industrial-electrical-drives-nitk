@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<style>
+    input
+    {
+        padding: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        width:40%;
+        height: 32.5px;
+        cursor: pointer;
+    }
+div.panel {
+    display: none;
+}
+
+div.panel.show {
+    display: block !important;
+}
+
+</style>
+</head>
+
+<body>
+<section class="content">
+<div class="accordion"><input type="button" value="And Logic Implementation Using PLC" style="text-align:left; " /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="andLogic/index.html" class="panel" style="height:606px; width:804px; background-color:white;"></iframe>
+</div></br>
+<div class="accordion"><input type="button" value="Nand Logic Implementation Using PLC" style="text-align:left; " /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="nandLogic/index.html" class="panel" style="height:606px; width:804px; background-color:white;"></iframe>
+</div></br>
+<div class="accordion"><input type="button" value="Not Logic Implementation Using PLC" style="text-align:left; " /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="notLogic/index.html" class="panel" style="height:606px; width:804px; background-color:white;"></iframe>
+</div></br>
+<div class="accordion"><input type="button" value="Or Logic Implementation Using PLC" style="text-align:left; " /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="orLogic/index.html" class="panel" style="height:606px; width:804px; background-color:white;"></iframe>
+</div></br>
+<div class="accordion"><input type="button" value="Nor Logic Implementation Using PLC" style=" text-align:left; " /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="norLogic/index.html" class="panel" style="height:606px; width:804px; background-color:white;"></iframe>
+</div></br>
+<div class="accordion"><input type="button" value="Exor Logic Implementation Using PLC" style="text-align:left; " /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="exOrLogic/index.html" class="panel" style="height:606px; width:804px; background-color:white;"></iframe>
+</div></br>
+<div class="accordion"><input type="button" value="Exnor Logic Implementation Using PLC" style="text-align:left; " /></div>
+<div class="panel" style="height:606px; width:806px;">
+<iframe noscroll="" scrolling="no" src="exNorLogic/index.html" class="panel" style="height:606px; width:804px; background-color:white;"></iframe>
+</div></br>
+</section>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var panel = document.getElementsByClassName('panel');
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+    	var setClasses = !this.classList.contains('active');
+        setClass(acc, 'active', 'remove');
+        setClass(panel, 'show', 'remove');
+        
+       	if (setClasses) {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
+}
+
+function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+        els[i].classList[fnName](className);
+    }
+}
+</script>
+</body>
